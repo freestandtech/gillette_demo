@@ -1,0 +1,35 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  .canvas { width: 1080px; height: 1200px; }
+  .top { position: absolute; top: 70px; left: 80px; right: 80px; display: flex; align-items: center; justify-content: space-between; }
+  .top img { width: 240px; }
+  .pill { font-family: 'Barlow'; font-weight: 700; font-size: 22px; letter-spacing: 0.16em; color: #CFE0F7;
+    border: 1.5px solid rgba(207,224,247,0.45); border-radius: 999px; padding: 10px 22px; }
+  .headline { position: absolute; top: 200px; left: 80px; right: 80px; font-size: 104px; text-align: center; }
+  .headline em { font-style: italic; font-weight: 900; }
+  .glow { left: 190px; top: 450px; width: 700px; height: 560px; }
+  .pack { position: absolute; left: 150px; top: 420px; width: 640px; }
+  .gel { position: absolute; left: 600px; top: 600px; width: 320px; transform: rotate(10deg); }
+  .chips { position: absolute; top: 1050px; left: 0; right: 0; display: flex; justify-content: center; gap: 16px; }
+  .chip { font-size: 24px; color: #E4EEFB; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.18);
+    padding: 10px 20px; border-radius: 999px; display: inline-flex; align-items: center; gap: 10px; }
+  .chip svg { width: 22px; height: 22px; }
+  .powered { position: absolute; bottom: 26px; right: 36px; display: flex; align-items: center; gap: 10px; font-size: 18px; color: #A9C4EA; }
+  .powered img { height: 20px; }
+</style></head>
+<body>
+<div class="canvas bg-gillette streaks">
+  <div class="top"><img src="../gillette-logo-white.png" alt="Gillette"><span class="pill">FIRST SHAVE KIT</span></div>
+  <div class="headline display">Your first smooth shave <em>is on us</em></div>
+  <div class="glow"></div>
+  <img class="pack shadow-prod" src="../guard-3in1-pack.png" alt="">
+  <img class="gel shadow-prod" src="../gillette-gel.png" alt="">
+  <div class="chips">
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Guard 3-in-1 razor</span>
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Mini shave gel</span>
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free delivery</span>
+  </div>
+  <div class="powered">Powered by <img src="../freestand-logo-white.png" alt="FreeStand"></div>
+</div>
+</body></html>

@@ -1,0 +1,45 @@
+/* Shared tokens for the Gillette x FreeStand creative sources.
+   Edit copy in each HTML file, then re-render with: node render-all.js */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+  --navy: #0A1F44;
+  --navy-2: #0E2A5C;
+  --blue: #0057B8;
+  --blue-2: #1A73D9;
+  --silver: #C9D1DC;
+  --silver-2: #E9EDF3;
+  --white: #FFFFFF;
+  --teal: #3FC1C9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { background: transparent; }
+body { font-family: 'Roboto', sans-serif; color: var(--white); -webkit-font-smoothing: antialiased; }
+
+.canvas { position: relative; overflow: hidden; }
+.display { font-family: 'Barlow', sans-serif; font-weight: 800; letter-spacing: -0.01em; line-height: 0.98; }
+.eyebrow { font-family: 'Barlow', sans-serif; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; }
+
+/* Navy to Gillette blue gradient used across ads */
+.bg-gillette {
+  background:
+    radial-gradient(120% 70% at 80% 10%, rgba(26,115,217,0.55) 0%, rgba(26,115,217,0) 60%),
+    radial-gradient(90% 60% at 10% 100%, rgba(0,87,184,0.55) 0%, rgba(0,87,184,0) 70%),
+    linear-gradient(165deg, #0A1F44 0%, #0B2A63 45%, #0057B8 100%);
+}
+/* Fine diagonal "blade" light streaks */
+.streaks::before {
+  content: ""; position: absolute; inset: -20%;
+  background: repeating-linear-gradient(115deg, rgba(255,255,255,0) 0 46px, rgba(255,255,255,0.045) 46px 48px);
+  pointer-events: none;
+}
+.glow { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(140,190,255,0.55) 0%, rgba(140,190,255,0) 65%); }
+
+.cta {
+  display: inline-flex; align-items: center; gap: 18px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #E3E9F1 100%);
+  color: var(--navy); font-family: 'Barlow', sans-serif; font-weight: 800;
+  border-radius: 999px; box-shadow: 0 14px 40px rgba(0,0,0,0.35), inset 0 -3px 0 rgba(10,31,68,0.12);
+}
+.shadow-prod { filter: drop-shadow(0 30px 40px rgba(0,0,0,0.45)) drop-shadow(0 6px 10px rgba(0,0,0,0.25)); }
