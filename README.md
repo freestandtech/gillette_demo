@@ -22,9 +22,9 @@ Opening `index.html` straight from disk also works.
 - The stage scales to fit the window. It is designed at 1280x820 and reads well at 1366x768 and above.
 
 ## Deploy on GitHub Pages
-1. Push this folder to a repo (for example `apurvacreates-7/gillette_sampling`).
+1. This repo is `freestandtech/gillette_demo`; the site URL is https://freestandtech.github.io/gillette_demo/.
 2. Go to Settings > Pages > Build and deployment, choose "Deploy from a branch", then pick `main` and `/ (root)`.
-3. If the repo name is not `gillette_sampling`, update the two `og:image` URLs in `index.html`. Link previews need an absolute URL.
+3. If the repo or org is renamed, update the two `og:image` URLs in `index.html`. Link previews need an absolute URL.
 
 ## Structure
 ```
