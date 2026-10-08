@@ -1,6 +1,6 @@
 # Gillette x FreeStand: Educate to Sample
 
-A click-through pitch demo for Gillette India (P&G). It follows Rohan, 19, a college student in Pune, from a Gillette first-shave education reel to a qualified free sample, WhatsApp feedback and a UGC Reel.
+A click-through pitch demo for Gillette India (P&G). It follows Rohan, 19, a college student in Pune, from a Gillette first-shave education reel to a qualified free Gillette Fusion5 sample (shave-only use case), WhatsApp feedback and a UGC Reel.
 
 The phone on the left shows what Rohan sees. The middle panel shows what Meta and FreeStand are doing at that moment. The right column is the first-party profile FreeStand builds, which stays anonymous until Rohan claims. Step 8 is the FreeStand Campaign Analytics dashboard (overview + data collected, live analytics, data visualisation, statistical analysis). Step 9 ("Shave It Forward") is the next campaign built from the data, and the last screen shows the whole engine as a loop.
 

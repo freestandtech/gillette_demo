@@ -17,13 +17,13 @@ Pitch-demo use only. Brand marks and product photography belong to their owners 
 | `freestand-logo.svg`, `freestand-logo.png`, `freestand-logo-white.png` | freestand.in footer wordmark: https://framerusercontent.com/images/hYY5CwrTYzubsPJ4sILBcdh4w.svg (recoloured navy #0E2A6B / white) | FreeStand's own mark |
 | `freestand-mark.png` | freestand.in header gift icon: https://framerusercontent.com/images/0J9Nzq9QZNhvI3xuWThOLe8w.png | FreeStand's own mark |
 
-## Product images
+## Product images (Gillette Fusion5, shave only)
 | File | Source | Notes |
 |---|---|---|
-| `guard-3in1-pack.png` | Amazon.in listing "Gillette Guard 3in1 Shaving Razor, 2 Cartridges + 1 Razor" (ASIN B0BWDNPP5V), image https://m.media-amazon.com/images/I/61wg-+QKQeL.jpg | White background removed with rembg (isnet-general-use), 1000x1000. P&G product photography. |
-| `guard-3in1-refill.png` | Amazon.in listing "Gillette Guard 3in1 Shaving Blades, 4 cartridges" (ASIN B0GJDXF2NM), image https://m.media-amazon.com/images/I/71XM7QHE0GL.jpg | Background removed. Used as the UGC reward (free refill pack). |
-| `guard-3in1-razor.png` | gillette.co.in Guard 3 product page: https://images.ctfassets.net/7tfi3razjgvb/.../Gillette-Guard-3-Shaving-Razor.png | Official transparent render. This is the Guard 3 razor (black/blue handle); the Guard 3in1 razor has a blue/teal handle. No standalone 3in1 razor render was available. |
-| `gillette-gel.png` | gillette.co.in, Gillette Series Sensitive Skin Shave Gel (80 g) page: https://www.gillette.co.in/en-in/products/shaving-gel-cream-and-aftershave/sensitive-skin-tube-shave-gel | Official transparent render. |
+| `fusion5-pack.png` | Flipkart listing "Gillette Fusion5 Razor for Men" (current India box), https://rukminim2.flixcart.com/image/1000/1000/xif0q/shaving-razor/g/q/h/fusion5-razor-for-men-1-gillette-original-imahr35xpn6jpyyt.jpeg | White background removed (flood fill), 1000x1000. P&G product photography. |
+| `fusion5-razor.png` | Flipkart listing "Gillette Fusion 5 Razor" blister shot, https://rukminim2.flixcart.com/image/1000/1000/xif0q/shaving-razor/s/g/j/fusion-5-razor-1-gillette-original-imah7rmsyvvx7zba.jpeg | Standalone razor cropped from the blister image, background removed. |
+| `fusion5-refill.png` | gillette.co.in Fusion manual razor blades page (4-count render) | Official transparent render. Older "Fusion" pack design; used as the UGC refill reward. |
+| `fusion-gel.png` | gillette.co.in Fusion Hydra Gel Sensitive Skin (75 ml) page | Official transparent render. |
 
 ## Photos (Pexels License)
 | File | Photo | Photographer |

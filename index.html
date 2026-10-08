@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gillette x FreeStand: Educate to Sample</title>
-<meta name="description" content="Interactive demo: how FreeStand turns Gillette India's first-shave education reel into qualified sampling, feedback and UGC.">
+<title>Gillette Fusion5 x FreeStand: Educate to Sample</title>
+<meta name="description" content="Interactive demo: how FreeStand turns Gillette India's first-shave education reel into qualified Fusion5 sampling, feedback and UGC.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Gillette x FreeStand: Educate to Sample">
 <meta property="og:description" content="Educate > Engage > Qualify > Sample > Feedback > UGC. A click-through demo for Gillette India.">
@@ -426,7 +426,7 @@ svg{display:block}
 .intro .logos img.g{height:30px}.intro .logos img.f{height:22px}.intro .logos span{color:#7F93B5;font-family:'Barlow';font-weight:600}
 .in-grid{flex:1;display:grid;grid-template-columns:1fr 330px;gap:40px;align-items:center}
 .in-foot{font-size:12px;color:#7F93B5;text-align:center}
-.intro h1{font-family:'Barlow',sans-serif;font-weight:800;font-size:54px;line-height:1.02;letter-spacing:-.5px}
+.intro h1{font-family:'Barlow',sans-serif;font-weight:800;font-size:68px;line-height:1.02;letter-spacing:-.5px}
 .intro h1 em{font-style:italic;font-weight:900;color:#A9C4EA}
 .intro p{font-size:16px;line-height:1.55;color:#CFDBEE;margin-top:18px;max-width:640px}
 .jr{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:26px}
@@ -1037,7 +1037,7 @@ const N = {
   landing: 41500, otp: 32800, completed: 28900, approved: 10000, delivered: 9720,
   feedback: 6410, ratingAvg: 4.6, intentYes: 58, intentMaybe: 31, intentNo: 11,
   creators: 1240, ugcViews: 8640000, reelsTagging: 1080,
-  mediaSpend: 750000, conquest: 82, pincodes: 1860, avgDays: 2.8, success: 97.2,
+  conquest: 82, pincodes: 1860, avgDays: 2.8, success: 97.2,
 };
 const PERSONA = { name: 'Rohan Kulkarni', first: 'Rohan', age: 19, mobile: '+91 98226 34417', pin: '411007', area: 'Ganeshkhind, Pune', id: 'GLT-FS-28417' };
 
@@ -1162,7 +1162,7 @@ function feedApp() {
       <img class="pimg" src="${A('sample-ad-1x1')}" alt="">
       <div class="pcta" data-tap><span>Claim Free Sample</span>${I.chevR}</div>
       <div class="pact">${I.heart}${I.comment}${I.send}<span style="margin-left:auto">${I.bookmark}</span></div>
-      <div class="ptxt"><b>8,214 likes</b><br><b>gilletteindia</b> You learnt the technique. Now try it free. Guard 3-in-1 kits for first-time shavers.</div>
+      <div class="ptxt"><b>8,214 likes</b><br><b>gilletteindia</b> You learnt the technique. Now try it free. Gillette Fusion5 kits for first-time shavers.</div>
     </div>
     <div class="tabbar light">${I.home}${I.search}${I.plusSq}${I.reels}<img src="${A('rohan-avatar')}" alt=""></div>
     <div class="homebar dark"></div>
@@ -1260,15 +1260,15 @@ Expected: Thursday${tmL('4:32 PM')}<div class="ft">Gillette India · Powered by 
   [3, `<div class="dchip"><span>SUNDAY</span></div>`],
   [3, `<div class="m in"><div class="b">Hi Rohan, how was your first Gillette shave?${tmL('10:00 AM')}</div></div><div class="qr" data-tap><div class="sel">${I.reply}Loved it</div><div>${I.reply}It was okay</div><div>${I.reply}Had issues</div></div>`],
   [3, `<div class="m out"><div class="b">Loved it${tmL('10:03 AM', 1)}</div></div>`],
-  [4, `<div class="m in"><div class="b">Good to hear. How would you rate the Guard 3-in-1, from 1 to 5?${tmL('10:03 AM')}<div class="btns"><div>${I.list}Choose rating</div></div></div></div>`],
+  [4, `<div class="m in"><div class="b">Good to hear. How would you rate the Fusion5, from 1 to 5?${tmL('10:03 AM')}<div class="btns"><div>${I.list}Choose rating</div></div></div></div>`],
   [4, `<div class="m out"><div class="b">5 - Excellent${tmL('10:04 AM', 1)}</div></div>`],
-  [4, `<div class="m in"><div class="b">Will you buy the Guard 3-in-1?${tmL('10:04 AM')}</div></div><div class="qr" data-tap><div class="sel">${I.reply}Yes</div><div>${I.reply}Maybe</div><div>${I.reply}No</div></div>`],
+  [4, `<div class="m in"><div class="b">Will you buy the Fusion5?${tmL('10:04 AM')}</div></div><div class="qr" data-tap><div class="sel">${I.reply}Yes</div><div>${I.reply}Maybe</div><div>${I.reply}No</div></div>`],
   [4, `<div class="m out"><div class="b">Yes${tmL('10:04 AM', 1)}</div></div>`],
-  [5, `<div class="m in"><div class="b tpl"><div class="img"><img src="${A('guard-3in1-pack')}" alt="" style="background:#EAF2FB"></div>Your next Guard 3-in-1 is 10 minutes away. Use code FIRSTSHAVE15 for 15% off your first order on quick commerce.${tmL('10:05 AM')}<div class="btns"><div>${I.ext}Buy in 10 minutes</div></div></div></div>`],
+  [5, `<div class="m in"><div class="b tpl"><div class="img"><img src="${A('fusion5-pack')}" alt="" style="background:#EAF2FB"></div>Your next Fusion5 is 10 minutes away. Use code FIRSTSHAVE15 for 15% off your first order on quick commerce.${tmL('10:05 AM')}<div class="btns"><div>${I.ext}Buy in 10 minutes</div></div></div></div>`],
   [5, `<div class="m out"><div class="b"><div class="photo"><img src="${A('unboxing')}" alt=""></div>First shave done. Zero cuts.${tmL('10:09 AM', 1)}</div></div>`],
-  [6, `<div class="m in"><div class="b tpl"><div class="img"><img src="${A('guard-3in1-refill')}" alt="" style="background:#EAF2FB"></div>Share your first-shave story, get a free refill pack.
+  [6, `<div class="m in"><div class="b tpl"><div class="img"><img src="${A('fusion5-refill')}" alt="" style="background:#EAF2FB"></div>Share your first-shave story, get a free refill pack.
 
-Post a Reel about your first shave, tag @gilletteindia and use #FirstShave. We will send a Guard 3-in-1 refill pack to your door.${tmL('10:12 AM')}</div></div><div class="qr" data-tap><div class="sel">${I.reply}I'm in</div><div>${I.reply}Maybe later</div></div>`],
+Post a Reel about your first shave, tag @gilletteindia and use #FirstShave. We will send a Fusion5 refill pack to your door.${tmL('10:12 AM')}</div></div><div class="qr" data-tap><div class="sel">${I.reply}I'm in</div><div>${I.reply}Maybe later</div></div>`],
   [6, `<div class="m out"><div class="b">I'm in${tmL('10:13 AM', 1)}</div></div>`],
 ];
 function waApp(s) {
@@ -1370,11 +1370,11 @@ function panelStory(s, prev) {
     3: [I.gift, 'Ad 2: free sample, only for that audience', 'Campaign 2 · Thursday. A separate ad, targeted to the custom audience and nobody else.', s.s3 === 2 ? 'SHOWN TO ROHAN' : 'LAUNCHED', '#4CC17A'],
   }[st];
   let bottom = '';
-  if (st === 1) bottom = `${mcard('Campaign 1 · Gillette First Shave Education', ['ACTIVE', 'ok'], [['Goal', 'ThruPlay (video views)'], ['Budget', '₹1,50,000 / day · 14 days'], ['Who', 'Men 18-24 · India Tier 1 + 2'], ['Est. reach', '1 Cr - 1.4 Cr'], ['Interests', 'Grooming, fitness, college life, cricket']])}
+  if (st === 1) bottom = `${mcard('Campaign 1 · Gillette First Shave Education', ['ACTIVE', 'ok'], [['Goal', 'ThruPlay (video views)'], ['Format', 'Reel · 2:30 how-to video'], ['Who', 'Men 18-24 · India Tier 1 + 2'], ['Est. reach', '1 Cr - 1.4 Cr'], ['Interests', 'Grooming, fitness, college life, cricket']])}
       <div class="callout">${I.playO}<div><b>No offer in Ad 1. It only teaches.</b><span>Who watches and reacts is what we capture next.</span></div></div>`;
   if (st === 2) bottom = `<div class="sigs">${SIG.map(g => `<div class="card sg" id="sg-${g.k}"><div class="sg-i">${g.ic}</div><div><b>${g.t}</b><span>${inr(g.n)}</span></div><div class="tick">${I.check}</div><div class="sg-r"></div></div>`).join('')}</div>
       ${mcard('Custom audience · Gillette Engaged Learners - 30 days', ['UPDATING', 'blue'], [['Built from', 'Ad 1 viewers 75%+ · Instagram engagement'], ['Keeps people for', '30 days']])}`;
-  if (st === 3) bottom = `${mcard('Campaign 2 · Gillette First Shave Free Sample', ['ACTIVE', 'ok'], [['Audience', 'Engaged Learners ONLY'], ['Advantage+', 'Off (no expansion)'], ['Excludes', 'People who already claimed'], ['Budget', '₹50,000 / day · 15 days']])}
+  if (st === 3) bottom = `${mcard('Campaign 2 · Gillette First Shave Free Sample', ['ACTIVE', 'ok'], [['Audience', 'Engaged Learners ONLY'], ['Advantage+', 'Off (no expansion)'], ['Excludes', 'People who already claimed'], ['Placements', 'Feed + Reels · 1:1 and 9:16']])}
       <div class="callout">${I.target}<div><b>Only people who reacted to Ad 1 see Ad 2.</b><span>Zero spend on the ${lakh(N.passive)} who scrolled past.</span></div></div>`;
   return `${ph(head[0], '', head[1], head[2], head[3], head[4])}
     <div class="pb story">${beats(st)}${viz(s)}${bottom}</div>`;
@@ -1423,11 +1423,11 @@ function introScreen() {
     ['Shave It Forward', 'The data launches the next campaign'],
   ];
   return `<div class="intro">
-    <div class="ctop"><div class="eb">Gillette x FreeStand · Educate to Sample</div><div class="logos"><img class="g" src="${A('gillette-logo-white')}" alt=""><span>x</span><img class="f" src="${A('freestand-logo-white')}" alt=""></div></div>
+    <div class="ctop"><div class="eb">Gillette Fusion5 x FreeStand · Educate to Sample</div><div class="logos"><img class="g" src="${A('gillette-logo-white')}" alt=""><span>x</span><img class="f" src="${A('freestand-logo-white')}" alt=""></div></div>
     <div class="in-grid">
       <div>
-        <h1 class="fi">Teach first.<br><em>Sample only the people who learnt.</em></h1>
-        <p class="fi" style="animation-delay:.15s">Two separate ads. Ad 1 teaches young men how to shave. Meta remembers everyone who reacts. Days later, Ad 2 offers a free sample to that audience only. FreeStand then verifies, ships, collects feedback and turns the data into the next campaign.</p>
+        <h1 class="fi">Teach the shave.<br><em>Sample the learners.</em></h1>
+        <p class="fi" style="animation-delay:.15s"><b style="color:#fff">Gillette Fusion5 · shave only.</b> Two separate ads. Ad 1 teaches young men how to shave. Meta remembers everyone who reacts. Days later, Ad 2 offers a free Fusion5 to that audience only. FreeStand then verifies, ships, collects feedback and turns the data into the next campaign.</p>
         <div class="jr">${J.map(([t, d], i) => `<div class="fi" style="animation-delay:${.3 + i * .07}s"><span class="jn">${i + 1}</span><b>${t}</b><small>${d}</small></div>`).join('')}</div>
       </div>
       <div class="rohan-card fi" style="animation-delay:.5s">
@@ -1451,7 +1451,7 @@ const ELOG = [
   { e: 2, pts: 10, t: 'Reachable on WhatsApp', src: 'Delivery updates + feedback can reach him' },
   { e: 3, pts: 15, t: 'Shaves 2-3x/week = high usage', src: 'Q1 · How often do you shave?' },
   { e: 4, pts: 30, t: 'Trimmer user = conquest', src: 'Q2 · Non-Gillette user, priority queue' },
-  { e: 5, pts: 5, t: 'Worried about cuts = Guard fit', src: 'Q3 · Safety comb message in kit insert' },
+  { e: 5, pts: 5, t: 'Worried about cuts = Fusion5 fit', src: 'Q3 · 5-blade comfort message in kit insert' },
   { e: 6, pts: 5, t: 'Reel recall confirmed', src: 'Q4 · "Yes, learnt a lot"' },
   { e: 7, chk: 1, t: 'Pincode 411007 serviceable', src: 'Geo-coded: Ganeshkhind, Pune · 3-day lane' },
   { e: 8, chk: 1, t: 'One sample per household', src: 'Address fingerprint is new' },
@@ -1530,14 +1530,14 @@ function afterDelivery(root, s) {
 function panelFeedback(s, prev) {
   const fresh = !prev || prev.panel !== 'feedback';
   const f = s.f;
-  const words = [['smooth', 30], ['no cuts', 27], ['easy', 24], ['comfortable', 19], ['safety comb', 16], ['quick', 15], ['gentle', 14], ['close shave', 13], ['beginner-friendly', 12], ['no irritation', 12]];
+  const words = [['smooth', 30], ['no cuts', 27], ['easy', 24], ['comfortable', 19], ['5 blades', 16], ['quick', 15], ['gentle', 14], ['close shave', 13], ['beginner-friendly', 12], ['no irritation', 12]];
   const kp = (v, fmt, label, hl, d, extra = '') => `<div class="card kpi ${fresh ? 'fi' : ''} ${hl ? 'hl' : ''}" style="animation-delay:${d}s"><div class="v" style="display:flex;align-items:center;gap:8px"><span data-count="${v}" ${fmt ? `data-fmt="${fmt}"` : ''} ${fresh ? '' : `data-from="${v}"`}>0</span>${extra}</div><div class="k">${label}</div></div>`;
   return `${ph(I.msg, '', 'Feedback loop on WhatsApp', 'Auto-triggered 3 days after delivery · 3 taps, no forms', 'LIVE')}
   <div class="pb" style="display:flex;flex-direction:column;gap:12px">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
       ${kp(66, 'pct', `Response rate · ${inr(N.feedback)} of ${inr(N.delivered)}`, f === 1, 0)}
       ${kp(4.6, 'dec1', 'Average rating', f === 2, .08, starRow(5))}
-      ${kp(58, 'pct', 'Will buy Guard 3-in-1', f === 2, .16)}
+      ${kp(58, 'pct', 'Will buy Fusion5', f === 2, .16)}
       ${kp(2140, '', 'Quick-commerce link taps', f === 3, .24)}
     </div>
     <div class="card ${fresh ? 'fi' : ''} ${f === 1 ? 'hl' : ''}" style="padding:12px 14px;animation-delay:.2s"><div class="lbl" style="margin-bottom:8px">First-shave reaction</div>
@@ -1655,9 +1655,9 @@ function closingScreen() {
     <div class="lside">
       <div class="eb" style="color:#7F93B5">Loop 1 results</div>
       <div class="ckpi" style="margin-top:12px">
-        <div class="fi" style="animation-delay:.5s"><b class="cv">₹<span data-count="${N.mediaSpend / N.approved}">0</span></b><span class="cl">Media cost per qualified sample</span><span class="cs">₹7.5L sample-ad media / ${inr(N.approved)} approved</span></div>
+        <div class="fi" style="animation-delay:.5s"><b class="cv"><span data-count="3412">0</span></b><span class="cl">Bad claims blocked</span><span class="cs">Duplicates, under-18, out-of-area</span></div>
         <div class="fi" style="animation-delay:.6s"><b class="cv"><span data-count="${N.conquest}" data-fmt="pct">0</span></b><span class="cl">Conquest share</span><span class="cs">Kits to non-Gillette users</span></div>
-        <div class="fi" style="animation-delay:.7s"><b class="cv"><span data-count="${N.intentYes}" data-fmt="pct">0</span></b><span class="cl">Purchase intent</span><span class="cs">Will buy Guard 3-in-1</span></div>
+        <div class="fi" style="animation-delay:.7s"><b class="cv"><span data-count="${N.intentYes}" data-fmt="pct">0</span></b><span class="cl">Purchase intent</span><span class="cs">Will buy Fusion5</span></div>
         <div class="fi" style="animation-delay:.8s"><b class="cv"><span data-count="${N.creators}">0</span></b><span class="cl">UGC pieces</span><span class="cs">${lakh(N.ugcViews)} organic views</span></div>
       </div>
       <div class="keeps fi" style="animation-delay:1s">
@@ -1710,7 +1710,7 @@ function dashOverview() {
     <div class="dcard"><div class="dch">First-party data collected <span class="dpill">${inr(N.completed)} profiles · 14 fields</span></div>
       <div class="dfields">${fields.map(([f, src, p], i) => `<div><span class="df">${f}</span><span class="ds">${src}</span><span class="dbar2"><i data-w="${p}%" style="background:${p === 100 ? DC.blue : p > 50 ? DC.sky : DC.pale};transition-delay:${i * .04}s"></i></span><b>${p}%</b></div>`).join('')}</div></div>
     <div class="dcard"><div class="dch">Key insights <span class="dpill purple">32 analyses</span></div>
-      ${['Trimmer users show the highest purchase intent after sampling: 64%', '75%+ viewers of Ad 1 claim at 2.3x the rate of people who only followed', '"Cuts and nicks" worriers rate the Guard 3-in-1 4.8 / 5: lead with the safety comb'].map(t => `<div class="dins">${I.check}<span>${t}</span></div>`).join('')}
+      ${['Trimmer users show the highest purchase intent after sampling: 64%', '75%+ viewers of Ad 1 claim at 2.3x the rate of people who only followed', '"Cuts and nicks" worriers rate the Fusion5 4.8 / 5: lead with 5-blade comfort'].map(t => `<div class="dins">${I.check}<span>${t}</span></div>`).join('')}
       <div class="dsub">Top performers <small>(purchase intent)</small></div>
       ${[['Trimmer only + worried about cuts', '71.2%'], ['Trimmer only + shaves 2-3x/week', '66.8%'], ['Barber + learnt a lot from reel', '61.4%']].map(([l, v]) => `<div class="dperf up"><span>${l}</span><b>${v}</b></div>`).join('')}
       <div class="dsub">Low performers</div>
@@ -1763,7 +1763,7 @@ function dashViz() {
     ['Q3) Biggest shaving worry?', [['Cuts and nicks', 54, DC.blue], ['Irritation', 31, DC.sky], ['Takes too long', 15, DC.pale]]],
     ['Q4) Did our shaving tips reel help?', [['Yes, learnt a lot', 68, DC.navy], ['Somewhat', 24, DC.sky], ["Didn't watch", 8, DC.grey]]],
     ['How was your first Gillette shave?', [['Loved it', 71, DC.green], ['It was okay', 22, DC.pale], ['Had issues', 7, DC.coral]]],
-    ['Will you buy Guard 3-in-1?', [['Yes', 58, DC.navy], ['Maybe', 31, DC.sky], ['No', 11, DC.grey]]],
+    ['Will you buy Fusion5?', [['Yes', 58, DC.navy], ['Maybe', 31, DC.sky], ['No', 11, DC.grey]]],
   ];
   return `<div class="dviz">${cards.map(([t, sl], i) => `<div class="dcard fi" style="animation-delay:${i * .07}s"><div class="dch" style="font-size:12.5px">${t}</div>
     <div class="dpc">${dPie(sl.map(([l, p, c]) => ({ l, p, c })), 150)}<div class="dlegs">${sl.map(([l, p, c]) => `<div><i style="background:${c}"></i>${l} <b>${p}%</b></div>`).join('')}</div></div></div>`).join('')}</div>`;
@@ -1771,10 +1771,10 @@ function dashViz() {
 function dashStats() {
   const rows = [['Trimmer only', 64.1, 3302], ['Barber', 53.8, 1346], ['Another razor brand', 41.2, 1154], ['Gillette', 56.0, 608]];
   return `<div class="dsubtabs">${[['2-Way Analysis', 1], ['3-Way Analysis'], ['Segmentation'], ['Barrier Analysis', 0, 'Coming soon'], ['Regression', 0, 'Coming soon']].map(([l, on, soon]) => `<span class="${on ? 'on' : ''}">${l}${soon ? `<em>${soon}</em>` : ''}</span>`).join('')}</div>
-  <div class="dinfo"><b>i</b><div><strong>2-Way Interaction Analysis</strong><span>How two answers together affect purchase intent. Here: does what you use today change whether you will buy Guard 3-in-1?</span></div></div>
+  <div class="dinfo"><b>i</b><div><strong>2-Way Interaction Analysis</strong><span>How two answers together affect purchase intent. Here: does what you use today change whether you will buy Fusion5?</span></div></div>
   <div class="dg2" style="grid-template-columns:1fr 1fr">
     <div class="dcard"><div class="dch">Select variables</div>
-      <div class="dsel"><div><small>Variable 1 (rows)</small><span>What do you use today?</span></div><div><small>Variable 2 (columns)</small><span>Will you buy Guard 3-in-1?</span></div></div>
+      <div class="dsel"><div><small>Variable 1 (rows)</small><span>What do you use today?</span></div><div><small>Variable 2 (columns)</small><span>Will you buy Fusion5?</span></div></div>
       <div class="dstats"><div><small>Sample size</small><b>${inr(N.feedback)}</b></div><div><small>Overall intent</small><b>58.0%</b></div><div><small>Chi-square</small><b>p &lt; 0.001</b></div><div><small>Cramér's V</small><b>0.18</b></div></div>
       <div class="dsub" style="margin-top:12px">Purchase intent by current routine</div>
       ${rows.map(([l, v, n], i) => `<div class="dbarrow"><span>${l} <small>n=${inr(n)}</small></span><span class="dbar2"><i data-w="${v}%" style="background:${i === 0 ? DC.blue : DC.sky};transition-delay:${i * .1}s"></i></span><b>${v.toFixed(1)}%</b></div>`).join('')}
@@ -1785,7 +1785,7 @@ function dashStats() {
     </div>
     <div class="dcard"><div class="dch">Key insights</div>
       <div class="dtext"><b>Analysis summary</b>Trimmer users are the most convertible group: 64% plan to buy after one free kit, 10 points above the next segment. Their reel recall is also highest (74% "learnt a lot").
-      <b>Recommendations</b>1. Seed the next lookalike from trimmer-user promoters.<br>2. Lead creative with the safety comb for the "cuts and nicks" segment.<br>3. Give "Another razor brand" users a comparison message, not a tips reel.</div>
+      <b>Recommendations</b>1. Seed the next lookalike from trimmer-user promoters.<br>2. Lead creative with 5-blade comfort for the "cuts and nicks" segment.<br>3. Give "Another razor brand" users a comparison message, not a tips reel.</div>
       <div class="dtests"><div><b>Chi-square test</b><span>χ² = 212.4 · df 3</span><small>Answers are not independent</small></div><div><b>Odds ratio</b><span>1.84 (trimmer vs rest)</span><small>95% CI 1.66 - 2.04</small></div></div>
       <div class="dnext">${I.sparkle}<div><small>Recommended next step</small><b>Build a lookalike from 3,302 trimmer-user promoters</b><span>FreeStand can turn this into a new campaign with one click.</span></div></div>
     </div>
@@ -2030,7 +2030,7 @@ window.addEventListener('resize', fit);
 
 /* ═══════════════ loader: preload, then start ═══════════════ */
 const PRELOAD = ['sample-ad-9x16', 'sample-ad-1x1', 'landing-hero', 'reel-cover', 'sample-kit', 'delivery', 'unboxing', 'ugc-1', 'ugc-2', 'ugc-3', 'ugc-4', 'ugc-5',
-  'guard-3in1-pack', 'guard-3in1-refill', 'rohan-avatar', 'gillette-ig-dp', 'gillette-logo-white', 'freestand-logo', 'freestand-logo-white',
+  'fusion5-pack', 'fusion5-refill', 'rohan-avatar', 'gillette-ig-dp', 'gillette-logo-white', 'freestand-logo', 'freestand-logo-white',
   'ugc-photo-1', 'avatar-1', 'avatar-2', 'avatar-3', 'avatar-4', 'avatar-5', 'avatar-6'].map(A);
 function boot() {
   let done = 0;
