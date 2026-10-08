@@ -282,6 +282,27 @@ svg{display:block}
 .two .fld{flex:1}
 .inp.lock{background:#F4F6F9;color:#55617A}
 
+/* WhatsApp OTP notification + geo map on the sampling site */
+.wanotif{position:absolute;left:8px;right:8px;top:44px;z-index:20;background:rgba(245,245,247,.97);border-radius:16px;padding:10px 12px;display:flex;gap:10px;align-items:center;box-shadow:0 10px 26px rgba(0,0,0,.22);animation:notif 4.2s .35s both}
+.wanotif .wi{width:30px;height:30px;border-radius:8px;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wanotif .wi svg{width:18px;height:18px}
+.wanotif b{display:block;font-size:12px;color:#111}
+.wanotif span{font-size:12px;color:#333;line-height:1.3}
+.wanotif small{margin-left:auto;align-self:flex-start;font-size:10.5px;color:#888}
+@keyframes notif{0%{opacity:0;transform:translateY(-30px)}10%,78%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-30px)}}
+.geo{margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #D5DCE6}
+.map{position:relative;height:104px;background:#E9EEF2}
+.map .road{position:absolute;background:#fff;box-shadow:0 0 0 1px #DCE2E8}
+.map .r1{left:0;right:0;top:46px;height:8px;transform:rotate(-8deg)}
+.map .r2{top:0;bottom:0;left:120px;width:7px;transform:rotate(14deg)}
+.map .r3{left:0;right:0;top:82px;height:5px}
+.map .park{position:absolute;left:190px;top:12px;width:70px;height:34px;border-radius:10px;background:#CFE8D2}
+.map .mpin{position:absolute;left:50%;top:22px;margin-left:-14px;width:28px;height:28px;color:#E53935;animation:popIn .5s .6s both}
+.map .mpin svg{width:28px;height:28px;fill:#E53935;stroke:#fff}
+.geo-b{padding:9px 12px;display:flex;flex-direction:column;gap:2px}
+.geo-b b{font-size:13px;color:var(--ink)}
+.geo-b>span{font-size:11px;color:var(--muted)}
+
 /* WhatsApp */
 .wa{background:var(--wa-bg);color:#111}
 .wah{position:absolute;top:0;left:0;right:0;height:104px;background:var(--wa-head);padding:52px 10px 0 6px;display:flex;align-items:center;gap:8px;color:#fff;z-index:5}
@@ -725,16 +746,15 @@ const STAGES = [
   { step: 2, label: 'Rohan likes, saves, shares, follows', app: 'reels', ad: 'edu', anim: 'engage', panel: 'story', aud: 2, side: 'Meta · step 2 of the setup' },
   { step: 3, label: 'Retargeted with the free sample ad', app: 'reels', ad: 'sample', panel: 'story', side: 'Meta · step 3 of the setup' },
   { step: 4, label: 'FreeStand sampling page', app: 'web', page: 'landing', panel: 'engine', e: 0, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Mobile number + OTP', app: 'web', page: 'otp', panel: 'engine', e: 1, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Name + age (18+ gate)', app: 'web', page: 'profile', panel: 'engine', e: 2, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Pincode serviceability', app: 'web', page: 'pincode', panel: 'engine', e: 3, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Brand question 1: shaving frequency', app: 'web', page: 'q1', panel: 'engine', e: 4, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Brand question 2: current routine', app: 'web', page: 'q2', panel: 'engine', e: 5, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Brand question 3: biggest worry', app: 'web', page: 'q3', panel: 'engine', e: 6, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Brand question 4: education recall', app: 'web', page: 'q4', panel: 'engine', e: 7, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'You qualify', app: 'web', page: 'qualify', panel: 'engine', e: 8, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Address + WhatsApp consent', app: 'web', page: 'address', panel: 'engine', e: 9, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Order confirmed', app: 'web', page: 'confirmed', panel: 'engine', e: 10, side: 'FreeStand qualification engine' },
+  { step: 4, label: 'Name, email + mobile', app: 'web', page: 'details', panel: 'engine', e: 1, side: 'FreeStand qualification engine' },
+  { step: 4, label: 'OTP on WhatsApp', app: 'web', page: 'otp', panel: 'engine', e: 2, side: 'FreeStand qualification engine' },
+  { step: 4, label: 'Brand question 1: shaving frequency', app: 'web', page: 'q1', panel: 'engine', e: 3, side: 'FreeStand qualification engine' },
+  { step: 4, label: 'Brand question 2: current routine', app: 'web', page: 'q2', panel: 'engine', e: 4, side: 'FreeStand qualification engine' },
+  { step: 4, label: 'Brand question 3: biggest worry', app: 'web', page: 'q3', panel: 'engine', e: 5, side: 'FreeStand qualification engine' },
+  { step: 4, label: 'Brand question 4: education recall', app: 'web', page: 'q4', panel: 'engine', e: 6, side: 'FreeStand qualification engine' },
+  { step: 4, label: 'Pincode verified + geo-coded', app: 'web', page: 'pincode', panel: 'engine', e: 7, side: 'FreeStand qualification engine' },
+  { step: 4, label: 'Delivery address + WhatsApp consent', app: 'web', page: 'address', panel: 'engine', e: 8, side: 'FreeStand qualification engine' },
+  { step: 4, label: 'Sample claimed', app: 'web', page: 'claimed', panel: 'engine', e: 9, side: 'FreeStand qualification engine' },
   { step: 5, label: 'Dispatched with tracking', app: 'wa', wa: 1, panel: 'delivery', d: 1, side: 'FreeStand fulfilment' },
   { step: 5, label: 'Delivered in 3 days', app: 'wa', wa: 2, panel: 'delivery', d: 2, side: 'FreeStand fulfilment' },
   { step: 6, label: 'Feedback triggered 3 days later', app: 'wa', wa: 3, panel: 'feedback', f: 1, side: 'FreeStand feedback loop' },
@@ -806,24 +826,19 @@ const PAGES = {
     <div class="trust"><span>${I.shield}OTP verified</span><span>${I.truck}Free delivery</span><span>${I.zap}2 minutes</span></div>
     <div class="btn" data-tap>Claim your free sample ${I.arrowR}</div>
     ${pwd}` },
-  otp: { prog: 16, html: `
-    <h2>Verify your mobile number</h2><div class="sub">We send a one-time password. One kit per verified number.</div>
-    <div class="fld"><label>Mobile number</label><div class="inp"><span class="pre">+91</span>98226 34417<span class="ok">${I.check}</span></div></div>
-    <div class="fld"><label>Enter the 6-digit OTP sent by SMS</label>
-      <div class="otp">${'482916'.split('').map((d, i) => `<div class="f" style="animation-delay:${.25 + i * .14}s">${d}</div>`).join('')}</div></div>
-    <div class="okline fi" style="animation-delay:1.2s">${I.shield}Number verified</div>
-    <div class="btn" data-tap>Continue ${I.arrowR}</div>${pwd}` },
-  profile: { prog: 32, html: `
-    <h2>Tell us about you</h2><div class="sub">This kit is for first-time shavers aged 18 and above.</div>
+  details: { prog: 12, html: `
+    <h2>Claim your free kit</h2><div class="sub">Takes under 2 minutes. One kit per person.</div>
     <div class="fld"><label>Full name</label><div class="inp">Rohan Kulkarni</div></div>
-    <div class="fld"><label>Date of birth</label><div class="inp focus">14 / 03 / 2007<span class="ok">${I.check}</span></div></div>
-    <div class="okline">${I.check}Age 19. You are eligible.</div>
-    <div class="btn" data-tap>Continue ${I.arrowR}</div>${pwd}` },
-  pincode: { prog: 46, html: `
-    <h2>Can we deliver to you?</h2><div class="sub">Enter your pincode to check free delivery.</div>
-    <div class="fld"><label>Pincode</label><div class="inp focus">411007<span class="ok">${I.check}</span></div></div>
-    <div class="okcard"><div class="c">${I.check}</div><div><b>We deliver to Ganeshkhind, Pune</b><span>Free delivery in about 3 days</span></div></div>
-    <div class="btn" data-tap>Continue ${I.arrowR}</div>${pwd}` },
+    <div class="fld"><label>Email</label><div class="inp">rohan.kulkarni@email.com</div></div>
+    <div class="fld"><label>Mobile number</label><div class="inp focus"><span class="pre">+91</span>98226 34417<span class="ok" style="color:#25D366">${I.whatsapp}</span></div></div>
+    <div class="consent" style="margin-top:12px"><span class="bx" style="animation-delay:.3s">${I.check}</span>I am 18 or older</div>
+    <div class="btn" data-tap>${I.whatsapp}Send OTP on WhatsApp</div>${pwd}` },
+  otp: { prog: 24, html: `
+    <h2>Enter the code from WhatsApp</h2><div class="sub">We sent a 6-digit code to <b style="color:var(--ink)">+91 98226 34417</b> on WhatsApp.</div>
+    <div class="otp" style="margin-top:22px">${'482916'.split('').map((d, i) => `<div class="f" style="animation-delay:${1.5 + i * .14}s">${d}</div>`).join('')}</div>
+    <div class="okline fi" style="animation-delay:2.5s">${I.shield}Number verified on WhatsApp</div>
+    <div class="fine fi" style="margin-top:10px;text-align:left;animation-delay:.2s">Didn't get it? <b style="color:var(--blue)">Resend in 0:24</b></div>
+    <div class="btn" data-tap>Verify and continue ${I.arrowR}</div>${pwd}` },
 };
 const Q = [
   { q: 'How often do you shave?', o: ['Daily', '2-3 times a week', 'Weekly', 'Rarely'], s: 1 },
@@ -832,30 +847,31 @@ const Q = [
   { q: 'Did our shaving tips reel help?', o: ['Yes, learnt a lot', 'Somewhat', "Didn't watch"], s: 0 },
 ];
 Q.forEach((q, i) => {
-  PAGES['q' + (i + 1)] = { prog: 56 + i * 8, html: `
+  PAGES['q' + (i + 1)] = { prog: 36 + i * 10, html: `
     <div class="qn">Quick question ${i + 1} of 4</div><h2>${q.q}</h2>
     <div class="opts">${q.o.map((o, j) => `<div class="opt ${j === q.s ? 'sel' : ''}" ${j === q.s ? 'data-tap' : ''} style="${j === q.s ? 'transition-delay:.6s' : ''}"><span class="rd">${j === q.s ? I.check : ''}</span>${o}</div>`).join('')}</div>
     <div class="btn" style="opacity:.35;box-shadow:none">Next ${I.arrowR}</div>${pwd}` };
 });
 Object.assign(PAGES, {
-  qualify: { prog: 88, html: `
-    <div class="check">${I.check}</div>
-    <h2 class="center">You qualify, Rohan!</h2>
-    <div class="sub center">Your Gillette First Shave Kit is reserved.</div>
-    <img class="kitimg fi" style="animation-delay:.3s" src="${A('sample-kit')}" alt="">
-    <div class="sub center" style="font-size:12px">Guard 3-in-1 razor + mini shave gel</div>
-    <div class="btn" data-tap>Add delivery address ${I.arrowR}</div>${pwd}` },
-  address: { prog: 95, html: `
-    <h2>Where should we send it?</h2>
+  pincode: { prog: 80, html: `
+    <div class="okcard" style="margin-top:0;animation-delay:0s"><div class="c">${I.check}</div><div><b>You qualify, Rohan!</b><span>Now let's check delivery to your area.</span></div></div>
+    <h2 style="margin-top:16px">Your pincode</h2>
+    <div class="fld" style="margin-top:10px"><div class="inp focus">411007<span class="ok">${I.check}</span></div></div>
+    <div class="geo fi" style="animation-delay:.4s"><div class="map"><span class="road r1"></span><span class="road r2"></span><span class="road r3"></span><span class="park"></span><span class="mpin">${I.pin}</span></div>
+      <div class="geo-b"><b>Ganeshkhind, Pune, Maharashtra</b><span>Geo-coded 18.55°N, 73.82°E · Tier 1 · Serviceable</span><span class="okline" style="margin-top:4px;font-size:12px">${I.truck}Free delivery in about 3 days</span></div></div>
+    <div class="btn" data-tap>Continue ${I.arrowR}</div>${pwd}` },
+  address: { prog: 92, html: `
+    <h2>Delivery address</h2>
     <div class="fld"><label>Flat / house / hostel</label><div class="inp">Flat 12, Shree Apartments</div></div>
     <div class="fld"><label>Street / area</label><div class="inp">Aundh Road, Ganeshkhind</div></div>
-    <div class="two"><div class="fld"><label>City</label><div class="inp lock">Pune</div></div><div class="fld"><label>Pincode</label><div class="inp lock">411007</div></div></div>
+    <div class="two"><div class="fld"><label>City</label><div class="inp lock">Pune</div></div><div class="fld"><label>State</label><div class="inp lock">Maharashtra</div></div></div>
+    <div class="fine" style="text-align:left;margin:6px 0 0">City and state auto-filled from pincode 411007</div>
     <div class="consent"><span class="bx">${I.check}</span>Send me order updates and shaving tips from Gillette on WhatsApp</div>
-    <div class="btn" data-tap>Confirm my free kit ${I.arrowR}</div>${pwd}` },
-  confirmed: { prog: 100, html: `
+    <div class="btn" data-tap>Claim my free sample ${I.arrowR}</div>${pwd}` },
+  claimed: { prog: 100, html: `
     <div class="check">${I.check}</div>
-    <h2 class="center">Order confirmed</h2>
-    <div class="sub center">Your First Shave Kit ships today. Updates will come on WhatsApp.</div>
+    <h2 class="center">Sample claimed!</h2>
+    <div class="sub center">Your Gillette First Shave Kit ships today. Updates will come on WhatsApp.</div>
     <div class="idcard"><div><small>Sample ID</small><b>GLT-FS-28417</b></div><div style="text-align:right"><small>Arriving</small><b style="font-family:inherit;font-size:14px">in 3 days</b></div></div>
     <img class="kitimg" style="width:150px;margin-top:12px" src="${A('sample-kit')}" alt="">
     <div class="btn navy" data-tap>${I.whatsapp}Get updates on WhatsApp</div>${pwd}` },
@@ -870,6 +886,7 @@ function webApp(s, animate) {
       <div class="lprog"><i style="width:${pg.prog}%"></i></div>`}
       <div class="pin">${pg.html}</div>
     </div>
+    ${s.page === 'otp' ? `<div class="wanotif"><span class="wi">${I.whatsapp}</span><div><b>WhatsApp · Gillette India</b><span>482916 is your verification code. Do not share it.</span></div><small>now</small></div>` : ''}
     <div class="homebar dark"></div>
   </div>`;
 }
@@ -1070,41 +1087,42 @@ function introScreen() {
 /* qualification engine */
 const ELOG = [
   { e: 0, pts: 20, t: 'Engaged with education ad', src: 'Arrived from "Gillette Engaged Learners - 30 days"' },
-  { e: 1, chk: 1, t: 'Mobile verified by OTP', src: '+91 98226 34417' },
-  { e: 1, chk: 1, t: 'Not a duplicate', src: 'Number and device not seen in any earlier claim' },
-  { e: 2, pts: 10, t: 'Age 19 = core first-shave cohort (18-24)', src: 'Date of birth, 18+ gate passed' },
-  { e: 3, chk: 1, t: 'Pincode 411007 serviceable', src: 'Pune, Tier 1 · 3-day delivery lane' },
-  { e: 4, pts: 15, t: 'Shaves 2-3x/week = high usage potential', src: 'Q1 · How often do you shave?' },
-  { e: 5, pts: 30, t: 'Trimmer user = conquest opportunity', src: 'Q2 · Non-Gillette user, priority queue' },
-  { e: 6, pts: 5, t: 'Worried about cuts = Guard 3-in-1 fit', src: 'Q3 · Safety comb message in kit insert' },
-  { e: 7, pts: 5, t: 'Reel recall confirmed', src: 'Q4 · "Yes, learnt a lot"' },
-  { e: 9, chk: 1, t: 'One sample per household', src: 'Address fingerprint is new' },
-  { e: 9, chk: 1, t: 'WhatsApp opt-in captured', src: 'Consent stored for updates + feedback' },
-  { e: 10, chk: 1, t: 'Order GLT-FS-28417 sent to Pune fulfilment', src: 'Kit reserved from inventory' },
+  { e: 1, chk: 1, t: 'Not a duplicate', src: 'Mobile, email and device not seen in any earlier claim' },
+  { e: 1, chk: 1, t: '18+ confirmed', src: 'Self-declared at sign-up' },
+  { e: 2, chk: 1, t: 'Mobile verified by WhatsApp OTP', src: '+91 98226 34417' },
+  { e: 2, pts: 10, t: 'Reachable on WhatsApp', src: 'Delivery updates + feedback can reach him' },
+  { e: 3, pts: 15, t: 'Shaves 2-3x/week = high usage potential', src: 'Q1 · How often do you shave?' },
+  { e: 4, pts: 30, t: 'Trimmer user = conquest opportunity', src: 'Q2 · Non-Gillette user, priority queue' },
+  { e: 5, pts: 5, t: 'Worried about cuts = Guard 3-in-1 fit', src: 'Q3 · Safety comb message in kit insert' },
+  { e: 6, pts: 5, t: 'Reel recall confirmed', src: 'Q4 · "Yes, learnt a lot"' },
+  { e: 7, chk: 1, t: 'Pincode 411007 serviceable', src: 'Geo-coded to Ganeshkhind, Pune · Tier 1 · 3-day lane' },
+  { e: 8, chk: 1, t: 'One sample per household', src: 'Address fingerprint is new' },
+  { e: 8, chk: 1, t: 'WhatsApp opt-in captured', src: 'Consent stored for updates + feedback' },
+  { e: 9, chk: 1, t: 'Sample GLT-FS-28417 sent to Pune fulfilment', src: 'Kit reserved from inventory' },
 ];
 const scoreAt = e => ELOG.filter(l => l.e <= e && l.pts).reduce((a, l) => a + l.pts, 0);
 const RULES = [
-  { t: 'OTP-verified mobile', d: 'No OTP, no kit', at: 1 },
-  { t: 'Duplicate auto-reject', d: 'Number, device, address', at: 1 },
-  { t: '18+ only', d: 'Under-18 politely declined', at: 2 },
-  { t: 'Priority to non-Gillette users', d: 'Conquest first', at: 5 },
-  { t: 'One sample per household', d: 'Address fingerprint', at: 9 },
+  { t: 'Duplicate auto-reject', d: 'Mobile, email, device, address', at: 1 },
+  { t: '18+ only', d: 'Under-18 politely declined', at: 1 },
+  { t: 'OTP-verified mobile', d: 'Code sent on WhatsApp', at: 2 },
+  { t: 'Priority to non-Gillette users', d: 'Conquest first', at: 4 },
+  { t: 'One sample per household', d: 'Address fingerprint', at: 8 },
 ];
 function panelEngine(s, prev) {
   const e = s.e, pe = prev && prev.panel === 'engine' ? prev.e : -1;
   const fresh = pe < 0;
-  const score = scoreAt(e), approved = e >= 8;
+  const score = scoreAt(e), approved = e >= 6;
   const rows = ELOG.filter(l => l.e <= e).slice().reverse();
   const C = 2 * Math.PI * 56;
   const prof = [
-    ['Name', e >= 2 ? 'Rohan Kulkarni' : null], ['Age', e >= 2 ? '19' : null], ['Mobile', e >= 1 ? '+91 98226 34417' : null],
-    ['Pincode', e >= 3 ? '411007 · Pune' : null], ['Uses', e >= 5 ? 'Trimmer only' : null], ['Source', 'Meta · Engaged Learners'],
+    ['Name', e >= 1 ? 'Rohan Kulkarni' : null], ['Email', e >= 1 ? 'rohan.kulkarni@email.com' : null], ['Mobile', e >= 2 ? '+91 98226 34417 ✓' : e >= 1 ? '+91 98226 34417' : null],
+    ['Uses', e >= 4 ? 'Trimmer only' : null], ['Pincode', e >= 7 ? '411007 · Ganeshkhind, Pune' : null], ['Source', 'Meta · Engaged Learners'],
   ];
   let ctx = '';
-  if (e === 2) ctx = `<div class="card ctx fi" style="animation-delay:.4s"><div class="lbl" style="color:var(--warn)">Branch · if under 18</div>
-    <div class="mini">"Thanks for your interest! This kit is for shavers aged 18 and above. We have saved some beginner shaving tips for you instead."</div>
+  if (e === 1) ctx = `<div class="card ctx fi" style="animation-delay:.4s"><div class="lbl" style="color:var(--warn)">Branch · if under 18</div>
+    <div class="mini">Leaves "I am 18 or older" unticked: "Thanks for your interest! This kit is for shavers aged 18 and above. Here are some beginner shaving tips instead."</div>
     <div style="font-size:11px;color:var(--muted);margin-top:6px">No kit, no data kept beyond the decline.</div></div>`;
-  else if (e >= 8) ctx = `<div class="card ctx ${pe < 8 ? 'fi' : ''}" style="animation-delay:.6s"><div class="lbl" style="color:var(--bad)">Rejected example</div>
+  else if (e >= 6) ctx = `<div class="card ctx ${pe < 6 ? 'fi' : ''}" style="animation-delay:.6s"><div class="lbl" style="color:var(--bad)">Rejected example</div>
     <div class="rej"><img src="${A('avatar-6')}" alt=""><div><div class="t">Vikram, 23 · Mumbai</div><div class="d">Score 25/100 · Not approved</div></div><span class="pill bad" style="margin-left:auto">REJECTED</span></div>
     <div class="rejrows"><div>Uses Gillette Mach3 daily<b>Low priority</b></div><div>Didn't watch the reel<b>+0</b></div><div>Same address as a claim last week<b>Duplicate</b></div></div></div>`;
   else ctx = `<div class="card ctx ${fresh ? 'fi' : ''}" style="animation-delay:.3s"><div class="lbl">Live campaign</div>
@@ -1120,9 +1138,9 @@ function panelEngine(s, prev) {
           <div class="num"><b id="scoreN">${scoreAt(pe)}</b><span>/ 100</span></div></div>
         <div class="st2">
           <div>${approved ? '<span class="pill ok fi">' + I.check + ' APPROVED</span>' : '<span class="pill warn">EVALUATING</span>'}</div>
-          <div>Approve at <b>60+</b> · Priority queue: <b>${e >= 5 ? 'Conquest' : 'Pending'}</b></div>
-          <div>Applicant: <b>${e >= 2 ? 'Rohan Kulkarni, 19' : 'Verifying...'}</b></div>
-          <div>Kits left today: <b>${inr(e >= 10 ? 1287 : 1288)}</b></div>
+          <div>Approve at <b>60+</b> · Priority queue: <b>${e >= 4 ? 'Conquest' : 'Pending'}</b></div>
+          <div>Applicant: <b>${e >= 1 ? 'Rohan Kulkarni' : 'New visitor'}</b></div>
+          <div>Kits left today: <b>${inr(e >= 9 ? 1287 : 1288)}</b></div>
         </div>
       </div></div>
       <div class="card log ${fresh ? 'fi' : ''}" style="animation-delay:.1s"><div class="card-h">Scoring log<span class="r">${rows.length} checks</span></div>
