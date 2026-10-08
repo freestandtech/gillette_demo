@@ -24,7 +24,7 @@
     box-shadow: 0 18px 40px rgba(0,0,0,0.35); text-align: center; color: #0A1F44; }
   .sticker img { width: 100%; display: block; }
   .sticker div { font-family: 'Barlow'; font-weight: 800; font-size: 26px; margin-top: 2px; letter-spacing: 0.02em; }
-  .chiptxt { position: absolute; left: 50%; top: 1180px; transform: translateX(-50%) rotate(-2deg); background: #fff; color: #111;
+  .chiptxt { position: absolute; left: 50%; top: 1380px; transform: translateX(-50%) rotate(-2deg); background: #fff; color: #111;
     font-family: 'Roboto'; font-weight: 700; font-size: 46px; padding: 14px 28px; border-radius: 14px; white-space: nowrap; }
   .progress { position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: rgba(255,255,255,0.3); }
   .progress i { display: block; height: 100%; width: 38%; background: #fff; }
@@ -56,11 +56,17 @@ const POSTS = {
        cap: 'Learnt from <span class="tag">@gilletteindia</span>\'s reel. First clean shave, zero cuts. <span class="h">#FirstShave #GilletteGuard3in1</span>',
        likes: '12.4K', comments: '318', shares: '1,204', tune: 'rohan.k_19 · Original audio' },
   2: { photo: '../ugc-photo-2.png', avatar: '../ugc-photo-2.png', handle: 'kabir.on.road', chip: 'tip 2 actually works',
-       cap: 'Followed the 3 tips from <span class="tag">@gilletteindia</span>. Light strokes, no irritation. <span class="h">#FirstShave #GilletteGuard3in1</span>',
+       cap: 'Followed the 3 tips from <span class="tag">@gilletteindia</span>. Light strokes, no irritation. <span class="h">#FirstShave</span>',
        likes: '8,906', comments: '214', shares: '640', tune: 'kabir.on.road · Original audio' },
-  3: { photo: '../ugc-photo-3.png', avatar: '../ugc-photo-3.png', handle: 'arjun.frames', chip: 'free sample to fresh face',
-       cap: 'Got the free kit, watched the <span class="tag">@gilletteindia</span> reel, nailed it in one go. <span class="h">#FirstShave #GilletteGuard3in1</span>',
+  3: { photo: '../ugc-photo-3.png', avatar: '../ugc-photo-3.png', handle: 'arjun.frames', chip: 'warm water first. trust me',
+       cap: 'Prep, lather, short strokes. The <span class="tag">@gilletteindia</span> reel made it look easy, and it was. <span class="h">#FirstShave</span>',
        likes: '5,731', comments: '142', shares: '389', tune: 'arjun.frames · Original audio' },
+  4: { photo: '../ugc-photo-4.png', avatar: '../ugc-photo-4.png', handle: 'dev.mehra', chip: 'clean jawline, zero cuts',
+       cap: 'From trimmer to razor in one weekend. Free kit from <span class="tag">@gilletteindia</span>. <span class="h">#FirstShave #GilletteGuard3in1</span>',
+       likes: '19.2K', comments: '401', shares: '1,866', tune: 'dev.mehra · Original audio' },
+  5: { photo: '../ugc-photo-5.png', avatar: '../ugc-photo-5.png', handle: 'ishaan.plays', chip: 'match-day clean shave',
+       cap: 'Clean shave before the game. Thanks <span class="tag">@gilletteindia</span> for the kit. <span class="h">#FirstShave</span>',
+       likes: '41.8K', comments: '1,120', shares: '3,402', tune: 'ishaan.plays · Original audio' },
 };
 const n = (location.search.match(/n=(\d)/) || [, '1'])[1];
 const p = POSTS[n];

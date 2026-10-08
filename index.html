@@ -535,7 +535,7 @@ svg{display:block}
 /* UGC wall */
 .wall{display:grid;grid-template-columns:repeat(3,1fr) 1fr;gap:10px;height:100%}
 .ugcT{position:relative;border-radius:12px;overflow:hidden;background:#EEF2F7}
-.ugcT img{width:100%;height:100%;object-fit:cover}
+.ugcT img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .ugcT .vw{position:absolute;left:8px;bottom:8px;display:flex;align-items:center;gap:5px;color:#fff;font-size:12px;font-weight:700;text-shadow:0 1px 3px rgba(0,0,0,.6)}
 .ugcT .vw svg{width:14px;height:14px}
 .ugcT .newb{position:absolute;top:8px;left:8px;background:var(--ok);color:#fff;font-size:10px;font-weight:800;padding:4px 8px;border-radius:999px;letter-spacing:.5px;animation:popIn .4s .3s both}
@@ -1443,11 +1443,11 @@ function panelUgc(s, prev) {
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
       ${[[N.creators, 'Creators', ''], [N.ugcViews, 'Total views', 'lakh'], [N.reelsTagging, 'Reels tagging @gilletteindia', ''], [N.creators, 'Refill packs sent', '']].map(([v, k, f], i) => `<div class="card kpi ${fresh ? 'fi' : ''}" style="animation-delay:${i * .08}s"><div class="v"><span data-count="${posted ? v : Math.round(v * .97)}" ${f ? `data-fmt="${f}"` : ''} data-from="${fresh ? 0 : Math.round(v * .97)}">0</span></div><div class="k">${k}</div></div>`).join('')}
     </div>
-    <div class="wall" style="grid-template-columns:repeat(3,1fr);flex:1;min-height:0">
+    <div class="wall" style="grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;flex:1;min-height:0">
       ${posted ? `<div class="ugcT fi"><img src="${A('ugc-1')}" alt=""><span class="newb">NEW · ROHAN</span><span class="vw">${I.playO}12.4K</span></div>`
         : `<div class="ugcT pend"><img src="${A('rohan-avatar')}" alt=""><b style="color:var(--ink)">Rohan</b>Invited on WhatsApp<br>Reel pending</div>`}
-      <div class="ugcT ${fresh ? 'fi' : ''}" style="animation-delay:.1s"><img src="${A('ugc-2')}" alt=""><span class="vw">${I.playO}38.2K</span></div>
-      <div class="ugcT ${fresh ? 'fi' : ''}" style="animation-delay:.2s"><img src="${A('ugc-3')}" alt=""><span class="vw">${I.playO}21.7K</span></div>
+      ${[['ugc-2', '38.2K'], ['ugc-3', '21.7K'], ['ugc-4', '64.5K'], ['ugc-5', '1.2L']].map(([u, v], i) => `<div class="ugcT ${fresh ? 'fi' : ''}" style="animation-delay:${.1 + i * .08}s"><img src="${A(u)}" alt=""><span class="vw">${I.playO}${v}</span></div>`).join('')}
+      <div class="ugcT pend ${fresh ? 'fi' : ''}" style="animation-delay:.45s;background:var(--navy);border:none;color:#CFDBEE"><b style="color:#fff;font-size:20px">+${inr(N.creators - 5)}</b>more first-shave Reels<br>tagging @gilletteindia</div>
     </div>
     <div class="callout ${fresh ? 'fi' : ''}" style="animation-delay:.5s">${I.reels}<div><b>The education ad comes back as social proof.</b><span>68% of first-shave Reels credit the @gilletteindia tips reel.</span></div></div>
   </div>`;
@@ -1770,7 +1770,7 @@ function fit() {
 window.addEventListener('resize', fit);
 
 /* ═══════════════ loader: preload, then start ═══════════════ */
-const PRELOAD = ['sample-ad-9x16', 'sample-ad-1x1', 'landing-hero', 'reel-cover', 'sample-kit', 'delivery', 'unboxing', 'ugc-1', 'ugc-2', 'ugc-3',
+const PRELOAD = ['sample-ad-9x16', 'sample-ad-1x1', 'landing-hero', 'reel-cover', 'sample-kit', 'delivery', 'unboxing', 'ugc-1', 'ugc-2', 'ugc-3', 'ugc-4', 'ugc-5',
   'guard-3in1-pack', 'guard-3in1-refill', 'rohan-avatar', 'gillette-ig-dp', 'gillette-logo-white', 'freestand-logo', 'freestand-logo-white',
   'ugc-photo-1', 'avatar-1', 'avatar-2', 'avatar-3', 'avatar-4', 'avatar-5', 'avatar-6'].map(A);
 function boot() {

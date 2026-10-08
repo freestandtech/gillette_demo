@@ -7,6 +7,9 @@ Pitch-demo use only. Brand marks and product photography belong to their owners 
 |---|---|
 | `gillette-education-reel.mp4` | Supplied by Apurva: "How to Shave for the First Time, Shaving Tips for Men, Gillette India" (1280x720 landscape). Center-cropped to 9:16, 540x960, H.264, audio removed, 2:30 loop. |
 
+## UGC photos (supplied by Apurva)
+`ugc-photo-1..5.png` are 9:16 crops of five images Apurva supplied (originals kept in `src/ugc-supplied/`). `ugc-1..5.png` add the Reel overlays. Several are Gillette India campaign images (two carry the Mach3 logo, one is from a Gillette cricket event), so confirm usage rights before sharing outside the pitch.
+
 ## Brand marks
 | File | Source | License |
 |---|---|---|
@@ -25,10 +28,8 @@ Pitch-demo use only. Brand marks and product photography belong to their owners 
 ## Photos (Pexels License)
 | File | Photo | Photographer |
 |---|---|---|
-| `rohan-avatar.png`, `ugc-photo-1.png` | https://www.pexels.com/photo/a-young-man-pinching-his-shirt-smiling-6338266/ | MD. Rasel Hossain |
+| `rohan-avatar.png` | https://www.pexels.com/photo/a-young-man-pinching-his-shirt-smiling-6338266/ | MD. Rasel Hossain |
 | `rohan-mirror.png` (and the base of `unboxing.png`) | https://www.pexels.com/photo/man-taking-a-selfie-in-mirror-16137199/ | Zain Ali |
-| `ugc-photo-2.png` | https://www.pexels.com/photo/young-traveler-at-iconic-indian-mosque-34420589/ | Sanket Mishra |
-| `ugc-photo-3.png` | https://www.pexels.com/photo/young-man-taking-selfie-in-a-field-in-india-39592551/ | NILU'Z FrameScape (Nelson Singh) |
 | `delivery.png` | https://www.pexels.com/photo/a-brown-cardboard-box-beside-white-door-6170463/ | Tima Miroshnichenko |
 | `avatar-1.png` | https://www.pexels.com/photo/portrait-of-a-young-man-in-urban-setting-29153201/ | Dream_ maKkerzz |
 | `avatar-2.png` | https://www.pexels.com/photo/young-man-smiling-in-gray-t-shirt-5192518/ | Velroy Fernandes |

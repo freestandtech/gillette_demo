@@ -19,6 +19,8 @@ const JOBS = [
   ['ugc-1.png',             'ugc.html',            1080, 1920, '?n=1',    false],
   ['ugc-2.png',             'ugc.html',            1080, 1920, '?n=2',    false],
   ['ugc-3.png',             'ugc.html',            1080, 1920, '?n=3',    false],
+  ['ugc-4.png',             'ugc.html',            1080, 1920, '?n=4',    false],
+  ['ugc-5.png',             'ugc.html',            1080, 1920, '?n=5',    false],
   ['unboxing.png',          'unboxing.html',       1080, 1350, '',        false],
   ['gillette-ig-dp.png',    'gillette-ig-dp.html',  400,  400, '',        true],
   ['og-image.png',          'og-image.html',       1200,  630, '',        false],
