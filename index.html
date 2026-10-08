@@ -711,6 +711,47 @@ svg{display:block}
 .feedapp .tabbar img{width:24px;height:24px;border-radius:50%}
 .tabbar.light{background:#fff;color:#111;border-top:1px solid #EFEFEF}
 
+/* pop-up dialogs */
+.mov{position:absolute;inset:0;z-index:60;background:rgba(10,20,40,.55);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;animation:fadeIn .35s both}
+.dlg{width:700px;background:#fff;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.45);overflow:hidden;animation:dlgIn .45s cubic-bezier(.2,.8,.2,1) .1s both}
+@keyframes dlgIn{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:none}}
+.dlg-h{display:flex;align-items:center;gap:8px;padding:14px 20px;border-bottom:1px solid #E4E6EB;font-size:13px;color:#65676B;font-weight:600}
+.dlg-h.dark{background:var(--navy);color:#fff;border-bottom:none}
+.dlg-b{padding:18px 22px}
+.dlg-k{font-size:13px;color:#65676B;font-weight:600}
+.dlg-big{display:flex;align-items:center;gap:16px;margin:8px 0 16px}
+.dlg-big b{font-size:52px;font-weight:800;color:#0866FF;font-variant-numeric:tabular-nums;letter-spacing:-1px;line-height:1}
+.dlg-big span{font-size:16px;font-weight:600;color:#1C2B33;line-height:1.3}
+.dlg-big small{font-size:12.5px;color:#65676B;font-weight:400}
+.dlg-rows{display:flex;flex-direction:column;gap:8px}
+.dlg-rows>div{display:grid;grid-template-columns:28px 190px 1fr 80px;align-items:center;gap:10px;font-size:13px}
+.dlg-rows .di{width:28px;height:28px;border-radius:7px;background:#EBF5FF;color:#0866FF;display:flex;align-items:center;justify-content:center}
+.dlg-rows .di svg{width:15px;height:15px}
+.dlg-rows .dbar{height:10px;border-radius:5px;background:#EEF0F3;overflow:hidden}
+.dlg-rows .dbar i{display:block;height:100%;width:0;background:#0866FF;border-radius:5px;transition:width 1s ease .4s}
+.dlg-rows b{text-align:right;font-variant-numeric:tabular-nums}
+.dlg-note{display:flex;align-items:center;gap:8px;margin-top:16px;padding:10px 12px;border-radius:9px;background:#F5F6F7;font-size:12.5px;color:#1C2B33}
+.dlg-f{display:flex;align-items:center;justify-content:flex-end;gap:10px;padding:14px 20px;border-top:1px solid #E4E6EB;background:#FAFBFC}
+.dlg-sub{margin-right:auto;font-size:12px;color:#65676B;max-width:230px;line-height:1.35}
+.dbtn{white-space:nowrap;height:40px;padding:0 16px;border-radius:8px;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:8px;background:#E4E6EB;color:#1C2B33}
+.dbtn svg{width:16px;height:16px}
+.dbtn.pri{background:#0866FF;color:#fff;animation:pulseRing 1.8s 1s infinite}
+.dbtn.pri.navy{background:var(--blue)}
+.dbtn:disabled{animation:none;opacity:.9}
+.spin{width:15px;height:15px;border-radius:50%;border:2.5px solid rgba(255,255,255,.4);border-top-color:#fff;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.dlg-t{font-family:'Barlow',sans-serif;font-weight:800;font-size:26px;color:var(--navy);line-height:1.1}
+.dlg-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.dlg-tiles div{border:1px solid var(--line);border-radius:10px;padding:12px}
+.dlg-tiles b{display:block;font-size:22px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+.dlg-tiles span{font-size:11.5px;color:var(--muted)}
+.dlg-camp{display:flex;gap:14px;align-items:flex-start;border-radius:12px;padding:14px 16px;background:linear-gradient(100deg,#EEF5FF,#F7FAFF);border:1.5px solid #C3D9FB}
+.dc-i{width:40px;height:40px;border-radius:10px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dc-i svg{width:20px;height:20px}
+.dlg-camp small{display:block;font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--blue);font-weight:700}
+.dlg-camp b{display:block;font-family:'Barlow',sans-serif;font-size:24px;font-weight:800;color:var(--navy);margin:2px 0 4px}
+.dlg-camp div>span{font-size:13px;color:#3F4B60;line-height:1.45}
+
 /* closing loop */
 .loopc{padding:30px 48px}
 .loop{position:absolute;left:0;top:84px;width:700px;height:680px;overflow:visible}
@@ -880,13 +921,13 @@ const starRow = n => `<div class="stars">${Array.from({ length: 5 }, (_, i) => `
 
 /* ═══════════════ campaign numbers (one source of truth) ═══════════════ */
 const N = {
-  reach: 1200000, thruplay: 420000, engaged: 184000,
-  watched: 121400, saved: 22600, shared: 18900, followed: 21100,
-  passive: 1016000,
+  reach: 12000000, thruplay: 4200000, engaged: 1000000,
+  watched: 640000, saved: 120000, shared: 100000, followed: 140000,
+  passive: 11000000,
   landing: 41500, otp: 32800, completed: 28900, approved: 10000, delivered: 9720,
   feedback: 6410, ratingAvg: 4.6, intentYes: 58, intentMaybe: 31, intentNo: 11,
   creators: 1240, ugcViews: 8640000, reelsTagging: 1080,
-  mediaSpend: 740000, conquest: 82, pincodes: 1860, avgDays: 2.8, success: 97.2,
+  mediaSpend: 750000, conquest: 82, pincodes: 1860, avgDays: 2.8, success: 97.2,
 };
 const PERSONA = { name: 'Rohan Kulkarni', first: 'Rohan', age: 19, mobile: '+91 98226 34417', pin: '411007', area: 'Ganeshkhind, Pune', id: 'GLT-FS-28417' };
 
@@ -898,6 +939,7 @@ const STAGES = [
   { k: 'ed', step: 1, label: 'Ad 1: education reel in Rohan\'s Reels (Monday)', app: 'reels', ad: 'edu', panel: 'story', side: 'Campaign 1 on Meta' },
   { k: 'eng1', step: 2, label: 'Rohan watches 75%+ of the reel', app: 'reels', ad: 'edu', anim: 'watch', panel: 'story', aud: 1, side: 'Meta custom audience' },
   { k: 'eng2', step: 2, label: 'Rohan likes, saves, shares, follows', app: 'reels', ad: 'edu', anim: 'engage', panel: 'story', aud: 2, side: 'Meta custom audience' },
+  { k: 'audm', step: 2, label: 'Audience ready: target these users for a free sample', app: 'reels', ad: 'edu', anim: 'done', panel: 'story', aud: 3, modal: 'aud', side: 'Meta custom audience' },
   { k: 'lock', step: 3, label: 'Two days later', app: 'lock', panel: 'story', s3: 1, side: 'Campaign 2 on Meta' },
   { k: 'feed', step: 3, label: 'Ad 2: free-sample post in his feed (Thursday)', app: 'feed', panel: 'story', s3: 2, side: 'Campaign 2 on Meta' },
   { k: 'land', step: 4, label: 'FreeStand sampling page', app: 'web', page: 'landing', panel: 'engine', e: 0, side: FS_ENGINE },
@@ -917,6 +959,7 @@ const STAGES = [
   { k: 'fb3', step: 6, label: 'Repurchase nudge + unboxing photo', app: 'wa', wa: 5, panel: 'feedback', f: 3, side: 'FreeStand feedback loop' },
   { k: 'ugc1', step: 7, label: 'UGC invite on WhatsApp', app: 'wa', wa: 6, panel: 'ugc', u: 1, side: 'FreeStand UGC engine' },
   { k: 'ugc2', step: 7, label: 'Rohan posts his first-shave Reel', app: 'ugc', panel: 'ugc', u: 2, side: 'FreeStand UGC engine' },
+  { k: 'fwdm', step: 8, label: 'Loop 1 data ready: launch a new campaign', app: 'ugc', panel: 'ugc', u: 2, modal: 'fwd', side: 'FreeStand insights' },
   { k: 'fwd', step: 8, label: 'New campaign: Shave It Forward', app: 'reels', ad: 'partner', panel: 'forward', side: 'Campaign 3, built from the data' },
   { k: 'loop', step: 9, label: 'The engine, as a loop', app: 'close' },
 ];
@@ -1134,15 +1177,15 @@ const ph = (icon, cls, title, sub, status, color) => `<div class="ph"><div class
 /* ═══════════════ Steps 1-3: Ad 1 > reactions > custom audience > Ad 2 ═══════════════ */
 const META_LOGO = `<svg viewBox="0 0 36 24"><defs><linearGradient id="mlg" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#0064E0"/><stop offset="1" stop-color="#0082FB"/></linearGradient></defs><path d="M4 15c0-5 2.5-10 6-10 4.3 0 7 8.5 10.5 13 1.5 1.9 2.7 2.6 4 2.6 2.4 0 4-2.5 4-5.8 0-5.4-2.6-9.8-6-9.8-3.8 0-6.7 7-10.2 12.5C10.9 20 9.7 20.6 8.5 20.6 5.8 20.6 4 18.4 4 15z" fill="none" stroke="url(#mlg)" stroke-width="3.2" stroke-linejoin="round"/></svg>`;
 
-// 120 dots = 12L people who saw Ad 1 (1 dot ≈ 10,000). 18 of them react = 1.84L.
+// 120 dots = 1.2 Cr people who saw Ad 1 (1 dot ≈ 1,00,000). 10 of them react = 10L.
 const CROWD = { cols: 12, rows: 10, x0: 16, y0: 70, gap: 13.4 };
 const SLOTS = { cols: 4, x0: 208, y0: 150, gap: 24 };
 const LIT = (() => {
   const out = [53]; let seed = 11;             // index 53 is Rohan
-  while (out.length < 18) { seed = (seed * 37 + 23) % 120; if (!out.includes(seed)) out.push(seed); }
-  return out;                                  // 0-11 watched, 12-13 saved, 14-15 shared, 16-17 followed
+  while (out.length < 10) { seed = (seed * 37 + 23) % 120; if (!out.includes(seed)) out.push(seed); }
+  return out;                                  // 0-5 watched, 6 saved, 7 shared, 8-9 followed
 })();
-const WAVES = [[0, 12, N.watched], [12, 14, N.watched + N.saved], [14, 16, N.watched + N.saved + N.shared], [16, 18, N.engaged]];
+const WAVES = [[0, 6, N.watched], [6, 7, N.watched + N.saved], [7, 8, N.watched + N.saved + N.shared], [8, 10, N.engaged]];
 const dotXY = i => [CROWD.x0 + (i % CROWD.cols) * CROWD.gap, CROWD.y0 + Math.floor(i / CROWD.cols) * CROWD.gap];
 const slotXY = j => [SLOTS.x0 + (j % SLOTS.cols) * SLOTS.gap, SLOTS.y0 + Math.floor(j / SLOTS.cols) * SLOTS.gap];
 
@@ -1167,7 +1210,7 @@ function viz(s) {
   }).join('');
   return `<div class="card viz">
     <div class="vh" style="left:14px"><span>Ad 1 · Education reel</span><b data-count="${N.reach}" ${st === 1 ? '' : `data-from="${N.reach}"`}>0</b><small>saw it</small></div>
-    <div class="vfoot" id="crowdNote">1 dot ≈ 10,000 young men</div>
+    <div class="vfoot" id="crowdNote">1 dot ≈ 1,00,000 young men</div>
     <div class="bucket ${st >= 2 ? 'on' : ''}" id="bucket">
       <div class="bk-t">Custom audience</div><div class="bk-s">"Engaged Learners" · built from reactions</div>
       <div class="bk-n" id="bkN">${st === 3 ? inr(N.engaged) : '0'}</div>
@@ -1213,11 +1256,11 @@ function panelStory(s, prev) {
     3: [I.gift, 'Ad 2: free sample, only for that audience', 'Campaign 2 · Thursday. A separate ad, targeted to the custom audience and nobody else.', s.s3 === 2 ? 'SHOWN TO ROHAN' : 'LAUNCHED', '#4CC17A'],
   }[st];
   let bottom = '';
-  if (st === 1) bottom = `${mcard('Campaign 1 · Gillette First Shave Education', ['ACTIVE', 'ok'], [['Goal', 'ThruPlay (video views)'], ['Budget', '₹40,000 / day · 14 days'], ['Who', 'Men 18-24 · India Tier 1 + 2'], ['Est. reach', '10L - 14L'], ['Interests', 'Grooming, fitness, college life, cricket']])}
+  if (st === 1) bottom = `${mcard('Campaign 1 · Gillette First Shave Education', ['ACTIVE', 'ok'], [['Goal', 'ThruPlay (video views)'], ['Budget', '₹1,50,000 / day · 14 days'], ['Who', 'Men 18-24 · India Tier 1 + 2'], ['Est. reach', '1 Cr - 1.4 Cr'], ['Interests', 'Grooming, fitness, college life, cricket']])}
       <div class="callout">${I.playO}<div><b>No offer in Ad 1. It only teaches.</b><span>Who watches and reacts is what we capture next.</span></div></div>`;
   if (st === 2) bottom = `<div class="sigs">${SIG.map(g => `<div class="card sg" id="sg-${g.k}"><div class="sg-i">${g.ic}</div><div><b>${g.t}</b><span>${inr(g.n)}</span></div><div class="tick">${I.check}</div><div class="sg-r"></div></div>`).join('')}</div>
       ${mcard('Custom audience · Gillette Engaged Learners - 30 days', ['UPDATING', 'blue'], [['Built from', 'Ad 1 viewers 75%+ · Instagram engagement'], ['Keeps people for', '30 days']])}`;
-  if (st === 3) bottom = `${mcard('Campaign 2 · Gillette First Shave Free Sample', ['ACTIVE', 'ok'], [['Audience', 'Engaged Learners ONLY'], ['Advantage+', 'Off (no expansion)'], ['Excludes', 'People who already claimed'], ['Budget', '₹12,000 / day']])}
+  if (st === 3) bottom = `${mcard('Campaign 2 · Gillette First Shave Free Sample', ['ACTIVE', 'ok'], [['Audience', 'Engaged Learners ONLY'], ['Advantage+', 'Off (no expansion)'], ['Excludes', 'People who already claimed'], ['Budget', '₹50,000 / day · 15 days']])}
       <div class="callout">${I.target}<div><b>Only people who reacted to Ad 1 see Ad 2.</b><span>Zero spend on the ${lakh(N.passive)} who scrolled past.</span></div></div>`;
   return `${ph(head[0], '', head[1], head[2], head[3], head[4])}
     <div class="pb story">${beats(st)}${viz(s)}${bottom}</div>`;
@@ -1227,7 +1270,7 @@ function afterStory(root, s, prev) {
   if (st === 1) return;
   const grey = () => { $('#crowdNote', root).innerHTML = `<b style="color:var(--bad)">Grey: ${lakh(N.passive)} scrolled past</b> · never retargeted`; };
   if (st === 3) {
-    setDots(root, 18, true); grey();
+    setDots(root, 10, true); grey();
     if (s.s3 === 2) {
       const r = $('#d' + LIT[0], root); r.classList.add('pick');
       $('#adNote', root).innerHTML = '<b>Rohan sees it now</b>';
@@ -1236,10 +1279,17 @@ function afterStory(root, s, prev) {
   }
   const sig = (k) => { const el = $('#sg-' + k, root); if (!el) return; el.classList.add('hit'); el.querySelector('.tick').classList.add('on'); el.querySelector('.sg-r').innerHTML = `<span class="rohan"><img src="${A('rohan-avatar')}" alt="">Rohan</span>`; };
   if (s.aud === 1) { later(2300, () => { moveWave(root, WAVES[0], 0); sig('watched'); }); return; }
-  setDots(root, 12, false); $('#bkN', root).textContent = inr(N.watched); sig('watched');
+  if (s.aud === 3) {
+    setDots(root, 10, true); ['watched', 'saved', 'shared', 'followed'].forEach(sig);
+    $('#bkN', root).textContent = inr(N.engaged);
+    $('#crowdNote', root).innerHTML = `<b>Grey: ${lakh(N.passive)} scrolled past.</b> They stay out.`;
+    const live = root.querySelector('.ph .live'); if (live) live.innerHTML = '<i></i>AUDIENCE READY';
+    return;
+  }
+  setDots(root, 6, false); $('#bkN', root).textContent = inr(N.watched); sig('watched');
   [['saved', 1100, 1], ['shared', 2200, 2], ['followed', 3300, 3]].forEach(([k, t, w]) => later(t, () => { moveWave(root, WAVES[w], WAVES[w - 1][2]); sig(k); }));
   later(4400, () => {
-    setDots(root, 18, true);
+    setDots(root, 10, true);
     $('#crowdNote', root).innerHTML = `<b>Grey: ${lakh(N.passive)} scrolled past.</b> They stay out.`;
     const live = root.querySelector('.ph .live'); if (live) live.innerHTML = '<i></i>AUDIENCE READY';
   });
@@ -1489,7 +1539,7 @@ function closingScreen() {
     <div class="lside">
       <div class="eb" style="color:#7F93B5">Loop 1 results</div>
       <div class="ckpi" style="margin-top:12px">
-        <div class="fi" style="animation-delay:.5s"><b class="cv">₹<span data-count="${N.mediaSpend / N.approved}">0</span></b><span class="cl">Media cost per qualified sample</span><span class="cs">₹7.4L media / ${inr(N.approved)} approved</span></div>
+        <div class="fi" style="animation-delay:.5s"><b class="cv">₹<span data-count="${N.mediaSpend / N.approved}">0</span></b><span class="cl">Media cost per qualified sample</span><span class="cs">₹7.5L sample-ad media / ${inr(N.approved)} approved</span></div>
         <div class="fi" style="animation-delay:.6s"><b class="cv"><span data-count="${N.conquest}" data-fmt="pct">0</span></b><span class="cl">Conquest share</span><span class="cs">Kits to non-Gillette users</span></div>
         <div class="fi" style="animation-delay:.7s"><b class="cv"><span data-count="${N.intentYes}" data-fmt="pct">0</span></b><span class="cl">Purchase intent</span><span class="cs">Will buy Guard 3-in-1</span></div>
         <div class="fi" style="animation-delay:.8s"><b class="cv"><span data-count="${N.creators}">0</span></b><span class="cl">UGC pieces</span><span class="cs">${lakh(N.ugcViews)} organic views</span></div>
@@ -1505,6 +1555,50 @@ function closingScreen() {
       </div>
     </div>
   </div>`;
+}
+
+/* ═══════════════ pop-ups: audience ready, Shave It Forward ═══════════════ */
+function modalAud() {
+  const rows = [['Watched 75%+ of the reel', N.watched, I.eye], ['Saved it', N.saved, I.bookmark], ['Shared it', N.shared, I.send], ['Followed @gilletteindia', N.followed, I.users]];
+  return `<div class="dlg meta">
+    <div class="dlg-h"><span class="ml2">${META_LOGO}</span><span>Meta Ads Manager · Audiences</span><span class="pill ok" style="margin-left:auto">${I.check} READY</span></div>
+    <div class="dlg-b">
+      <div class="dlg-k">Custom audience · Gillette Engaged Learners - 30 days</div>
+      <div class="dlg-big"><b data-count="${N.engaged}" data-dur="1500">0</b><span>people interacted with Ad 1<br><small>out of ${lakh(N.reach)} who saw it</small></span></div>
+      <div class="dlg-rows">${rows.map(([t, v, ic], i) => `<div class="fi" style="animation-delay:${.3 + i * .1}s"><span class="di">${ic}</span><span class="dt">${t}</span><span class="dbar"><i data-w="${(v / N.watched * 100).toFixed(0)}%"></i></span><b>${inr(v)}</b></div>`).join('')}</div>
+      <div class="dlg-note"><span class="rohan"><img src="${A('rohan-avatar')}" alt="">Rohan</span>is in this audience (anonymous to Gillette)<span style="margin-left:auto;color:var(--bad);font-weight:600">${lakh(N.passive)} scrollers excluded</span></div>
+    </div>
+    <div class="dlg-f"><span class="dlg-sub">Creates Campaign 2: a free-sample ad shown only to these ${inr(N.engaged)} people.</span>
+      <button class="dbtn ghost">Not now</button><button class="dbtn pri" id="modalGo">${I.target}Target these users for free sample</button></div>
+  </div>`;
+}
+function modalFwd() {
+  const data = [[N.delivered, 'Verified profiles'], [4550, 'Loved their first shave'], [N.creators, 'Creator reels'], [1990, '"Maybe" buyers']];
+  return `<div class="dlg fs">
+    <div class="dlg-h dark"><img src="${A('freestand-logo-white')}" alt="FreeStand" style="height:16px"><span style="opacity:.75">Insights</span><span class="pill blue" style="margin-left:auto">LOOP 1 COMPLETE</span></div>
+    <div class="dlg-b">
+      <div class="dlg-t">Your sampling data is ready to launch a new campaign</div>
+      <div class="dlg-tiles">${data.map(([v, k], i) => `<div class="fi" style="animation-delay:${.2 + i * .1}s"><b data-count="${v}">0</b><span>${k}</span></div>`).join('')}</div>
+      <div class="dlg-camp fi" style="animation-delay:.7s">
+        <span class="dc-i">${I.refresh}</span>
+        <div><small>Recommended campaign</small><b>Shave It Forward</b><span>Find more Rohans: lookalikes of happy samplers, creator reels as ads, a refill nudge for the maybes, and refer-a-friend links.</span></div>
+      </div>
+    </div>
+    <div class="dlg-f"><button class="dbtn ghost">Review plan</button><button class="dbtn pri navy" id="modalGo">${I.sparkle}Launch Shave It Forward</button></div>
+  </div>`;
+}
+function showModal(s) {
+  const ov = document.createElement('div');
+  ov.className = 'mov';
+  ov.innerHTML = s.modal === 'aud' ? modalAud() : modalFwd();
+  stageEl.appendChild(ov);
+  animateCounters(ov); growBars(ov);
+  const btn = $('#modalGo', ov);
+  btn.onclick = () => {
+    btn.disabled = true;
+    btn.innerHTML = `<span class="spin"></span>${s.modal === 'aud' ? 'Creating Campaign 2...' : 'Launching...'}`;
+    later(900, () => go(idx + 1));
+  };
 }
 
 /* ═══════════════ render loop ═══════════════ */
@@ -1589,7 +1683,8 @@ function render() {
 
     if (s.app === 'reels') afterReels(screen, s, pPrev);
     if (s.app === 'wa') afterWa(screen, s, pPrev);
-    placeTapDot(screen);
+    if (s.modal) showModal(s);
+    else placeTapDot(screen);
     screen.addEventListener('click', () => go(idx + 1));
   }
   updateNav();
@@ -1608,6 +1703,10 @@ function afterReels(screen, s, prev) {
   const setProg = (w, dur) => { prog.style.transition = dur ? `width ${dur}ms linear` : 'none'; prog.style.width = w; };
   if (!s.anim) { setProg('12%'); requestAnimationFrame(() => requestAnimationFrame(() => setProg('30%', 5000))); }
   if (s.anim === 'watch') { setProg('30%'); requestAnimationFrame(() => requestAnimationFrame(() => setProg('78%', 2600))); }
+  if (s.anim === 'done') {
+    setProg('100%'); like.classList.add('on'); save.classList.add('on'); $('#igLikeN', screen).textContent = '24.7K';
+    follow.classList.add('on'); follow.textContent = 'Following';
+  }
   if (s.anim === 'engage') {
     setProg('78%'); requestAnimationFrame(() => requestAnimationFrame(() => setProg('96%', 4200)));
     later(250, () => { like.classList.add('on'); $('#igLikeN', screen).textContent = '24.7K'; $('.bigheart', screen).classList.add('go'); });

@@ -18,7 +18,7 @@ Opening `index.html` straight from disk also works.
 - **Next:** `→`, `Space`, `Enter`, the Next button, or a tap on the phone.
 - **Back:** `←`, or the Back button.
 - **Jump:** `Home` / `End`, the 7 step chips at the top, or the numbered sub-steps at the bottom.
-- **Deep link:** `index.html#s=12` opens sub-step 12 (sub-step 1 is the intro, 25 is the engine loop). The last stage you viewed is remembered.
+- **Deep link:** `index.html#s=12` opens sub-step 12 (sub-step 1 is the intro, 27 is the engine loop). The last stage you viewed is remembered.
 - The stage scales to fit the window. It is designed at 1280x820 and reads well at 1366x768 and above.
 
 ## Deploy on GitHub Pages
