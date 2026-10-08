@@ -2,7 +2,7 @@
 
 A click-through pitch demo for Gillette India (P&G). It follows Rohan, 19, a college student in Pune, from a Gillette first-shave education reel to a qualified free sample, WhatsApp feedback and a UGC Reel.
 
-The phone on the right shows what Rohan sees. The panel on the left shows what Meta and FreeStand are doing at that moment.
+The phone on the left shows what Rohan sees. The middle panel shows what Meta and FreeStand are doing at that moment. The right column is the first-party profile FreeStand builds, which stays anonymous until Rohan claims. Step 8 ("Shave It Forward") is the next campaign built from the data, and the last screen shows the whole engine as a loop.
 
 ## Run locally
 Any static server works:
@@ -18,7 +18,7 @@ Opening `index.html` straight from disk also works.
 - **Next:** `→`, `Space`, `Enter`, the Next button, or a tap on the phone.
 - **Back:** `←`, or the Back button.
 - **Jump:** `Home` / `End`, the 7 step chips at the top, or the numbered sub-steps at the bottom.
-- **Deep link:** `index.html#s=12` opens sub-step 12 (sub-step 1 is the intro). The last stage you viewed is remembered.
+- **Deep link:** `index.html#s=12` opens sub-step 12 (sub-step 1 is the intro, 25 is the engine loop). The last stage you viewed is remembered.
 - The stage scales to fit the window. It is designed at 1280x820 and reads well at 1366x768 and above.
 
 ## Deploy on GitHub Pages

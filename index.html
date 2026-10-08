@@ -91,7 +91,7 @@ svg{display:block}
 
 /* ── Stage furniture ────────────────────── */
 .eyebrow{position:absolute;top:18px;font-size:11px;font-weight:700;color:#8C96A8;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
-.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.eyebrow .edot{width:6px;height:6px;border-radius:50%;background:var(--blue)}
 #ebLeft{left:40px}
 .persona{position:absolute;top:10px;right:36px;display:flex;align-items:center;gap:9px;background:#F3F6FA;border:1px solid var(--line);border-radius:999px;padding:4px 14px 4px 4px}
 .persona img{width:30px;height:30px;border-radius:50%;object-fit:cover}
@@ -583,6 +583,159 @@ svg{display:block}
 .close .logos img.g{height:30px}
 .close .logos img.f{height:22px}
 .close .logos span{color:#7F93B5;font-family:'Barlow';font-weight:600}
+/* ── Layout v3: phone left, behind-the-scenes middle, profile right ── */
+.steps{grid-template-columns:repeat(8,1fr)}
+.st .l{font-size:12px}
+.phone{left:36px;top:50px}
+.persona{left:36px;right:auto;max-width:356px}
+#ebLeft{left:428px}
+.taphint{left:120px;right:auto}
+.panel{left:420px;top:52px;width:500px;height:748px}
+.pcol{position:absolute;left:934px;top:52px;width:310px;height:748px;border-radius:12px;background:#F7F9FC;border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(13,42,107,.06)}
+#ebRight{left:938px}
+.pc-h{background:var(--navy);color:#fff;padding:12px 14px 14px;position:relative}
+.pc-h .eb{font-size:9.5px;letter-spacing:1.8px;text-transform:uppercase;color:#8FB5E8;font-weight:700}
+.pc-id{display:flex;align-items:center;gap:10px;margin-top:10px}
+.pc-id img,.ghost-av{width:44px;height:44px;border-radius:50%;object-fit:cover;flex-shrink:0;box-shadow:0 0 0 2px rgba(255,255,255,.3)}
+.ghost-av{background:#22396A;color:#8FB5E8;display:flex;align-items:center;justify-content:center}
+.ghost-av svg{width:22px;height:22px}
+.pc-id b{display:block;font-size:15px}
+.pc-id span{font-size:11px;color:#A9C4EA}
+.pc-h .pill{position:absolute;top:10px;right:12px;font-size:9.5px;padding:3px 8px}
+.pc-b{flex:1;min-height:0;padding:8px 12px 10px;overflow:hidden;display:flex;flex-direction:column;gap:6px}
+.ps h6{font-size:9.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--navy);font-weight:800;margin:4px 0 2px}
+.pr{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:11.5px;padding:4px 6px;border-bottom:1px solid #E9EDF3;border-radius:4px}
+.pr span{color:var(--muted);flex-shrink:0}
+.pr b{font-weight:600;color:var(--ink);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pr .shim{width:90px;height:9px;flex:none}
+.pnew{animation:pflash 2.2s ease}
+@keyframes pflash{0%,35%{background:#DDEBFF}100%{background:transparent}}
+.ptags{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.ptags span{font-size:10.5px;font-weight:600;padding:3px 7px;border-radius:5px;background:#E6F0FF;color:#0B4FB3}
+.anon{display:flex;gap:9px;align-items:flex-start;background:#FFF5E5;border:1px solid #F3D9A8;border-radius:8px;padding:9px 10px;margin-bottom:2px}
+.anon svg{width:16px;height:16px;color:var(--warn);flex-shrink:0;margin-top:1px}
+.anon b{display:block;font-size:12px;color:#7A4A00}
+.anon span{font-size:11px;color:#7A5A2A;line-height:1.4}
+
+/* story panel at 500px */
+.pb.story{gap:10px}
+.beats{grid-template-columns:1fr 18px 1fr 18px 1fr}
+.beat{padding:7px 8px;gap:7px}
+.beat .bi{width:26px;height:26px}
+.beat .bi svg{width:13px;height:13px}
+.beat b{font-size:12px}
+.beat span{font-size:10.5px}
+.barrow svg{width:14px;height:14px}
+.viz{height:290px}
+.vh{flex-wrap:wrap;width:150px;gap:2px 6px}
+.vh b{font-size:17px}
+.vh small{font-size:10.5px;color:var(--muted)}
+.vfoot{width:160px;font-size:10.5px;line-height:1.35}
+.dot{width:8px;height:8px;margin:-4px 0 0 -4px}
+.dot.ro{width:22px;height:22px;margin:-11px 0 0 -11px}
+.dot.pick{box-shadow:0 0 0 3px var(--ok),0 0 0 9px rgba(30,142,78,.2)!important;animation:pickPulse 1.4s infinite}
+@keyframes pickPulse{50%{transform:scale(1.18)}}
+.bucket{left:186px;top:10px;width:126px;height:270px;padding:9px 10px}
+.bucket .bk-s{font-size:10px}
+.bk-n{font-size:21px}
+.bk-empty{top:160px;padding:0 8px}
+.adcol{left:332px;top:10px;width:106px;height:270px;padding:0 8px;gap:8px}
+.adcol img{width:84px}
+.adcol .bk-s{font-size:10.5px}
+.sigs{grid-template-columns:1fr 1fr}
+.sg{padding:8px 10px}
+.mc-rows{gap:6px 12px}
+.story .callout{padding:11px 14px}
+.story .callout b{font-size:13.5px}
+
+/* engine at 500px */
+.rules2{display:grid;grid-template-columns:repeat(3,1fr);gap:6px 8px}
+.rules2 div{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--muted)}
+.rules2 div.ok{color:var(--ink);font-weight:500}
+.rules2 .tick{width:18px;height:18px}
+.rules2 .tick svg{width:11px;height:11px}
+.ctx .rej .d{font-size:10.5px}
+
+/* forward plays */
+.play{display:flex;gap:11px;align-items:flex-start;padding:9px 14px;border-bottom:1px solid #F0F2F6}
+.play:last-child{border-bottom:none}
+.play .pi{width:30px;height:30px;border-radius:8px;background:#EEF5FF;color:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.play .pi svg{width:16px;height:16px}
+.play b{display:block;font-size:13px}
+.play span{font-size:11.5px;color:var(--muted);line-height:1.4}
+
+/* lock screen */
+.lock{background:linear-gradient(170deg,#2B3F6E 0%,#1A2240 45%,#3A2A55 100%);color:#fff;text-align:center}
+.lk-chip{position:absolute;top:66px;left:50%;transform:translateX(-50%);background:#fff;color:var(--navy);font-weight:800;font-size:13px;padding:7px 14px;border-radius:999px;display:flex;align-items:center;gap:7px;white-space:nowrap;animation:popIn .5s both}
+.lk-chip svg{width:15px;height:15px}
+.lk-date{margin-top:120px;font-size:16px;font-weight:600;opacity:.9}
+.lk-time{font-size:84px;font-weight:300;line-height:1;margin-top:2px;letter-spacing:-2px}
+.lk-n{margin:14px 12px 0;background:rgba(255,255,255,.18);backdrop-filter:blur(10px);border-radius:16px;padding:10px 12px;display:flex;gap:10px;align-items:center;text-align:left}
+.lk-n + .lk-n{margin-top:8px}
+.lk-ic{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.lk-ic svg{width:18px;height:18px;color:#fff}
+.lk-ic.ig{background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF)}
+.lk-ic.wa{background:#25D366}
+.lk-n b{display:block;font-size:12.5px}
+.lk-n span{font-size:12px;opacity:.9}
+.lk-n small{margin-left:auto;align-self:flex-start;font-size:10.5px;opacity:.7}
+.lk-foot{position:absolute;left:0;right:0;bottom:34px;font-size:12px;opacity:.75}
+
+/* Instagram home feed */
+.feedapp{background:#fff;color:#111}
+.fh{position:absolute;top:48px;left:0;right:0;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 14px}
+.igword{font-family:'Grand Hotel',cursive;font-size:28px}
+.fh-i{display:flex;gap:16px}
+.fh-i svg{width:22px;height:22px}
+.stories{position:absolute;top:94px;left:0;right:0;display:flex;gap:10px;padding:0 10px;overflow:hidden;border-bottom:1px solid #EFEFEF;height:86px}
+.stories div{display:flex;flex-direction:column;align-items:center;gap:3px;width:58px;flex-shrink:0}
+.stories .ring{width:56px;height:56px;border-radius:50%;padding:2px;background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF)}
+.stories .ring.me{background:#DBDBDB}
+.stories img{width:100%;height:100%;border-radius:50%;border:2px solid #fff;object-fit:cover}
+.stories small{font-size:10px;color:#333;width:58px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post{position:absolute;top:182px;left:0;right:0}
+.ph2{display:flex;align-items:center;gap:8px;padding:7px 10px}
+.ph2 img{width:30px;height:30px;border-radius:50%}
+.ph2 b{display:flex;align-items:center;gap:4px;font-size:12.5px}
+.ph2 .verified{width:12px;height:12px}
+.ph2 small{display:block;font-size:10.5px;color:#666}
+.ph2>svg{width:18px;height:18px;margin-left:auto}
+.pimg{width:100%;height:auto}
+.pcta{display:flex;justify-content:space-between;align-items:center;padding:0 12px;height:38px;background:#0095F6;color:#fff;font-size:13px;font-weight:600;animation:pulseRing 1.8s infinite}
+.pcta svg{width:16px;height:16px}
+.pact{display:flex;gap:14px;padding:8px 12px 4px}
+.pact svg{width:22px;height:22px}
+.ptxt{padding:0 12px;font-size:11.5px;line-height:1.4}
+.feedapp .tabbar{position:absolute;left:0;right:0;bottom:0;height:50px;display:flex;justify-content:space-around;align-items:flex-start;padding-top:12px;z-index:7}
+.feedapp .tabbar svg{width:23px;height:23px}
+.feedapp .tabbar img{width:24px;height:24px;border-radius:50%}
+.tabbar.light{background:#fff;color:#111;border-top:1px solid #EFEFEF}
+
+/* closing loop */
+.loopc{padding:30px 48px}
+.loop{position:absolute;left:0;top:84px;width:700px;height:680px;overflow:visible}
+.ring1{fill:none;stroke:rgba(143,181,232,.18);stroke-width:26}
+.ring2{fill:none;stroke:#8FB5E8;stroke-width:2;stroke-dasharray:6 8;animation:dashMove 1.2s linear infinite}
+@keyframes dashMove{to{stroke-dashoffset:-14}}
+.ln-node{opacity:0;animation:fadeIn .5s both}
+@keyframes fadeIn{to{opacity:1}}
+.nbg{fill:#13306A;stroke:#8FB5E8;stroke-width:2}
+.nlast{fill:#fff;stroke:#fff;stroke-width:2}
+.nic{width:28px;height:28px;color:#fff;display:flex;align-items:center;justify-content:center}
+.nic svg{width:24px;height:24px}
+.nic.dark{color:var(--navy)}
+.nt{fill:#fff;font-family:'Barlow',sans-serif;font-weight:800;font-size:19px}
+.nn{fill:#A9C4EA;font-size:14px;font-family:'Roboto',sans-serif}
+.ct1{fill:#fff;font-family:'Barlow',sans-serif;font-weight:800;font-size:40px}
+.ct2{fill:#A9C4EA;font-family:'Barlow',sans-serif;font-weight:800;font-style:italic;font-size:28px}
+.ct3{fill:#CFDBEE;font-size:14.5px;font-family:'Roboto',sans-serif}
+.lside{position:absolute;right:44px;top:110px;width:420px}
+.lside .eb{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700}
+.keeps{margin-top:16px;display:flex;flex-direction:column;gap:8px}
+.keeps div{display:flex;align-items:center;gap:10px;font-size:13.5px;color:#CFDBEE;padding:9px 12px;border-radius:10px;background:rgba(255,255,255,.05)}
+.keeps svg{width:18px;height:18px;color:#8FB5E8}
+.keeps b{color:#fff}
+.loopc .cta-row{margin-top:20px}
 </style>
 </head>
 <body>
@@ -738,35 +891,39 @@ const N = {
 const PERSONA = { name: 'Rohan Kulkarni', first: 'Rohan', age: 19, mobile: '+91 98226 34417', pin: '411007', area: 'Ganeshkhind, Pune', id: 'GLT-FS-28417' };
 
 /* ═══════════════ stages ═══════════════ */
-const STEPS = ['Education Ad', 'Rohan Engages', 'Sample Ad', 'Website Sampling', 'Delivered', 'Feedback', 'UGC'];
+const STEPS = ['Ad 1: Education', 'Reactions', 'Ad 2: Free Sample', 'Claim + Qualify', 'Delivered', 'Feedback', 'UGC', 'Shave It Forward'];
+const FS_ENGINE = 'FreeStand qualification engine';
 const STAGES = [
-  { step: 0, label: 'How it works + meet Rohan', app: 'intro' },
-  { step: 1, label: 'Education reel in Rohan\'s Reels feed', app: 'reels', ad: 'edu', panel: 'story', side: 'Meta · step 1 of the setup' },
-  { step: 2, label: 'Rohan watches 75%+ of the reel', app: 'reels', ad: 'edu', anim: 'watch', panel: 'story', aud: 1, side: 'Meta · step 2 of the setup' },
-  { step: 2, label: 'Rohan likes, saves, shares, follows', app: 'reels', ad: 'edu', anim: 'engage', panel: 'story', aud: 2, side: 'Meta · step 2 of the setup' },
-  { step: 3, label: 'Retargeted with the free sample ad', app: 'reels', ad: 'sample', panel: 'story', side: 'Meta · step 3 of the setup' },
-  { step: 4, label: 'FreeStand sampling page', app: 'web', page: 'landing', panel: 'engine', e: 0, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Name, email + mobile', app: 'web', page: 'details', panel: 'engine', e: 1, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'OTP on WhatsApp', app: 'web', page: 'otp', panel: 'engine', e: 2, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Brand question 1: shaving frequency', app: 'web', page: 'q1', panel: 'engine', e: 3, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Brand question 2: current routine', app: 'web', page: 'q2', panel: 'engine', e: 4, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Brand question 3: biggest worry', app: 'web', page: 'q3', panel: 'engine', e: 5, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Brand question 4: education recall', app: 'web', page: 'q4', panel: 'engine', e: 6, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Pincode verified + geo-coded', app: 'web', page: 'pincode', panel: 'engine', e: 7, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Delivery address + WhatsApp consent', app: 'web', page: 'address', panel: 'engine', e: 8, side: 'FreeStand qualification engine' },
-  { step: 4, label: 'Sample claimed', app: 'web', page: 'claimed', panel: 'engine', e: 9, side: 'FreeStand qualification engine' },
-  { step: 5, label: 'Dispatched with tracking', app: 'wa', wa: 1, panel: 'delivery', d: 1, side: 'FreeStand fulfilment' },
-  { step: 5, label: 'Delivered in 3 days', app: 'wa', wa: 2, panel: 'delivery', d: 2, side: 'FreeStand fulfilment' },
-  { step: 6, label: 'Feedback triggered 3 days later', app: 'wa', wa: 3, panel: 'feedback', f: 1, side: 'FreeStand feedback loop' },
-  { step: 6, label: 'Rating + purchase intent', app: 'wa', wa: 4, panel: 'feedback', f: 2, side: 'FreeStand feedback loop' },
-  { step: 6, label: 'Repurchase nudge + unboxing photo', app: 'wa', wa: 5, panel: 'feedback', f: 3, side: 'FreeStand feedback loop' },
-  { step: 7, label: 'UGC invite on WhatsApp', app: 'wa', wa: 6, panel: 'ugc', u: 1, side: 'FreeStand UGC engine' },
-  { step: 7, label: 'Rohan posts his first-shave Reel', app: 'ugc', panel: 'ugc', u: 2, side: 'FreeStand UGC engine' },
-  { step: 8, label: 'Results', app: 'close' },
+  { k: 'intro', step: 0, label: 'How it works + meet Rohan', app: 'intro' },
+  { k: 'ed', step: 1, label: 'Ad 1: education reel in Rohan\'s Reels (Monday)', app: 'reels', ad: 'edu', panel: 'story', side: 'Campaign 1 on Meta' },
+  { k: 'eng1', step: 2, label: 'Rohan watches 75%+ of the reel', app: 'reels', ad: 'edu', anim: 'watch', panel: 'story', aud: 1, side: 'Meta custom audience' },
+  { k: 'eng2', step: 2, label: 'Rohan likes, saves, shares, follows', app: 'reels', ad: 'edu', anim: 'engage', panel: 'story', aud: 2, side: 'Meta custom audience' },
+  { k: 'lock', step: 3, label: 'Two days later', app: 'lock', panel: 'story', s3: 1, side: 'Campaign 2 on Meta' },
+  { k: 'feed', step: 3, label: 'Ad 2: free-sample post in his feed (Thursday)', app: 'feed', panel: 'story', s3: 2, side: 'Campaign 2 on Meta' },
+  { k: 'land', step: 4, label: 'FreeStand sampling page', app: 'web', page: 'landing', panel: 'engine', e: 0, side: FS_ENGINE },
+  { k: 'det', step: 4, label: 'Name, email + mobile', app: 'web', page: 'details', panel: 'engine', e: 1, side: FS_ENGINE },
+  { k: 'otp', step: 4, label: 'OTP on WhatsApp', app: 'web', page: 'otp', panel: 'engine', e: 2, side: FS_ENGINE },
+  { k: 'q1', step: 4, label: 'Brand question 1: shaving frequency', app: 'web', page: 'q1', panel: 'engine', e: 3, side: FS_ENGINE },
+  { k: 'q2', step: 4, label: 'Brand question 2: current routine', app: 'web', page: 'q2', panel: 'engine', e: 4, side: FS_ENGINE },
+  { k: 'q3', step: 4, label: 'Brand question 3: biggest worry', app: 'web', page: 'q3', panel: 'engine', e: 5, side: FS_ENGINE },
+  { k: 'q4', step: 4, label: 'Brand question 4: education recall', app: 'web', page: 'q4', panel: 'engine', e: 6, side: FS_ENGINE },
+  { k: 'pin', step: 4, label: 'Pincode verified + geo-coded', app: 'web', page: 'pincode', panel: 'engine', e: 7, side: FS_ENGINE },
+  { k: 'addr', step: 4, label: 'Delivery address + WhatsApp consent', app: 'web', page: 'address', panel: 'engine', e: 8, side: FS_ENGINE },
+  { k: 'claim', step: 4, label: 'Sample claimed', app: 'web', page: 'claimed', panel: 'engine', e: 9, side: FS_ENGINE },
+  { k: 'ship', step: 5, label: 'Dispatched with tracking', app: 'wa', wa: 1, panel: 'delivery', d: 1, side: 'FreeStand fulfilment' },
+  { k: 'deliv', step: 5, label: 'Delivered in 3 days', app: 'wa', wa: 2, panel: 'delivery', d: 2, side: 'FreeStand fulfilment' },
+  { k: 'fb1', step: 6, label: 'Feedback triggered 3 days later', app: 'wa', wa: 3, panel: 'feedback', f: 1, side: 'FreeStand feedback loop' },
+  { k: 'fb2', step: 6, label: 'Rating + purchase intent', app: 'wa', wa: 4, panel: 'feedback', f: 2, side: 'FreeStand feedback loop' },
+  { k: 'fb3', step: 6, label: 'Repurchase nudge + unboxing photo', app: 'wa', wa: 5, panel: 'feedback', f: 3, side: 'FreeStand feedback loop' },
+  { k: 'ugc1', step: 7, label: 'UGC invite on WhatsApp', app: 'wa', wa: 6, panel: 'ugc', u: 1, side: 'FreeStand UGC engine' },
+  { k: 'ugc2', step: 7, label: 'Rohan posts his first-shave Reel', app: 'ugc', panel: 'ugc', u: 2, side: 'FreeStand UGC engine' },
+  { k: 'fwd', step: 8, label: 'New campaign: Shave It Forward', app: 'reels', ad: 'partner', panel: 'forward', side: 'Campaign 3, built from the data' },
+  { k: 'loop', step: 9, label: 'The engine, as a loop', app: 'close' },
 ];
+const stageIdx = k => STAGES.findIndex(s => s.k === k);
 
 /* ═══════════════ phone: shared chrome ═══════════════ */
-const statusBar = dark => `<div class="sbar ${dark ? 'dark' : ''}"><span>9:41</span><span class="ics">${I.signal}${I.wifi}${I.battery}</span></div>`;
+const statusBar = (dark, t = '9:41') => `<div class="sbar ${dark ? 'dark' : ''}"><span>${t}</span><span class="ics">${I.signal}${I.wifi}${I.battery}</span></div>`;
 
 /* persistent reel video so playback continues across steps 1-2 */
 const reelVideo = document.createElement('video');
@@ -777,30 +934,34 @@ reelVideo.poster = 'assets/web/reel-cover.webp';
 reelVideo.innerHTML = '<source src="assets/gillette-education-reel.mp4" type="video/mp4"><source src="assets/gillette-education-reel.webm" type="video/webm">';
 
 function reelsApp(s) {
-  const edu = s.ad === 'edu';
-  const st = s.anim === 'engage' ? 'pre' : '';
+  const partner = s.ad === 'partner';
+  const who = partner
+    ? `<img src="${A('rohan-avatar')}" alt=""><span>rohan.k_19</span><span class="follow">Follow</span>`
+    : `<img src="${A('gillette-ig-dp')}" alt=""><span>gilletteindia</span><span class="verified">${I.verified}</span><span class="follow" id="igFollow">Follow</span>`;
   return `<div class="app ig">
-    <div class="media">${edu ? '<div class="vslot" style="width:100%;height:100%"></div>' : `<img src="${A('sample-ad-9x16')}" alt="">`}</div>
+    <div class="media">${partner ? `<img src="${A('ugc-photo-1')}" alt="">` : '<div class="vslot" style="width:100%;height:100%"></div>'}</div>
     <div class="shade"></div>
-    ${statusBar(false)}
+    ${statusBar(false, partner ? '7:05' : '8:40')}
     <div class="hdr"><span>Reels</span>${I.camera}</div>
-    ${edu ? '' : `<div class="later">${I.calendar}2 days later · Rohan opens Reels</div>`}
+    ${s.step === 1 ? `<div class="later">${I.calendar}Monday, 8:40 PM · Rohan scrolls Reels</div>` : ''}
+    ${partner ? `<div class="later">${I.users}Aarav's phone · 3 weeks later</div>` : ''}
     <svg class="bigheart" viewBox="0 0 24 24">${I.bigheart.replace(/<\/?svg[^>]*>/g, '')}</svg>
     <div class="toast" id="igToast">${I.bookmark}<span>Saved to your collection</span></div>
     <div class="rail">
-      <div class="i like" id="igLike">${I.heart}<span id="igLikeN">${edu ? '24.6K' : '8,214'}</span></div>
-      <div class="i">${I.comment}<span>${edu ? '812' : '356'}</span></div>
-      <div class="i share" id="igShare">${I.send}<span>${edu ? '3,104' : '1,024'}</span></div>
+      <div class="i like" id="igLike">${I.heart}<span id="igLikeN">${partner ? '12.4K' : '24.6K'}</span></div>
+      <div class="i">${I.comment}<span>${partner ? '318' : '812'}</span></div>
+      <div class="i share" id="igShare">${I.send}<span>${partner ? '1,204' : '3,104'}</span></div>
       <div class="i save" id="igSave">${I.bookmark}</div>
       <div class="i">${I.more}</div>
-      <div class="aud"><img src="${A('gillette-ig-dp')}" alt=""></div>
+      <div class="aud"><img src="${A(partner ? 'rohan-avatar' : 'gillette-ig-dp')}" alt=""></div>
     </div>
     <div class="meta">
-      <div class="who"><img src="${A('gillette-ig-dp')}" alt=""><span>gilletteindia</span><span class="verified">${I.verified}</span><span class="follow" id="igFollow">Follow</span></div>
-      <div class="cap">${edu ? 'Your first shave, done right. 3 tips every beginner needs.' : 'You learnt the technique. Now try it free. Your Guard 3-in-1 kit is on us.'}</div>
-      <div class="spons">Sponsored · ${I.music}<span>Gillette India · Original audio</span></div>
+      <div class="who">${who}</div>
+      ${partner ? `<div class="spons" style="margin-top:6px">Paid partnership with <b>gilletteindia</b></div>` : ''}
+      <div class="cap">${partner ? 'Learnt from @gilletteindia\'s reel. First clean shave, zero cuts. #FirstShave' : 'Your first shave, done right. 3 tips every beginner needs.'}</div>
+      ${partner ? '' : `<div class="spons">Sponsored · ${I.music}<span>Gillette India · Original audio</span></div>`}
     </div>
-    <div class="cta ${edu ? '' : 'white'}" ${edu ? '' : 'data-tap'}><span>${edu ? 'Learn more' : 'Claim Free Sample'}</span>${I.chevR}</div>
+    <div class="cta ${partner ? 'white' : ''}" ${partner ? 'data-tap' : ''}><span>${partner ? 'Watch the 3 tips' : 'Learn more'}</span>${I.chevR}</div>
     <div class="prog"><i id="igProg"></i></div>
     <div class="sheet" id="igSheet">
       <div class="grab"></div>
@@ -813,8 +974,41 @@ function reelsApp(s) {
       </div>
       <div class="send" id="igSend">Send</div>
     </div>
-    <div class="tabbar">${I.home}${I.search}${I.plusSq}${I.reels}<img src="${A('rohan-avatar')}" alt=""></div>
+    <div class="tabbar">${I.home}${I.search}${I.plusSq}${I.reels}<img src="${A(partner ? 'avatar-2' : 'rohan-avatar')}" alt=""></div>
     <div class="homebar"></div>
+  </div>`;
+}
+
+/* lock screen: makes the two-day gap between Ad 1 and Ad 2 visible */
+function lockApp() {
+  return `<div class="app lock">
+    ${statusBar(false, '')}
+    <div class="lk-chip">${I.calendar}2 days later</div>
+    <div class="lk-date">Thursday 10 October</div>
+    <div class="lk-time">8:12</div>
+    <div class="lk-n fi" style="animation-delay:.5s" data-tap><span class="lk-ic ig">${I.insta}</span><div><b>Instagram</b><span>aditya.p sent you a reel</span></div><small>now</small></div>
+    <div class="lk-n fi" style="animation-delay:.8s"><span class="lk-ic wa">${I.whatsapp}</span><div><b>College Gang</b><span>kunal_07: lecture shifted to 10</span></div><small>8m</small></div>
+    <div class="lk-foot">Rohan opens Instagram</div>
+    <div class="homebar"></div>
+  </div>`;
+}
+
+/* Instagram home feed: Ad 2 is a separate sponsored post, not the reel */
+function feedApp() {
+  const stories = [['Your story', 'rohan-avatar'], ['aditya.p', 'avatar-2'], ['kunal_07', 'avatar-3'], ['sid.rao', 'avatar-5'], ['college_gang', 'avatar-4']];
+  return `<div class="app feedapp">
+    ${statusBar(true, '8:13')}
+    <div class="fh"><span class="igword">Instagram</span><span class="fh-i">${I.heart}${I.send}</span></div>
+    <div class="stories">${stories.map(([n, a], i) => `<div><span class="ring ${i ? '' : 'me'}"><img src="${A(a)}" alt=""></span><small>${n}</small></div>`).join('')}</div>
+    <div class="post">
+      <div class="ph2"><img src="${A('gillette-ig-dp')}" alt=""><div><b>gilletteindia <span class="verified">${I.verified}</span></b><small>Sponsored</small></div>${I.more}</div>
+      <img class="pimg" src="${A('sample-ad-1x1')}" alt="">
+      <div class="pcta" data-tap><span>Claim Free Sample</span>${I.chevR}</div>
+      <div class="pact">${I.heart}${I.comment}${I.send}<span style="margin-left:auto">${I.bookmark}</span></div>
+      <div class="ptxt"><b>8,214 likes</b><br><b>gilletteindia</b> You learnt the technique. Now try it free. Guard 3-in-1 kits for first-time shavers.</div>
+    </div>
+    <div class="tabbar light">${I.home}${I.search}${I.plusSq}${I.reels}<img src="${A('rohan-avatar')}" alt=""></div>
+    <div class="homebar dark"></div>
   </div>`;
 }
 
@@ -937,59 +1131,60 @@ function ugcApp() {
 /* ═══════════════ panels ═══════════════ */
 const ph = (icon, cls, title, sub, status, color) => `<div class="ph"><div class="ic ${cls}">${icon}</div><div><div class="tt">${title}</div><div class="sb">${sub}</div></div><div class="live"><i style="${color ? `background:${color}` : ''}"></i>${status}</div></div>`;
 
-/* ═══════════════ Steps 1-3: Teach > Capture > Sample (one story panel) ═══════════════ */
+/* ═══════════════ Steps 1-3: Ad 1 > reactions > custom audience > Ad 2 ═══════════════ */
 const META_LOGO = `<svg viewBox="0 0 36 24"><defs><linearGradient id="mlg" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#0064E0"/><stop offset="1" stop-color="#0082FB"/></linearGradient></defs><path d="M4 15c0-5 2.5-10 6-10 4.3 0 7 8.5 10.5 13 1.5 1.9 2.7 2.6 4 2.6 2.4 0 4-2.5 4-5.8 0-5.4-2.6-9.8-6-9.8-3.8 0-6.7 7-10.2 12.5C10.9 20 9.7 20.6 8.5 20.6 5.8 20.6 4 18.4 4 15z" fill="none" stroke="url(#mlg)" stroke-width="3.2" stroke-linejoin="round"/></svg>`;
 
-// crowd of 192 dots = 12L people reached (1 dot ≈ 6,250). 30 of them engage = 1.84L.
-const CROWD = { cols: 16, rows: 12, x0: 14, y0: 72, gap: 19.5 };
-const SLOTS = { cols: 6, x0: 392, y0: 150, gap: 27 };
+// 120 dots = 12L people who saw Ad 1 (1 dot ≈ 10,000). 18 of them react = 1.84L.
+const CROWD = { cols: 12, rows: 10, x0: 16, y0: 70, gap: 13.4 };
+const SLOTS = { cols: 4, x0: 208, y0: 150, gap: 24 };
 const LIT = (() => {
-  const out = [77]; let seed = 7;            // index 77 is Rohan
-  while (out.length < 30) { seed = (seed * 73 + 41) % 192; if (!out.includes(seed)) out.push(seed); }
-  return out;                                // 0-18 watched, 19-22 saved, 23-25 shared, 26-29 followed
+  const out = [53]; let seed = 11;             // index 53 is Rohan
+  while (out.length < 18) { seed = (seed * 37 + 23) % 120; if (!out.includes(seed)) out.push(seed); }
+  return out;                                  // 0-11 watched, 12-13 saved, 14-15 shared, 16-17 followed
 })();
-const WAVES = [[0, 19, N.watched], [19, 23, N.watched + N.saved], [23, 26, N.watched + N.saved + N.shared], [26, 30, N.engaged]];
+const WAVES = [[0, 12, N.watched], [12, 14, N.watched + N.saved], [14, 16, N.watched + N.saved + N.shared], [16, 18, N.engaged]];
 const dotXY = i => [CROWD.x0 + (i % CROWD.cols) * CROWD.gap, CROWD.y0 + Math.floor(i / CROWD.cols) * CROWD.gap];
 const slotXY = j => [SLOTS.x0 + (j % SLOTS.cols) * SLOTS.gap, SLOTS.y0 + Math.floor(j / SLOTS.cols) * SLOTS.gap];
 
 function beats(cur) {
   const B = [
-    { t: 'Teach', d: 'Education reel to young men', ic: I.playO },
-    { t: 'Capture', d: 'Meta keeps who engaged', ic: I.users },
-    { t: 'Sample', d: 'Free-sample ad to them only', ic: I.gift },
+    { t: 'Ad 1 · Mon', d: 'Education reel', ic: I.playO },
+    { t: 'Mon - Wed', d: 'Reactions saved', ic: I.users },
+    { t: 'Ad 2 · Thu', d: 'Free-sample ad', ic: I.gift },
   ];
-  return `<div class="beats">${B.map((b, i) => `${i ? `<div class="barrow">${I.arrowR}</div>` : ''}<div class="beat ${i + 1 === cur ? 'on' : i + 1 < cur ? 'done' : ''}"><div class="bi">${i + 1 < cur ? I.check : b.ic}</div><div><b>${i + 1}. ${b.t}</b><span>${b.d}</span></div></div>`).join('')}</div>`;
+  return `<div class="beats">${B.map((b, i) => `${i ? `<div class="barrow">${I.arrowR}</div>` : ''}<div class="beat ${i + 1 === cur ? 'on' : i + 1 < cur ? 'done' : ''}"><div class="bi">${i + 1 < cur ? I.check : b.ic}</div><div><b>${b.t}</b><span>${b.d}</span></div></div>`).join('')}</div>`;
 }
 function mcard(title, status, rows) {
   return `<div class="card mcard"><div class="mc-h"><span class="ml2">${META_LOGO}</span><span>Meta Ads Manager</span><span class="pill ${status[1]}" style="margin-left:auto">${status[0]}</span></div>
     <div class="mc-t">${title}</div>
     <div class="mc-rows">${rows.map(([k, v]) => `<div><span>${k}</span><b>${v}</b></div>`).join('')}</div></div>`;
 }
-function viz(stepNo) {
+function viz(s) {
+  const st = s.step;
   const dots = Array.from({ length: CROWD.cols * CROWD.rows }, (_, i) => {
     const [x, y] = dotXY(i), ro = i === LIT[0];
-    return `<div class="dot ${ro ? 'ro' : ''} ${stepNo === 1 ? 'wave' : ''}" id="d${i}" style="left:${x}px;top:${y}px;animation-delay:${stepNo === 1 ? (i % CROWD.cols) * .05 + Math.floor(i / CROWD.cols) * .02 : 0}s">${ro ? `<img src="${A('rohan-avatar')}" alt="">` : ''}</div>`;
+    return `<div class="dot ${ro ? 'ro' : ''} ${st === 1 ? 'wave' : ''}" id="d${i}" style="left:${x}px;top:${y}px;animation-delay:${st === 1 ? (i % CROWD.cols) * .05 + Math.floor(i / CROWD.cols) * .03 : 0}s">${ro ? `<img src="${A('rohan-avatar')}" alt="">` : ''}</div>`;
   }).join('');
   return `<div class="card viz">
-    <div class="vh" style="left:14px"><span>Saw the education reel</span><b data-count="${N.reach}" data-fmt="${''}" ${stepNo === 1 ? '' : `data-from="${N.reach}"`}>0</b></div>
-    <div class="vfoot" id="crowdNote">Each dot ≈ 6,250 young men</div>
-    <div class="bucket ${stepNo >= 2 ? 'on' : ''}" id="bucket">
-      <div class="bk-t">Gillette Engaged Learners</div><div class="bk-s">Meta Custom Audience · 30 days</div>
-      <div class="bk-n" id="bkN">${stepNo === 3 ? inr(N.engaged) : '0'}</div>
-      ${stepNo === 1 ? '<div class="bk-empty">Fills up in step 2</div>' : ''}
+    <div class="vh" style="left:14px"><span>Ad 1 · Education reel</span><b data-count="${N.reach}" ${st === 1 ? '' : `data-from="${N.reach}"`}>0</b><small>saw it</small></div>
+    <div class="vfoot" id="crowdNote">1 dot ≈ 10,000 young men</div>
+    <div class="bucket ${st >= 2 ? 'on' : ''}" id="bucket">
+      <div class="bk-t">Custom audience</div><div class="bk-s">"Engaged Learners" · built from reactions</div>
+      <div class="bk-n" id="bkN">${st === 3 ? inr(N.engaged) : '0'}</div>
+      ${st === 1 ? '<div class="bk-empty">Empty until people react</div>' : ''}
     </div>
-    <div class="adcol ${stepNo === 3 ? 'on' : ''}" id="adcol">
-      <div class="bk-t">Free-sample ad</div>
-      <img src="${A('sample-ad-9x16')}" alt="">
-      <div class="bk-s" id="adNote">${stepNo === 3 ? 'Shown to these 1,84,000 only' : 'Not running yet'}</div>
+    <div class="adcol ${st === 3 ? 'on' : ''}" id="adcol">
+      <div class="bk-t">Ad 2 · Free sample</div>
+      <img src="${A('sample-ad-1x1')}" alt="">
+      <div class="bk-s" id="adNote">${st === 3 ? 'New campaign, shown only to this audience' : 'Not created yet'}</div>
     </div>
-    <svg class="varrows" viewBox="0 0 758 330"><defs><marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="context-stroke"/></marker></defs>
-      <path id="arr1" class="${stepNo >= 2 ? 'on' : ''}" d="M322 178 H352" marker-end="url(#ah)"/>
-      <path id="arr2" class="${stepNo === 3 ? 'on' : ''}" d="M566 178 H594" marker-end="url(#ah)"/></svg>
+    <svg class="varrows" viewBox="0 0 446 290"><defs><marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="context-stroke"/></marker></defs>
+      <path id="arr1" class="${st >= 2 ? 'on' : ''}" d="M170 160 H184" marker-end="url(#ah)"/>
+      <path id="arr2" class="${st === 3 ? 'on' : ''}" d="M316 160 H330" marker-end="url(#ah)"/></svg>
     ${dots}
   </div>`;
 }
-function setDots(root, nIn, fadeRest) {   // place first nIn lit dots in the bucket
+function setDots(root, nIn, fadeRest) {
   LIT.forEach((i, j) => {
     const el = $('#d' + i, root); if (!el || j >= nIn) return;
     const [x, y] = slotXY(j); el.classList.add('lit'); el.style.left = x + 'px'; el.style.top = y + 'px';
@@ -1006,49 +1201,46 @@ function moveWave(root, [a, b, total], from) {
 }
 const SIG = [
   { k: 'watched', t: 'Watched 75%+', n: N.watched, ic: I.eye },
-  { k: 'saved', t: 'Saved the reel', n: N.saved, ic: I.bookmark },
+  { k: 'saved', t: 'Saved it', n: N.saved, ic: I.bookmark },
   { k: 'shared', t: 'Shared it', n: N.shared, ic: I.send },
-  { k: 'followed', t: 'Followed @gilletteindia', n: N.followed, ic: I.users },
+  { k: 'followed', t: 'Followed', n: N.followed, ic: I.users },
 ];
-
 function panelStory(s, prev) {
   const st = s.step;
   const head = {
-    1: [I.playO, '1. Gillette teaches first', 'A how-to-shave reel, no offer. It reaches young men about to start shaving.', 'RUNNING', '#4CC17A'],
-    2: [I.users, '2. Meta keeps the people who engaged', 'Watch 75%+, save, share or follow and you join a 30-day audience. Everyone else is left out.', s.aud === 2 ? 'BUILDING' : 'CAPTURING', '#F4B400'],
-    3: [I.gift, '3. Only that audience sees the free sample', 'Two days later the sample ad runs, targeted to the Engaged Learners audience and nobody else.', 'LIVE', '#4CC17A'],
+    1: [I.playO, 'Ad 1: Gillette teaches first', 'Campaign 1 · Monday. A how-to-shave reel with no offer, shown to young men about to start shaving.', 'RUNNING', '#4CC17A'],
+    2: [I.users, 'Reactions build a custom audience', 'Meta adds everyone who watched 75%+, saved, shared or followed. Scrollers are left out.', 'CAPTURING', '#F4B400'],
+    3: [I.gift, 'Ad 2: free sample, only for that audience', 'Campaign 2 · Thursday. A separate ad, targeted to the custom audience and nobody else.', s.s3 === 2 ? 'SHOWN TO ROHAN' : 'LAUNCHED', '#4CC17A'],
   }[st];
   let bottom = '';
-  if (st === 1) bottom = `<div class="sb3">
-      ${mcard('Ad set: Gillette First Shave Education', ['ACTIVE', 'ok'], [['Goal', 'ThruPlay (video views)'], ['Budget', '₹40,000 / day · 14 days'], ['Who', 'Men 18-24 · India Tier 1 + 2'], ['Est. reach', '10L - 14L'], ['Interests', 'Grooming, fitness, college life, cricket']])}
-      <div class="callout" style="flex-direction:column;align-items:flex-start;justify-content:center">${I.playO}<div><b>No offer yet. The reel just teaches.</b><span>Whether someone actually watches is the signal we use next.</span></div></div></div>`;
+  if (st === 1) bottom = `${mcard('Campaign 1 · Gillette First Shave Education', ['ACTIVE', 'ok'], [['Goal', 'ThruPlay (video views)'], ['Budget', '₹40,000 / day · 14 days'], ['Who', 'Men 18-24 · India Tier 1 + 2'], ['Est. reach', '10L - 14L'], ['Interests', 'Grooming, fitness, college life, cricket']])}
+      <div class="callout">${I.playO}<div><b>No offer in Ad 1. It only teaches.</b><span>Who watches and reacts is what we capture next.</span></div></div>`;
   if (st === 2) bottom = `<div class="sigs">${SIG.map(g => `<div class="card sg" id="sg-${g.k}"><div class="sg-i">${g.ic}</div><div><b>${g.t}</b><span>${inr(g.n)}</span></div><div class="tick">${I.check}</div><div class="sg-r"></div></div>`).join('')}</div>
-      ${mcard('Custom audience: Gillette Engaged Learners - 30 days', s.aud === 2 ? ['UPDATING', 'blue'] : ['UPDATING', 'blue'], [['Source', 'Reel viewers 75%+ · Instagram engagement'], ['Retention', '30 days']])}`;
-  if (st === 3) bottom = `<div class="sb3">
-      ${mcard('Ad set: Gillette First Shave Sample Offer', ['ACTIVE', 'ok'], [['Audience', 'Gillette Engaged Learners ONLY'], ['Advantage+', 'Off (no expansion)'], ['Excludes', 'People who already claimed'], ['Budget', '₹12,000 / day']])}
-      <div class="callout" style="flex-direction:column;align-items:flex-start;justify-content:center">${I.target}<div><b>Only engaged, attentive viewers see the offer.</b><span>Zero spend on the ${lakh(N.passive)} who scrolled past.</span></div></div></div>`;
+      ${mcard('Custom audience · Gillette Engaged Learners - 30 days', ['UPDATING', 'blue'], [['Built from', 'Ad 1 viewers 75%+ · Instagram engagement'], ['Keeps people for', '30 days']])}`;
+  if (st === 3) bottom = `${mcard('Campaign 2 · Gillette First Shave Free Sample', ['ACTIVE', 'ok'], [['Audience', 'Engaged Learners ONLY'], ['Advantage+', 'Off (no expansion)'], ['Excludes', 'People who already claimed'], ['Budget', '₹12,000 / day']])}
+      <div class="callout">${I.target}<div><b>Only people who reacted to Ad 1 see Ad 2.</b><span>Zero spend on the ${lakh(N.passive)} who scrolled past.</span></div></div>`;
   return `${ph(head[0], '', head[1], head[2], head[3], head[4])}
-    <div class="pb story">${beats(st)}${viz(st)}${bottom}</div>`;
+    <div class="pb story">${beats(st)}${viz(s)}${bottom}</div>`;
 }
 function afterStory(root, s, prev) {
   const st = s.step;
   if (st === 1) return;
+  const grey = () => { $('#crowdNote', root).innerHTML = `<b style="color:var(--bad)">Grey: ${lakh(N.passive)} scrolled past</b> · never retargeted`; };
   if (st === 3) {
-    setDots(root, 30, true);
-    $('#crowdNote', root).innerHTML = `<b style="color:var(--bad)">Grey: ${inr(N.passive)} scrolled past</b> · never retargeted, ₹0 spent`;
+    setDots(root, 18, true); grey();
+    if (s.s3 === 2) {
+      const r = $('#d' + LIT[0], root); r.classList.add('pick');
+      $('#adNote', root).innerHTML = '<b>Rohan sees it now</b>';
+    }
     return;
   }
-  const sig = (k, rohan = true) => { const el = $('#sg-' + k, root); if (!el) return; el.classList.add('hit'); el.querySelector('.tick').classList.add('on'); if (rohan) el.querySelector('.sg-r').innerHTML = `<span class="rohan"><img src="${A('rohan-avatar')}" alt="">Rohan</span>`; };
-  if (s.aud === 1) {
-    later(2300, () => { moveWave(root, WAVES[0], 0); sig('watched'); });
-    return;
-  }
-  // aud 2: watched wave already in the bucket, then saved / shared / followed
-  setDots(root, 19, false); $('#bkN', root).textContent = inr(N.watched); sig('watched');
+  const sig = (k) => { const el = $('#sg-' + k, root); if (!el) return; el.classList.add('hit'); el.querySelector('.tick').classList.add('on'); el.querySelector('.sg-r').innerHTML = `<span class="rohan"><img src="${A('rohan-avatar')}" alt="">Rohan</span>`; };
+  if (s.aud === 1) { later(2300, () => { moveWave(root, WAVES[0], 0); sig('watched'); }); return; }
+  setDots(root, 12, false); $('#bkN', root).textContent = inr(N.watched); sig('watched');
   [['saved', 1100, 1], ['shared', 2200, 2], ['followed', 3300, 3]].forEach(([k, t, w]) => later(t, () => { moveWave(root, WAVES[w], WAVES[w - 1][2]); sig(k); }));
   later(4400, () => {
-    setDots(root, 30, true);
-    $('#crowdNote', root).innerHTML = `<b>Grey: ${inr(N.passive)} scrolled past.</b> They stay out.`;
+    setDots(root, 18, true);
+    $('#crowdNote', root).innerHTML = `<b>Grey: ${lakh(N.passive)} scrolled past.</b> They stay out.`;
     const live = root.querySelector('.ph .live'); if (live) live.innerHTML = '<i></i>AUDIENCE READY';
   });
 }
@@ -1056,21 +1248,22 @@ function afterStory(root, s, prev) {
 /* intro */
 function introScreen() {
   const J = [
-    ['Teach', 'Gillette runs a how-to-shave reel to men 18-24'],
-    ['Capture', 'Meta keeps everyone who watched, saved, shared or followed'],
-    ['Sample ad', 'Only that audience sees a free-sample ad'],
-    ['Qualify', 'FreeStand verifies, scores and approves'],
-    ['Deliver', 'Kit at the door in 3 days, tracked on WhatsApp'],
+    ['Ad 1: Teach', 'A how-to-shave reel runs to men 18-24. No offer.'],
+    ['Reactions', 'Meta saves everyone who watched, saved, shared or followed'],
+    ['Ad 2: Sample', 'A separate free-sample ad, shown only to them'],
+    ['Claim', 'FreeStand verifies, asks, scores and approves'],
+    ['Deliver', 'Kit at the door in 3 days'],
     ['Feedback', 'WhatsApp check-in after the first shave'],
-    ['UGC', 'First-shave Reels come back as social proof'],
+    ['UGC', 'First-shave Reels as social proof'],
+    ['Shave It Forward', 'The data launches the next campaign'],
   ];
   return `<div class="intro">
     <div class="ctop"><div class="eb">Gillette x FreeStand · Educate to Sample</div><div class="logos"><img class="g" src="${A('gillette-logo-white')}" alt=""><span>x</span><img class="f" src="${A('freestand-logo-white')}" alt=""></div></div>
     <div class="in-grid">
       <div>
         <h1 class="fi">Teach first.<br><em>Sample only the people who learnt.</em></h1>
-        <p class="fi" style="animation-delay:.15s">Most young Indian men start with a trimmer or the barber. Gillette's tips reel teaches them how to shave. FreeStand takes the ones who actually paid attention and turns them into verified, sampled, reviewing customers.</p>
-        <div class="jr">${J.map(([t, d], i) => `<div class="fi" style="animation-delay:${.3 + i * .08}s"><span class="jn">${i + 1}</span><b>${t}</b><small>${d}</small></div>`).join('')}</div>
+        <p class="fi" style="animation-delay:.15s">Two separate ads. Ad 1 teaches young men how to shave. Meta remembers everyone who reacts. Days later, Ad 2 offers a free sample to that audience only. FreeStand then verifies, ships, collects feedback and turns the data into the next campaign.</p>
+        <div class="jr">${J.map(([t, d], i) => `<div class="fi" style="animation-delay:${.3 + i * .07}s"><span class="jn">${i + 1}</span><b>${t}</b><small>${d}</small></div>`).join('')}</div>
       </div>
       <div class="rohan-card fi" style="animation-delay:.5s">
         <img src="${A('rohan-avatar')}" alt="">
@@ -1080,88 +1273,64 @@ function introScreen() {
         <button class="bigcta" id="startBtn" style="font-size:17px;padding:12px 22px">Follow Rohan's journey ${I.arrowR}</button>
       </div>
     </div>
-    <div class="in-foot">Steps 1-3 show how the sample audience is built. Steps 4-7 show what FreeStand does with it.</div>
+    <div class="in-foot">Phone on the left: what Rohan sees. Right: what happens behind the scenes, and the profile FreeStand builds.</div>
   </div>`;
 }
 
 /* qualification engine */
 const ELOG = [
-  { e: 0, pts: 20, t: 'Engaged with education ad', src: 'Arrived from "Gillette Engaged Learners - 30 days"' },
-  { e: 1, chk: 1, t: 'Not a duplicate', src: 'Mobile, email and device not seen in any earlier claim' },
+  { e: 0, pts: 20, t: 'Came from Ad 2 (Engaged Learners)', src: 'Reacted to the education reel' },
+  { e: 1, chk: 1, t: 'Not a duplicate', src: 'Mobile, email and device are new' },
   { e: 1, chk: 1, t: '18+ confirmed', src: 'Self-declared at sign-up' },
   { e: 2, chk: 1, t: 'Mobile verified by WhatsApp OTP', src: '+91 98226 34417' },
   { e: 2, pts: 10, t: 'Reachable on WhatsApp', src: 'Delivery updates + feedback can reach him' },
-  { e: 3, pts: 15, t: 'Shaves 2-3x/week = high usage potential', src: 'Q1 · How often do you shave?' },
-  { e: 4, pts: 30, t: 'Trimmer user = conquest opportunity', src: 'Q2 · Non-Gillette user, priority queue' },
-  { e: 5, pts: 5, t: 'Worried about cuts = Guard 3-in-1 fit', src: 'Q3 · Safety comb message in kit insert' },
+  { e: 3, pts: 15, t: 'Shaves 2-3x/week = high usage', src: 'Q1 · How often do you shave?' },
+  { e: 4, pts: 30, t: 'Trimmer user = conquest', src: 'Q2 · Non-Gillette user, priority queue' },
+  { e: 5, pts: 5, t: 'Worried about cuts = Guard fit', src: 'Q3 · Safety comb message in kit insert' },
   { e: 6, pts: 5, t: 'Reel recall confirmed', src: 'Q4 · "Yes, learnt a lot"' },
-  { e: 7, chk: 1, t: 'Pincode 411007 serviceable', src: 'Geo-coded to Ganeshkhind, Pune · Tier 1 · 3-day lane' },
+  { e: 7, chk: 1, t: 'Pincode 411007 serviceable', src: 'Geo-coded: Ganeshkhind, Pune · 3-day lane' },
   { e: 8, chk: 1, t: 'One sample per household', src: 'Address fingerprint is new' },
-  { e: 8, chk: 1, t: 'WhatsApp opt-in captured', src: 'Consent stored for updates + feedback' },
-  { e: 9, chk: 1, t: 'Sample GLT-FS-28417 sent to Pune fulfilment', src: 'Kit reserved from inventory' },
+  { e: 9, chk: 1, t: 'Sample GLT-FS-28417 to Pune FC', src: 'Kit reserved from inventory' },
 ];
 const scoreAt = e => ELOG.filter(l => l.e <= e && l.pts).reduce((a, l) => a + l.pts, 0);
 const RULES = [
-  { t: 'Duplicate auto-reject', d: 'Mobile, email, device, address', at: 1 },
-  { t: '18+ only', d: 'Under-18 politely declined', at: 1 },
-  { t: 'OTP-verified mobile', d: 'Code sent on WhatsApp', at: 2 },
-  { t: 'Priority to non-Gillette users', d: 'Conquest first', at: 4 },
-  { t: 'One sample per household', d: 'Address fingerprint', at: 8 },
+  { t: 'No duplicates', at: 1 }, { t: '18+ only', at: 1 }, { t: 'WhatsApp OTP', at: 2 },
+  { t: 'Non-Gillette first', at: 4 }, { t: 'One per household', at: 8 }, { t: 'Score 60+', at: 6 },
 ];
 function panelEngine(s, prev) {
   const e = s.e, pe = prev && prev.panel === 'engine' ? prev.e : -1;
-  const fresh = pe < 0;
-  const score = scoreAt(e), approved = e >= 6;
+  const fresh = pe < 0, approved = e >= 6;
   const rows = ELOG.filter(l => l.e <= e).slice().reverse();
-  const C = 2 * Math.PI * 56;
-  const prof = [
-    ['Name', e >= 1 ? 'Rohan Kulkarni' : null], ['Email', e >= 1 ? 'rohan.kulkarni@email.com' : null], ['Mobile', e >= 2 ? '+91 98226 34417 ✓' : e >= 1 ? '+91 98226 34417' : null],
-    ['Uses', e >= 4 ? 'Trimmer only' : null], ['Pincode', e >= 7 ? '411007 · Ganeshkhind, Pune' : null], ['Source', 'Meta · Engaged Learners'],
-  ];
+  const C = 2 * Math.PI * 46;
   let ctx = '';
   if (e === 1) ctx = `<div class="card ctx fi" style="animation-delay:.4s"><div class="lbl" style="color:var(--warn)">Branch · if under 18</div>
-    <div class="mini">Leaves "I am 18 or older" unticked: "Thanks for your interest! This kit is for shavers aged 18 and above. Here are some beginner shaving tips instead."</div>
-    <div style="font-size:11px;color:var(--muted);margin-top:6px">No kit, no data kept beyond the decline.</div></div>`;
-  else if (e >= 6) ctx = `<div class="card ctx ${pe < 6 ? 'fi' : ''}" style="animation-delay:.6s"><div class="lbl" style="color:var(--bad)">Rejected example</div>
-    <div class="rej"><img src="${A('avatar-6')}" alt=""><div><div class="t">Vikram, 23 · Mumbai</div><div class="d">Score 25/100 · Not approved</div></div><span class="pill bad" style="margin-left:auto">REJECTED</span></div>
-    <div class="rejrows"><div>Uses Gillette Mach3 daily<b>Low priority</b></div><div>Didn't watch the reel<b>+0</b></div><div>Same address as a claim last week<b>Duplicate</b></div></div></div>`;
-  else ctx = `<div class="card ctx ${fresh ? 'fi' : ''}" style="animation-delay:.3s"><div class="lbl">Live campaign</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
-      <div><div style="font-size:18px;font-weight:800">${inr(N.landing)}</div><div style="font-size:10.5px;color:var(--muted)">Landing visits</div></div>
-      <div><div style="font-size:18px;font-weight:800">${inr(N.approved)}</div><div style="font-size:10.5px;color:var(--muted)">Kits available</div></div></div></div>`;
+    <div class="mini">Leaves "I am 18 or older" unticked: "Thanks! This kit is for shavers aged 18 and above. Here are some beginner shaving tips instead."</div></div>`;
+  else if (e >= 6) ctx = `<div class="card ctx ${pe < 6 ? 'fi' : ''}" style="animation-delay:.6s"><div class="rej"><img src="${A('avatar-6')}" alt=""><div><div class="t">Rejected example · Vikram, 23</div><div class="d">Gillette Mach3 user · skipped the reel · same address as last week</div></div><span class="pill bad" style="margin-left:auto">25/100</span></div></div>`;
   return `${ph(P('<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/>'), 'fs', 'Qualification engine', 'FreeStand · gillette.freestand.in/first-shave', approved ? 'APPROVED' : 'SCORING', approved ? '' : '#F4B400')}
-  <div class="pb"><div class="eng">
-    <div class="col">
-      <div class="card ${fresh ? 'fi' : ''}"><div class="score">
-        <div class="ring"><svg viewBox="0 0 132 132"><circle class="tr" cx="66" cy="66" r="56"/><circle class="fg" id="ringFg" cx="66" cy="66" r="56" stroke-dasharray="${C}" stroke-dashoffset="${C * (1 - scoreAt(Math.max(pe, -1)) / 100)}" style="stroke:${approved ? 'var(--ok)' : 'var(--blue)'}"/>
-          <circle class="th" cx="66" cy="66" r="56" stroke-dasharray="2 ${C}" stroke-dashoffset="${-C * .6}"/></svg>
-          <div class="num"><b id="scoreN">${scoreAt(pe)}</b><span>/ 100</span></div></div>
-        <div class="st2">
-          <div>${approved ? '<span class="pill ok fi">' + I.check + ' APPROVED</span>' : '<span class="pill warn">EVALUATING</span>'}</div>
-          <div>Approve at <b>60+</b> · Priority queue: <b>${e >= 4 ? 'Conquest' : 'Pending'}</b></div>
-          <div>Applicant: <b>${e >= 1 ? 'Rohan Kulkarni' : 'New visitor'}</b></div>
-          <div>Kits left today: <b>${inr(e >= 9 ? 1287 : 1288)}</b></div>
-        </div>
-      </div></div>
-      <div class="card log ${fresh ? 'fi' : ''}" style="animation-delay:.1s"><div class="card-h">Scoring log<span class="r">${rows.length} checks</span></div>
-        <div class="rows">${rows.map(l => {
-          const isNew = l.e > pe;
-          return `<div class="lr ${isNew ? 'new fi' : ''}" style="${isNew ? 'animation-delay:.25s' : ''}"><div class="pts ${l.chk ? 'chk' : ''}">${l.chk ? I.check : '+' + l.pts}</div><div><div class="t">${l.t}</div><div class="src">${l.src}</div></div></div>`;
-        }).join('')}</div></div>
-    </div>
-    <div class="col">
-      <div class="card ${fresh ? 'fi' : ''}"><div class="card-h">${I.shield}Campaign rules</div>
-        ${RULES.map(r => `<div class="rule"><div class="tick ${e >= r.at ? 'on' : ''}">${I.check}</div><div><div>${r.t}</div><div class="d">${r.d}</div></div></div>`).join('')}</div>
-      <div class="card prof ${fresh ? 'fi' : ''}" style="animation-delay:.1s"><div class="card-h">${I.users}Applicant profile</div>
-        ${prof.map(([k, v]) => `<div class="f"><span class="k">${k}</span>${v ? `<span class="v">${v}</span>` : '<span class="shim"></span>'}</div>`).join('')}</div>
-      ${ctx}
-    </div>
-  </div></div>`;
+  <div class="pb" style="display:flex;flex-direction:column;gap:12px">
+    <div class="card ${fresh ? 'fi' : ''}"><div class="score">
+      <div class="ring" style="width:112px;height:112px"><svg viewBox="0 0 112 112" style="width:112px;height:112px"><circle class="tr" cx="56" cy="56" r="46"/><circle class="fg" id="ringFg" cx="56" cy="56" r="46" stroke-dasharray="${C}" stroke-dashoffset="${C * (1 - scoreAt(pe) / 100)}" style="stroke:${approved ? 'var(--ok)' : 'var(--blue)'}"/>
+        <circle class="th" cx="56" cy="56" r="46" stroke-dasharray="2 ${C}" stroke-dashoffset="${-C * .6}"/></svg>
+        <div class="num"><b id="scoreN" style="font-size:34px">${scoreAt(pe)}</b><span>/ 100</span></div></div>
+      <div class="st2">
+        <div>${approved ? '<span class="pill ok fi">' + I.check + ' APPROVED</span>' : '<span class="pill warn">EVALUATING</span>'}</div>
+        <div>Approve at <b>60+</b> · Queue: <b>${e >= 4 ? 'Conquest' : 'Pending'}</b></div>
+        <div>Kits left today: <b>${inr(e >= 9 ? 1287 : 1288)}</b> of 10,000</div>
+      </div>
+    </div></div>
+    <div class="card ${fresh ? 'fi' : ''}" style="padding:10px 12px"><div class="lbl" style="margin-bottom:8px">Campaign rules</div>
+      <div class="rules2">${RULES.map(r => `<div class="${e >= r.at ? 'ok' : ''}"><span class="tick ${e >= r.at ? 'on' : ''}">${I.check}</span>${r.t}</div>`).join('')}</div></div>
+    <div class="card log ${fresh ? 'fi' : ''}" style="animation-delay:.1s"><div class="card-h">Scoring log<span class="r">${rows.length} checks</span></div>
+      <div class="rows">${rows.map(l => {
+        const isNew = l.e > pe;
+        return `<div class="lr ${isNew ? 'new fi' : ''}" style="${isNew ? 'animation-delay:.25s' : ''}"><div class="pts ${l.chk ? 'chk' : ''}">${l.chk ? I.check : '+' + l.pts}</div><div><div class="t">${l.t}</div><div class="src">${l.src}</div></div></div>`;
+      }).join('')}</div></div>
+    ${ctx}
+  </div>`;
 }
 function afterEngine(root, s, prev) {
   const pe = prev && prev.panel === 'engine' ? prev.e : -1;
-  const from = scoreAt(pe), to = scoreAt(s.e);
-  const C = 2 * Math.PI * 56;
+  const from = scoreAt(pe), to = scoreAt(s.e), C = 2 * Math.PI * 46;
   const fg = $('#ringFg', root);
   requestAnimationFrame(() => requestAnimationFrame(() => { fg.style.strokeDashoffset = C * (1 - to / 100); }));
   if (from !== to) countUp($('#scoreN', root), from, to, 1000);
@@ -1170,66 +1339,49 @@ function afterEngine(root, s, prev) {
 function panelDelivery(s, prev) {
   const fresh = !prev || prev.panel !== 'delivery';
   const done = s.d === 2;
-  const nodes = [['Approved', 'Mon 9:14 AM'], ['Packed', 'Mon 4:30 PM'], ['Shipped', 'Tue 8:05 AM'], ['Delivered', done ? 'Thu 11:42 AM' : 'Expected Thu']];
-  return `${ph(I.truck, '', 'Fulfilment & delivery', 'Sample ID GLT-FS-28417 · Ganeshkhind, Pune 411007', done ? 'DELIVERED' : 'IN TRANSIT', done ? '' : '#1A73D9')}
-  <div class="pb" style="display:flex;flex-direction:column;gap:14px">
-    <div class="road ${fresh ? 'fi' : ''}"><div class="lane"></div><div class="hub">PUNE FC-02</div>
-      <div class="house"><svg viewBox="0 0 92 50"><path d="M6 22 46 2l40 20v28H6z" fill="#fff" stroke="#3A4C66" stroke-width="2"/><rect x="38" y="28" width="16" height="22" fill="#0A1F44"/><rect x="16" y="26" width="12" height="10" fill="#CFE2F7" stroke="#3A4C66"/><rect x="64" y="26" width="12" height="10" fill="#CFE2F7" stroke="#3A4C66"/></svg><img src="${A('rohan-avatar')}" alt=""></div>
-      <svg class="truck" id="truck" viewBox="0 0 84 44" style="left:${fresh ? 40 : 330}px"><rect x="2" y="6" width="50" height="28" rx="3" fill="#0A1F44"/><text x="27" y="24" font-size="9" font-weight="700" fill="#fff" text-anchor="middle" font-family="Barlow,Roboto">FreeStand</text><path d="M52 14h16l10 10v10H52z" fill="#1A73D9"/><rect x="58" y="17" width="10" height="7" fill="#CFE2F7"/><circle cx="16" cy="36" r="6" fill="#1C2B33"/><circle cx="16" cy="36" r="2.5" fill="#9AA6B4"/><circle cx="66" cy="36" r="6" fill="#1C2B33"/><circle cx="66" cy="36" r="2.5" fill="#9AA6B4"/></svg>
+  const nodes = [['Approved', 'Mon 9:14'], ['Packed', 'Mon 4:30'], ['Shipped', 'Tue 8:05'], ['Delivered', done ? 'Thu 11:42' : 'Expected Thu']];
+  return `${ph(I.truck, '', 'Fulfilment & delivery', 'Sample GLT-FS-28417 · Ganeshkhind, Pune 411007', done ? 'DELIVERED' : 'IN TRANSIT', done ? '' : '#1A73D9')}
+  <div class="pb" style="display:flex;flex-direction:column;gap:12px">
+    <div class="road ${fresh ? 'fi' : ''}" style="height:100px"><div class="lane" style="top:70px"></div><div class="hub">PUNE FC-02</div>
+      <div class="house" style="right:24px;top:14px"><svg viewBox="0 0 92 50"><path d="M6 22 46 2l40 20v28H6z" fill="#fff" stroke="#3A4C66" stroke-width="2"/><rect x="38" y="28" width="16" height="22" fill="#0A1F44"/><rect x="16" y="26" width="12" height="10" fill="#CFE2F7" stroke="#3A4C66"/><rect x="64" y="26" width="12" height="10" fill="#CFE2F7" stroke="#3A4C66"/></svg><img src="${A('rohan-avatar')}" alt=""></div>
+      <svg class="truck" id="truck" viewBox="0 0 84 44" style="top:34px;left:${fresh ? 20 : 150}px"><rect x="2" y="6" width="50" height="28" rx="3" fill="#0A1F44"/><text x="27" y="24" font-size="9" font-weight="700" fill="#fff" text-anchor="middle" font-family="Barlow,Roboto">FreeStand</text><path d="M52 14h16l10 10v10H52z" fill="#1A73D9"/><rect x="58" y="17" width="10" height="7" fill="#CFE2F7"/><circle cx="16" cy="36" r="6" fill="#1C2B33"/><circle cx="16" cy="36" r="2.5" fill="#9AA6B4"/><circle cx="66" cy="36" r="6" fill="#1C2B33"/><circle cx="66" cy="36" r="2.5" fill="#9AA6B4"/></svg>
     </div>
-    <div class="card ${fresh ? 'fi' : ''}" style="animation-delay:.1s"><div class="card-h">${I.pkg}Rohan's kit<span class="r">${done ? '<span class="pill ok">3 DAYS, APPROVAL TO DOOR</span>' : '<span class="pill blue">ON THE WAY</span>'}</span></div>
-      <div class="tl"><div class="ln" id="tlLine"></div>${nodes.map((n, i) => `<div class="nd"><div class="tick ${i < (done ? 4 : 3) ? 'on' : ''}" style="transition-delay:${i * .25}s">${I.check}</div><b>${n[0]}</b><span>${n[1]}</span></div>`).join('')}</div>
-    </div>
-    <div class="tiles">
+    <div class="card ${fresh ? 'fi' : ''}" style="animation-delay:.1s"><div class="card-h">${I.pkg}Rohan's kit<span class="r">${done ? '<span class="pill ok">3 DAYS TO DOOR</span>' : '<span class="pill blue">ON THE WAY</span>'}</span></div>
+      <div class="tl"><div class="ln" id="tlLine"></div>${nodes.map((n, i) => `<div class="nd"><div class="tick ${i < (done ? 4 : 3) ? 'on' : ''}" style="transition-delay:${i * .25}s">${I.check}</div><b>${n[0]}</b><span>${n[1]}</span></div>`).join('')}</div></div>
+    <div class="tiles" style="grid-template-columns:1fr 1fr">
       ${[[N.pincodes, 'Pincodes served', ''], [N.avgDays, 'Avg delivery time (days)', 'dec1'], [N.success, 'Delivery success rate', 'dec1pct'], [N.delivered, 'Kits delivered', '']].map(([v, k, f], i) => `<div class="card kpi ${fresh ? 'fi' : ''}" style="animation-delay:${.2 + i * .08}s"><div class="v"><span data-count="${v}" ${f ? `data-fmt="${f}"` : ''} ${fresh ? '' : `data-from="${v}"`}>0</span></div><div class="k">${k}</div></div>`).join('')}
     </div>
-    <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:14px;flex:1;min-height:0">
-      <div class="card ${fresh ? 'fi' : ''}" style="animation-delay:.3s"><div class="card-h">${I.calendar}Avg days to deliver, by city tier</div>
-        <div class="bars2" style="padding:10px 16px">${[['Tier 1 metros', 2.4, 60], ['Tier 1 others', 2.7, 68], ['Tier 2', 3.3, 83]].map(([k, v, w]) => `<div class="r"><span>${k}</span><div class="bar"><i data-w="${w}%"></i></div><b>${v} d</b></div>`).join('')}</div></div>
-      <div class="card" style="overflow:hidden;display:flex">
-        ${done ? `<img src="${A('delivery')}" alt="" style="width:140px;object-fit:cover" class="fi"><div style="padding:12px 14px" class="fi"><div class="lbl" style="color:var(--ok)">Proof of delivery</div><div style="font-size:12.5px;margin-top:6px;line-height:1.45">Photo captured at the door, 11:42 AM. WhatsApp update sent to Rohan automatically.</div></div>`
-        : `<div style="padding:12px 14px"><div class="lbl">Every update goes on WhatsApp</div><div style="font-size:12.5px;margin-top:6px;line-height:1.45;color:var(--muted)">Dispatched, out for delivery and delivered messages fire from the order status. No app to install.</div></div>`}
-      </div>
+    <div class="card" style="overflow:hidden;display:flex;flex:1;min-height:0">
+      ${done ? `<img src="${A('delivery')}" alt="" style="width:150px;object-fit:cover" class="fi"><div style="padding:12px 14px" class="fi"><div class="lbl" style="color:var(--ok)">Proof of delivery</div><div style="font-size:12.5px;margin-top:6px;line-height:1.45">Photo at the door, Thu 11:42 AM. WhatsApp update sent to Rohan automatically.</div></div>`
+      : `<div style="padding:12px 14px"><div class="lbl">Every update goes on WhatsApp</div><div style="font-size:12.5px;margin-top:6px;line-height:1.45;color:var(--muted)">Dispatched, out for delivery and delivered messages fire from the order status. No app to install.</div></div>`}
     </div>
   </div>`;
 }
-function afterDelivery(root, s, prev) {
-  const done = s.d === 2;
+function afterDelivery(root, s) {
   const truck = $('#truck', root), line = $('#tlLine', root);
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    truck.style.left = done ? '640px' : '330px';
-    line.style.width = done ? '75%' : '50%';
-  }));
+  requestAnimationFrame(() => requestAnimationFrame(() => { truck.style.left = s.d === 2 ? '236px' : '150px'; line.style.width = s.d === 2 ? '75%' : '50%'; }));
 }
 
 function panelFeedback(s, prev) {
   const fresh = !prev || prev.panel !== 'feedback';
   const f = s.f;
-  const words = [['smooth', 34], ['no cuts', 30], ['easy', 27], ['comfortable', 21], ['safety comb', 18], ['quick', 16], ['gentle', 15], ['close shave', 14], ['beginner-friendly', 13], ['no irritation', 13], ['gel felt cool', 11], ['grip', 10]];
-  const feed = [];
-  if (f >= 1) feed.push(['Loved it', 'Reaction']);
-  if (f >= 2) feed.push(['5 / 5', 'Rating'], ['Yes', 'Will buy']);
-  if (f >= 3) feed.push(['Photo received', 'Unboxing']);
+  const words = [['smooth', 30], ['no cuts', 27], ['easy', 24], ['comfortable', 19], ['safety comb', 16], ['quick', 15], ['gentle', 14], ['close shave', 13], ['beginner-friendly', 12], ['no irritation', 12]];
+  const kp = (v, fmt, label, hl, d, extra = '') => `<div class="card kpi ${fresh ? 'fi' : ''} ${hl ? 'hl' : ''}" style="animation-delay:${d}s"><div class="v" style="display:flex;align-items:center;gap:8px"><span data-count="${v}" ${fmt ? `data-fmt="${fmt}"` : ''} ${fresh ? '' : `data-from="${v}"`}>0</span>${extra}</div><div class="k">${label}</div></div>`;
   return `${ph(I.msg, '', 'Feedback loop on WhatsApp', 'Auto-triggered 3 days after delivery · 3 taps, no forms', 'LIVE')}
-  <div class="pb" style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto 1fr;gap:14px">
-    <div style="grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
-      <div class="card kpi ${fresh ? 'fi' : ''} ${f === 1 ? 'hl' : ''}"><div class="v"><span data-count="66" data-fmt="pct" ${fresh ? '' : 'data-from="66"'}>0</span></div><div class="k">Response rate · ${inr(N.feedback)} of ${inr(N.delivered)}</div></div>
-      <div class="card kpi ${fresh ? 'fi' : ''} ${f === 2 ? 'hl' : ''}" style="animation-delay:.08s"><div class="v" style="display:flex;align-items:center;gap:8px"><span data-count="4.6" data-fmt="dec1" ${fresh ? '' : 'data-from="4.6"'}>0</span>${starRow(5)}</div><div class="k">Average rating</div></div>
-      <div class="card kpi ${fresh ? 'fi' : ''} ${f === 2 ? 'hl' : ''}" style="animation-delay:.16s"><div class="v"><span data-count="58" data-fmt="pct" ${fresh ? '' : 'data-from="58"'}>0</span></div><div class="k">Will buy Guard 3-in-1</div></div>
-      <div class="card kpi ${fresh ? 'fi' : ''} ${f === 3 ? 'hl' : ''}" style="animation-delay:.24s"><div class="v"><span data-count="2140" ${fresh ? '' : 'data-from="2140"'}>0</span></div><div class="k">Quick-commerce link taps</div></div>
+  <div class="pb" style="display:flex;flex-direction:column;gap:12px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      ${kp(66, 'pct', `Response rate · ${inr(N.feedback)} of ${inr(N.delivered)}`, f === 1, 0)}
+      ${kp(4.6, 'dec1', 'Average rating', f === 2, .08, starRow(5))}
+      ${kp(58, 'pct', 'Will buy Guard 3-in-1', f === 2, .16)}
+      ${kp(2140, '', 'Quick-commerce link taps', f === 3, .24)}
     </div>
-    <div class="card ${fresh ? 'fi' : ''} ${f === 1 ? 'hl' : ''}" style="padding:14px 16px;animation-delay:.2s"><div class="lbl" style="margin-bottom:10px">First-shave reaction</div>
+    <div class="card ${fresh ? 'fi' : ''} ${f === 1 ? 'hl' : ''}" style="padding:12px 14px;animation-delay:.2s"><div class="lbl" style="margin-bottom:8px">First-shave reaction</div>
       <div class="split"><div data-w="71%" style="background:#1E8E4E">Loved it 71%</div><div data-w="22%" style="background:#9DB4D6">22%</div><div data-w="7%" style="background:#E0796B"></div></div>
       <div class="legend"><span><i style="background:#1E8E4E"></i>Loved it</span><span><i style="background:#9DB4D6"></i>It was okay</span><span><i style="background:#E0796B"></i>Had issues 7%</span></div></div>
-    <div class="card ${fresh ? 'fi' : ''} ${f === 2 ? 'hl' : ''}" style="padding:14px 16px;animation-delay:.28s"><div class="lbl" style="margin-bottom:10px">Purchase intent</div>
-      <div class="split"><div data-w="58%" style="background:var(--navy)">Yes 58%</div><div data-w="31%" style="background:var(--blue-2)">Maybe 31%</div><div data-w="11%" style="background:#C9D1DC;color:#3F4B60">11%</div></div>
-      <div class="legend"><span><i style="background:var(--navy)"></i>Yes</span><span><i style="background:var(--blue-2)"></i>Maybe</span><span><i style="background:#C9D1DC"></i>No</span></div></div>
-    <div class="card ${fresh ? 'fi' : ''} ${f === 3 ? 'hl' : ''}" style="animation-delay:.36s;display:flex;flex-direction:column"><div class="card-h">${I.sparkle}Themes from ${inr(N.feedback)} replies</div>
-      <div class="cloud">${words.map(([w, sz], i) => `<span style="font-size:${sz}px;opacity:${.45 + sz / 60};animation-delay:${fresh ? .4 + i * .06 : 0}s">${w}</span>`).join('')}</div></div>
-    <div class="card feed ${fresh ? 'fi' : ''}" style="animation-delay:.44s;display:flex;flex-direction:column"><div class="card-h">${I.zap}Live replies<span class="r">Synced to Gillette CRM</span></div>
-      ${feed.map(([a, k], i) => `<div class="fr2 ${i >= (prev && prev.panel === 'feedback' ? (prev.f === 1 ? 1 : prev.f === 2 ? 3 : 4) : 0) ? 'fi' : ''}"><img src="${A('rohan-avatar')}" alt=""><b>Rohan, 19</b><span style="color:var(--muted)">${k}</span><span class="a"><span class="chip ok">${a}</span></span></div>`).join('')}
-      ${f >= 3 ? `<div class="fr2 fi" style="animation-delay:.3s"><img src="${A('unboxing')}" alt="" style="border-radius:6px"><span style="color:var(--muted)">Unboxing photo saved as UGC with consent</span></div>` : ''}
-    </div>
+    <div class="card ${fresh ? 'fi' : ''} ${f === 2 ? 'hl' : ''}" style="padding:12px 14px;animation-delay:.28s"><div class="lbl" style="margin-bottom:8px">Purchase intent</div>
+      <div class="split"><div data-w="58%" style="background:var(--navy)">Yes 58%</div><div data-w="31%" style="background:var(--blue-2)">Maybe 31%</div><div data-w="11%" style="background:#C9D1DC;color:#3F4B60">11%</div></div></div>
+    <div class="card ${fresh ? 'fi' : ''} ${f === 3 ? 'hl' : ''}" style="animation-delay:.36s;display:flex;flex-direction:column;flex:1;min-height:0"><div class="card-h">${I.sparkle}Themes from ${inr(N.feedback)} replies</div>
+      <div class="cloud" style="flex:1">${words.map(([w, sz], i) => `<span style="font-size:${sz}px;opacity:${.45 + sz / 55};animation-delay:${fresh ? .4 + i * .06 : 0}s">${w}</span>`).join('')}</div></div>
   </div>`;
 }
 
@@ -1237,55 +1389,120 @@ function panelUgc(s, prev) {
   const fresh = !prev || prev.panel !== 'ugc';
   const posted = s.u === 2;
   return `${ph(I.insta, '', 'UGC engine', 'Refill-pack reward for first-shave Reels tagging @gilletteindia', 'LIVE')}
-  <div class="pb" style="display:flex;flex-direction:column;gap:14px">
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+  <div class="pb" style="display:flex;flex-direction:column;gap:12px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
       ${[[N.creators, 'Creators', ''], [N.ugcViews, 'Total views', 'lakh'], [N.reelsTagging, 'Reels tagging @gilletteindia', ''], [N.creators, 'Refill packs sent', '']].map(([v, k, f], i) => `<div class="card kpi ${fresh ? 'fi' : ''}" style="animation-delay:${i * .08}s"><div class="v"><span data-count="${posted ? v : Math.round(v * .97)}" ${f ? `data-fmt="${f}"` : ''} data-from="${fresh ? 0 : Math.round(v * .97)}">0</span></div><div class="k">${k}</div></div>`).join('')}
     </div>
-    <div style="flex:1;min-height:0"><div class="wall">
+    <div class="wall" style="grid-template-columns:repeat(3,1fr);flex:1;min-height:0">
       ${posted ? `<div class="ugcT fi"><img src="${A('ugc-1')}" alt=""><span class="newb">NEW · ROHAN</span><span class="vw">${I.playO}12.4K</span></div>`
         : `<div class="ugcT pend"><img src="${A('rohan-avatar')}" alt=""><b style="color:var(--ink)">Rohan</b>Invited on WhatsApp<br>Reel pending</div>`}
       <div class="ugcT ${fresh ? 'fi' : ''}" style="animation-delay:.1s"><img src="${A('ugc-2')}" alt=""><span class="vw">${I.playO}38.2K</span></div>
       <div class="ugcT ${fresh ? 'fi' : ''}" style="animation-delay:.2s"><img src="${A('ugc-3')}" alt=""><span class="vw">${I.playO}21.7K</span></div>
-      <div class="mosaic ${fresh ? 'fi' : ''}" style="animation-delay:.3s">${[1, 2, 3, 4, 5, 6].map(n => `<img src="${A('avatar-' + n)}" alt="">`).join('')}<div class="more" style="grid-column:1/-1;aspect-ratio:auto;padding:14px 0">+${inr(N.creators - 9)}<small>more creators</small></div></div>
-    </div></div>
-    <div class="callout ${fresh ? 'fi' : ''}" style="animation-delay:.5s">${I.reels}<div><b>The education ad comes back as social proof.</b><span>68% of first-shave Reels credit the @gilletteindia tips reel. Best ones get whitelisted as Spark-style ads for the next wave.</span></div></div>
+    </div>
+    <div class="callout ${fresh ? 'fi' : ''}" style="animation-delay:.5s">${I.reels}<div><b>The education ad comes back as social proof.</b><span>68% of first-shave Reels credit the @gilletteindia tips reel.</span></div></div>
   </div>`;
 }
 
-function closingScreen() {
-  const rows = [
-    ['Reached', 'Education reel', N.reach], ['Engaged learners', '75%+ watch, save, share, follow', N.engaged],
-    ['Landing visits', 'From the sample ad', N.landing], ['OTP verified', 'Unique, non-duplicate', N.otp],
-    ['Qualified + sampled', 'Score 60+, conquest first', N.approved], ['Delivered', '97.2% success, 2.8 days', N.delivered],
-    ['Gave feedback', 'On WhatsApp', N.feedback], ['UGC creators', 'Reels tagging @gilletteindia', N.creators],
+/* step 8: the next campaign, built from the data */
+function panelForward() {
+  const data = [[N.delivered, 'Verified profiles'], [4550, 'Promoters (loved it)'], [N.creators, 'Creator reels'], [1990, '"Maybe" buyers']];
+  const plays = [
+    [I.users, 'Lookalike of the promoters', 'Meta 1% lookalike of the 4,550 who loved it: 21L new young men get Ad 1.'],
+    [I.reels, 'Creator reels as ads', 'The best 40 first-shave Reels run as partnership ads, like the one Aarav sees now.'],
+    [I.whatsapp, 'Convert the maybes', '1,990 "Maybe" buyers get a 15% refill offer on WhatsApp, 10-minute delivery.'],
+    [I.gift, 'Refer a friend', 'Every sampler gets 2 invite links. Friends start at Ad 1.'],
   ];
-  const max = Math.log10(N.reach);
-  const chain = ['Educate', 'Engage', 'Qualify', 'Sample', 'Feedback', 'UGC'];
-  return `<div class="close">
-    <div class="ctop"><div class="eb">Campaign summary · Gillette First Shave · 6 weeks</div><div class="logos"><img class="g" src="${A('gillette-logo-white')}" alt=""><span>x</span><img class="f" src="${A('freestand-logo-white')}" alt=""></div></div>
-    <div class="chain">${chain.map((c, i) => `<span style="animation-delay:${i * .12}s">${c}</span>${i < chain.length - 1 ? `<span style="animation-delay:${i * .12 + .06}s">${I.chevR}</span>` : ''}`).join('')}</div>
-    <div class="lead">One campaign. Every rupee of sampling goes to someone who watched, engaged and qualified.</div>
-    <div class="cgrid">
-      <div class="cf">${rows.map(([k, d, v], i) => `<div class="r fi" style="animation-delay:${.3 + i * .08}s"><div class="k">${k}<small>${d}</small></div><div class="bar"><i data-w="${Math.max(6, (Math.log10(v) - 2.6) / (max - 2.6) * 100).toFixed(1)}%" style="transition-delay:${.4 + i * .08}s"></i></div><div class="v"><span data-count="${v}" data-fmt="${v >= 100000 ? 'lakh' : ''}">0</span></div></div>`).join('')}</div>
-      <div>
-        <div class="ckpi">
-          <div class="fi" style="animation-delay:.5s"><b class="cv">₹<span data-count="${N.mediaSpend / N.approved}">0</span></b><span class="cl">Media cost per qualified sample</span><span class="cs">₹7.4L media / ${inr(N.approved)} approved kits</span></div>
-          <div class="fi" style="animation-delay:.6s"><b class="cv"><span data-count="${N.conquest}" data-fmt="pct">0</span></b><span class="cl">Conquest share</span><span class="cs">Kits sent to non-Gillette users</span></div>
-          <div class="fi" style="animation-delay:.7s"><b class="cv"><span data-count="${N.intentYes}" data-fmt="pct">0</span></b><span class="cl">Purchase intent</span><span class="cs">Said yes to buying Guard 3-in-1</span></div>
-          <div class="fi" style="animation-delay:.8s"><b class="cv"><span data-count="${N.creators}">0</span></b><span class="cl">UGC pieces</span><span class="cs">${lakh(N.ugcViews)} organic views</span></div>
-        </div>
-        <div class="cta-row fi" style="animation-delay:1s">
-          <button class="bigcta" id="runCta">Run this with <img src="${A('freestand-logo')}" alt="FreeStand">${I.arrowR}</button>
-          <button class="ghost" id="restart">${I.refresh}Restart demo</button>
-        </div>
-      </div>
+  return `${ph(I.sparkle, '', 'New campaign: Shave It Forward', 'Campaign 3 · built only from the data FreeStand collected in loop 1', 'LAUNCHING', '#1A73D9')}
+  <div class="pb" style="display:flex;flex-direction:column;gap:12px">
+    <div class="lbl">Built from</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:-4px">${data.map(([v, k], i) => `<div class="card kpi fi" style="animation-delay:${i * .08}s"><div class="v"><span data-count="${v}">0</span></div><div class="k">${k}</div></div>`).join('')}</div>
+    <div class="card fi" style="animation-delay:.3s"><div class="card-h">${I.zap}Four plays</div>
+      ${plays.map(([ic, t, d], i) => `<div class="play fi" style="animation-delay:${.45 + i * .15}s"><span class="pi">${ic}</span><div><b>${t}</b><span>${d}</span></div></div>`).join('')}</div>
+    <div class="callout fi" style="animation-delay:1.1s">${I.refresh}<div><b>The engine restarts with warmer inputs.</b><span>Proven creators, lookalikes of happy samplers, cheaper qualified samples.</span></div></div>
+  </div>`;
+}
+
+/* right column: Rohan's first-party profile, built step by step */
+function profileCol() {
+  const at = k => idx >= stageIdx(k);
+  const isNew = k => idx === stageIdx(k);
+  const row = (label, val, k) => `<div class="pr ${val && isNew(k) ? 'pnew' : ''}"><span>${label}</span>${val ? `<b>${val}</b>` : '<i class="shim"></i>'}</div>`;
+  const v = (k, val) => at(k) ? val : null;
+  const known = at('det');
+  const state = at('ugc2') ? ['ADVOCATE', 'ok'] : at('deliv') ? ['SAMPLED', 'ok'] : at('otp') ? ['VERIFIED', 'blue'] : at('land') ? ['IDENTIFYING', 'warn'] : ['ANONYMOUS', 'bad'];
+  const tags = [['Engaged Learner', 'land'], ['High usage', 'q1'], ['Conquest: trimmer user', 'q2'], ['Approved 85/100', 'q4'], ['WhatsApp opt-in', 'addr'], ['Sampled', 'deliv'], ['Promoter', 'fb1'], ['High purchase intent', 'fb2'], ['Creator', 'ugc2'], ['Lookalike seed', 'fwd']].filter(([, k]) => at(k));
+  let anon = '';
+  if (!at('land')) anon = `<div class="anon fi">${I.lock}<div><b>No profile yet</b><span>${at('eng2') ? 'Meta now has Rohan in the "Engaged Learners" audience, but audiences are anonymous.' : 'Ad 1 is running. Nobody knows who Rohan is.'} Gillette can reach him with Ad 2, but nobody knows it is Rohan until he claims the sample.</span></div></div>`;
+  return `<div class="pc-h">
+      <div class="eb">Built by FreeStand</div>
+      <div class="pc-id">${known ? `<img src="${A('rohan-avatar')}" alt="">` : `<span class="ghost-av">${I.users}</span>`}
+        <div><b>${known ? 'Rohan Kulkarni' : 'Unknown Instagram user'}</b><span>${known ? '19 · Ganeshkhind, Pune' : at('land') ? 'Landed from Ad 2' : 'Inside Meta only'}</span></div></div>
+      <span class="pill ${state[1]}">${state[0]}</span>
     </div>
-    <div class="cstrip fi" style="animation-delay:1.1s">
-      <div class="h">Gillette also keeps</div>
-      <div>${I.users}<div><b>${inr(N.completed)}</b><span>First-party profiles of first-time shavers</span></div></div>
-      <div>${I.whatsapp}<div><b>${inr(N.delivered)}</b><span>WhatsApp opt-ins for re-engagement</span></div></div>
-      <div>${I.msg}<div><b>${inr(N.feedback)}</b><span>Product reviews synced to CRM</span></div></div>
-      <div>${I.reels}<div><b>${inr(N.creators)}</b><span>Consented UGC for whitelisting</span></div></div>
+    <div class="pc-b">
+      ${anon}
+      <div class="ps"><h6>Identity</h6>${row('Name', v('det', 'Rohan Kulkarni'), 'det')}${row('Email', v('det', 'rohan.kulkarni@email.com'), 'det')}${row('Mobile', at('otp') ? '98226 34417 · WhatsApp ✓' : v('det', '98226 34417'), at('otp') ? 'otp' : 'det')}${row('Age', v('det', '18+ confirmed'), 'det')}</div>
+      <div class="ps"><h6>Shaving today</h6>${row('How often', v('q1', '2-3 times a week'), 'q1')}${row('Uses', v('q2', 'Trimmer only'), 'q2')}${row('Worry', v('q3', 'Cuts and nicks'), 'q3')}${row('Tips reel', v('q4', 'Learnt a lot'), 'q4')}</div>
+      <div class="ps"><h6>Delivery</h6>${row('Location', v('pin', '411007 · Ganeshkhind'), 'pin')}${row('Address', v('addr', 'Flat 12, Shree Apts...'), 'addr')}${row('Sample', v('claim', 'GLT-FS-28417'), 'claim')}${row('Status', at('deliv') ? 'Delivered Thu' : v('ship', 'Shipped'), at('deliv') ? 'deliv' : 'ship')}</div>
+      <div class="ps"><h6>After the shave</h6>${row('Reaction', v('fb1', 'Loved it'), 'fb1')}${row('Rating', v('fb2', '5 / 5'), 'fb2')}${row('Will buy', v('fb2', 'Yes'), 'fb2')}${row('Content', at('ugc2') ? 'Reel · 12.4K views' : v('fb3', 'Unboxing photo'), at('ugc2') ? 'ugc2' : 'fb3')}</div>
+      ${tags.length ? `<div class="ps"><h6>Cohorts</h6><div class="ptags">${tags.map(([t, k]) => `<span class="${isNew(k) ? 'pnew' : ''}">${t}</span>`).join('')}</div></div>` : ''}
+    </div>`;
+}
+
+/* closing: the whole engine as a loop */
+function closingScreen() {
+  const nodes = [
+    ['Ad 1: Educate', lakh(N.reach) + ' reached', I.playO],
+    ['Reactions', lakh(N.engaged) + ' engaged', I.users],
+    ['Ad 2: Free sample', inr(N.landing) + ' visits', I.gift],
+    ['Claim + qualify', inr(N.approved) + ' approved', I.shield],
+    ['Deliver', inr(N.delivered) + ' in 2.8 days', I.truck],
+    ['Feedback', inr(N.feedback) + ' replies', I.msg],
+    ['UGC', inr(N.creators) + ' creators', I.reels],
+    ['Shave It Forward', '21L new learners', I.refresh],
+  ];
+  const cx = 330, cy = 330, r = 236;
+  const pos = i => { const a = (-90 + i * 45) * Math.PI / 180; return [cx + r * Math.cos(a), cy + r * Math.sin(a), Math.cos(a), Math.sin(a)]; };
+  const svgNodes = nodes.map(([t, n, ic], i) => {
+    const [x, y, ca, sa] = pos(i);
+    const lx = x + ca * 62, ly = y + sa * 54;
+    const anchor = Math.abs(ca) < .2 ? 'middle' : ca > 0 ? 'start' : 'end';
+    const last = i === nodes.length - 1;
+    return `<g class="ln-node" style="animation-delay:${.2 + i * .15}s">
+      <circle cx="${x}" cy="${y}" r="38" class="${last ? 'nlast' : 'nbg'}"/>
+      <foreignObject x="${x - 14}" y="${y - 14}" width="28" height="28"><div class="nic ${last ? 'dark' : ''}">${ic}</div></foreignObject>
+      <text x="${lx}" y="${ly - 4}" text-anchor="${anchor}" class="nt">${i + 1}. ${t}</text>
+      <text x="${lx}" y="${ly + 15}" text-anchor="${anchor}" class="nn">${n}</text></g>`;
+  }).join('');
+  return `<div class="close loopc">
+    <div class="ctop"><div class="eb">The Gillette x FreeStand sampling engine</div><div class="logos"><img class="g" src="${A('gillette-logo-white')}" alt=""><span>x</span><img class="f" src="${A('freestand-logo-white')}" alt=""></div></div>
+    <svg class="loop" viewBox="-110 -60 880 780">
+      <circle cx="${cx}" cy="${cy}" r="${r}" class="ring1"/>
+      <circle cx="${cx}" cy="${cy}" r="${r}" class="ring2"/>
+      <circle r="7" fill="#fff"><animateMotion dur="9s" repeatCount="indefinite" path="M${cx},${cy - r} A${r},${r} 0 1,1 ${cx - .1},${cy - r}"/></circle>
+      ${svgNodes}
+      <text x="${cx}" y="${cy - 34}" text-anchor="middle" class="ct1">One loop.</text>
+      <text x="${cx}" y="${cy + 6}" text-anchor="middle" class="ct2">Every turn starts warmer.</text>
+      <text x="${cx}" y="${cy + 44}" text-anchor="middle" class="ct3">Loop 1 data launches loop 2:</text>
+      <text x="${cx}" y="${cy + 66}" text-anchor="middle" class="ct3">lookalikes, creator ads, referrals.</text>
+    </svg>
+    <div class="lside">
+      <div class="eb" style="color:#7F93B5">Loop 1 results</div>
+      <div class="ckpi" style="margin-top:12px">
+        <div class="fi" style="animation-delay:.5s"><b class="cv">₹<span data-count="${N.mediaSpend / N.approved}">0</span></b><span class="cl">Media cost per qualified sample</span><span class="cs">₹7.4L media / ${inr(N.approved)} approved</span></div>
+        <div class="fi" style="animation-delay:.6s"><b class="cv"><span data-count="${N.conquest}" data-fmt="pct">0</span></b><span class="cl">Conquest share</span><span class="cs">Kits to non-Gillette users</span></div>
+        <div class="fi" style="animation-delay:.7s"><b class="cv"><span data-count="${N.intentYes}" data-fmt="pct">0</span></b><span class="cl">Purchase intent</span><span class="cs">Will buy Guard 3-in-1</span></div>
+        <div class="fi" style="animation-delay:.8s"><b class="cv"><span data-count="${N.creators}">0</span></b><span class="cl">UGC pieces</span><span class="cs">${lakh(N.ugcViews)} organic views</span></div>
+      </div>
+      <div class="keeps fi" style="animation-delay:1s">
+        <div>${I.users}<span><b>${inr(N.completed)}</b> first-party profiles</span></div>
+        <div>${I.whatsapp}<span><b>${inr(N.delivered)}</b> WhatsApp opt-ins</span></div>
+        <div>${I.msg}<span><b>${inr(N.feedback)}</b> reviews in CRM</span></div>
+      </div>
+      <div class="cta-row fi" style="animation-delay:1.2s">
+        <button class="bigcta" id="runCta">Run this with <img src="${A('freestand-logo')}" alt="FreeStand">${I.arrowR}</button>
+        <button class="ghost" id="restart">${I.refresh}Restart</button>
+      </div>
     </div>
   </div>`;
 }
@@ -1337,6 +1554,8 @@ function render() {
     $('#runCta').onclick = () => window.open('https://freestand.in', '_blank', 'noopener');
   } else {
     let phoneHtml = '';
+    if (s.app === 'lock') phoneHtml = lockApp();
+    if (s.app === 'feed') phoneHtml = feedApp();
     if (s.app === 'reels') phoneHtml = reelsApp(s);
     if (s.app === 'web') phoneHtml = webApp(s, forward);
     if (s.app === 'wa') phoneHtml = waApp(s);
@@ -1348,11 +1567,17 @@ function render() {
     if (s.panel === 'delivery') panelHtml = panelDelivery(s, pPrev);
     if (s.panel === 'feedback') panelHtml = panelFeedback(s, pPrev);
     if (s.panel === 'ugc') panelHtml = panelUgc(s, pPrev);
+    if (s.panel === 'forward') panelHtml = panelForward();
+    const persona = s.k === 'fwd'
+      ? `<img src="${A('avatar-2')}" alt=""><b>Now: Aarav, 18</b><span>Nagpur · a lookalike of Rohan's cohort</span>`
+      : `<img src="${A('rohan-avatar')}" alt=""><b>Rohan, 19</b><span>College student, Pune · uses a trimmer</span>`;
 
     stageEl.innerHTML = `
-      <div class="eyebrow" id="ebLeft"><span class="dot"></span>Behind the scenes · ${s.side}</div>
-      <div class="persona"><img src="${A('rohan-avatar')}" alt=""><b>Rohan, 19</b><span>College student, Pune · uses a trimmer</span></div>
+      <div class="eyebrow" id="ebLeft"><span class="edot"></span>Behind the scenes · ${s.side}</div>
+      <div class="eyebrow" id="ebRight"><span class="edot"></span>Rohan's profile</div>
+      <div class="persona">${persona}</div>
       <div class="panel" id="panel">${panelHtml}</div>
+      <div class="pcol" id="pcol">${profileCol()}</div>
       <div class="phone"><div class="island"></div><div class="screen" id="screen">${phoneHtml}</div></div>
       <div class="taphint">${I.tap}Tap the phone to continue</div>`;
 
@@ -1360,7 +1585,7 @@ function render() {
     animateCounters(panel); growBars(panel);
     if (s.panel === 'story') afterStory(panel, s, pPrev);
     if (s.panel === 'engine') afterEngine(panel, s, pPrev);
-    if (s.panel === 'delivery') afterDelivery(panel, s, pPrev);
+    if (s.panel === 'delivery') afterDelivery(panel, s);
 
     if (s.app === 'reels') afterReels(screen, s, pPrev);
     if (s.app === 'wa') afterWa(screen, s, pPrev);
@@ -1448,7 +1673,7 @@ window.addEventListener('resize', fit);
 /* ═══════════════ loader: preload, then start ═══════════════ */
 const PRELOAD = ['sample-ad-9x16', 'sample-ad-1x1', 'landing-hero', 'reel-cover', 'sample-kit', 'delivery', 'unboxing', 'ugc-1', 'ugc-2', 'ugc-3',
   'guard-3in1-pack', 'guard-3in1-refill', 'rohan-avatar', 'gillette-ig-dp', 'gillette-logo-white', 'freestand-logo', 'freestand-logo-white',
-  'avatar-1', 'avatar-2', 'avatar-3', 'avatar-4', 'avatar-5', 'avatar-6'].map(A);
+  'ugc-photo-1', 'avatar-1', 'avatar-2', 'avatar-3', 'avatar-4', 'avatar-5', 'avatar-6'].map(A);
 function boot() {
   let done = 0;
   const bar = $('#lbar');
