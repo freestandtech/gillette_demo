@@ -429,8 +429,8 @@ svg{display:block}
 .intro h1{font-family:'Barlow',sans-serif;font-weight:800;font-size:54px;line-height:1.02;letter-spacing:-.5px}
 .intro h1 em{font-style:italic;font-weight:900;color:#A9C4EA}
 .intro p{font-size:16px;line-height:1.55;color:#CFDBEE;margin-top:18px;max-width:640px}
-.jr{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:34px}
-.jr div{border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:12px 10px;min-height:150px}
+.jr{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:26px}
+.jr div{border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:10px 10px;min-height:96px}
 .jr div:nth-child(-n+3){background:rgba(26,115,217,.22);border-color:rgba(143,181,232,.5)}
 .jr .jn{display:inline-flex;width:24px;height:24px;border-radius:50%;background:#fff;color:var(--navy);font-weight:800;font-size:12px;align-items:center;justify-content:center}
 .jr b{display:block;font-family:'Barlow';font-size:17px;font-weight:800;margin-top:10px}
@@ -584,7 +584,7 @@ svg{display:block}
 .close .logos img.f{height:22px}
 .close .logos span{color:#7F93B5;font-family:'Barlow';font-weight:600}
 /* ── Layout v3: phone left, behind-the-scenes middle, profile right ── */
-.steps{grid-template-columns:repeat(8,1fr)}
+.steps{grid-template-columns:repeat(9,1fr)}
 .st .l{font-size:12px}
 .phone{left:36px;top:50px}
 .persona{left:36px;right:auto;max-width:356px}
@@ -777,6 +777,116 @@ svg{display:block}
 .keeps svg{width:18px;height:18px;color:#8FB5E8}
 .keeps b{color:#fff}
 .loopc .cta-row{margin-top:20px}
+/* FreeStand Campaign Analytics dashboard */
+.dflow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.dflow .dcard{display:flex;gap:10px;align-items:flex-start}
+.dfi{width:30px;height:30px;border-radius:8px;background:#EEF5FF;color:#0057B8;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dfi svg{width:16px;height:16px}
+.dflow small{display:block;font-size:10.5px;color:#8A94A8}
+.dflow b{display:block;font-size:15px;margin:1px 0}
+.dflow span{font-size:10.5px;color:#55617A;line-height:1.3}
+.dxt{width:100%;border-collapse:separate;border-spacing:3px;font-size:11.5px}
+.dxt th{font-weight:500;color:#8A94A8;font-size:10.5px;text-align:center}
+.dxt td{text-align:center;padding:6px;border-radius:4px;font-weight:600}
+.dxt td:first-child{text-align:left;font-weight:500;background:none}
+.dnext{display:flex;gap:10px;align-items:flex-start;margin-top:12px;padding:12px 14px;border-radius:9px;background:linear-gradient(100deg,#0A1F44,#0057B8);color:#fff}
+.dnext svg{width:18px;height:18px;flex-shrink:0;margin-top:2px}
+.dnext small{display:block;font-size:10px;letter-spacing:1px;text-transform:uppercase;opacity:.7}
+.dnext b{display:block;font-size:13.5px;margin:2px 0}
+.dnext span{font-size:11.5px;opacity:.85}
+.dviz .dcard{display:flex;flex-direction:column}
+.dviz .dpc{flex:1;justify-content:center;gap:16px}
+.dviz .dlegs{white-space:nowrap}
+.dash{position:absolute;inset:0;display:flex;background:#fff;color:#1a1a1a}
+.dash svg{flex-shrink:0}
+.dside{width:196px;background:linear-gradient(180deg,#0D2A6B,#1A3D8F);color:#fff;display:flex;flex-direction:column;flex-shrink:0}
+.dlogo{padding:18px 18px 10px}.dlogo img{height:22px}
+.dnav{flex:1;padding-top:6px}
+.dnav div{display:flex;align-items:center;gap:10px;padding:8px 18px;font-size:12.5px;opacity:.75;border-left:3px solid transparent}
+.dnav div svg{width:15px;height:15px}
+.dnav div.on{opacity:1;font-weight:600;background:rgba(255,255,255,.14);border-left-color:#fff}
+.dnav.foot{flex:none;border-top:1px solid rgba(255,255,255,.15);padding:8px 0 12px}
+.dmain{flex:1;display:flex;flex-direction:column;min-width:0}
+.dtop{height:50px;border-bottom:1px solid #E8E8E8;display:flex;align-items:center;gap:16px;padding:0 22px;flex-shrink:0}
+.dtop b{font-size:18px;margin-right:auto}
+.dbell{position:relative;color:#8A94A8}.dbell svg{width:19px;height:19px}
+.dbell i{position:absolute;top:-6px;right:-9px;background:#2D7FD3;color:#fff;border-radius:999px;font-size:9px;font-style:normal;font-weight:700;padding:1px 5px}
+.dme{width:28px;height:28px;border-radius:50%;background:#0A1F44;color:#fff;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center}
+.dbody{flex:1;min-height:0;padding:12px 18px;background:#FBFCFE;display:flex;flex-direction:column;gap:10px}
+.dctl{display:flex;align-items:center;gap:14px}
+.dsel1{display:inline-flex;align-items:center;gap:24px;border:1px solid #D8DEE8;border-radius:6px;padding:7px 12px;font-size:12.5px;background:#fff}
+.dsel1 svg{width:13px;height:13px;transform:rotate(90deg);color:#98A2B8}
+.dbrand{display:flex;align-items:center;gap:7px;font-size:12px;color:#55617A}.dbrand img{width:22px;height:22px;border-radius:50%}
+.dpanel{flex:1;min-height:0;background:#fff;border:1px solid #E4E8F0;border-radius:10px;display:flex;flex-direction:column;overflow:hidden}
+.dtabs{display:flex;align-items:center;gap:2px;padding:0 14px;border-bottom:1px solid #EEF0F5;flex-shrink:0}
+.dtabs>span:not(.dbtns){display:flex;align-items:center;gap:7px;padding:12px 12px 10px;font-size:12.5px;color:#667;border-bottom:2.5px solid transparent;font-weight:500}
+.dtabs>span svg{width:14px;height:14px}
+.dtabs>span.on{color:#0D2A6B;font-weight:700;border-bottom-color:#0D2A6B}
+.dtabs em,.dsubtabs em{font-style:normal;padding:1px 7px;border-radius:999px;background:#F3E8FD;border:1px solid #D8B4FE;font-size:9px;font-weight:700;color:#7C3AED}
+.dbtns{margin-left:auto;display:flex;gap:6px}
+.dbtn2{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:6px;background:#8A9AB8;color:#fff;font-size:11.5px;font-weight:600}
+.dbtn2.o{background:#fff;color:#333;border:1px solid #D8DEE8;font-weight:500}
+.dbtn2 svg{width:13px;height:13px}
+.dcontent{flex:1;min-height:0;padding:12px 14px;display:flex;flex-direction:column;gap:10px;overflow:hidden}
+.dk{display:grid;grid-template-columns:repeat(7,1fr);border:1px solid #E8ECF4;border-radius:8px;flex-shrink:0}
+.dk div{text-align:center;padding:9px 4px;border-right:1px solid #EEF0F5}.dk div:last-child{border-right:none}
+.dk b{display:block;font-size:18px;font-weight:700;font-variant-numeric:tabular-nums}
+.dk span{font-size:10.5px;color:#8A94A8}
+.dcard{background:#fff;border:1px solid #E4E8F0;border-radius:9px;padding:10px 14px;min-height:0}
+.dch{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;margin-bottom:8px}
+.dch small{font-weight:400;color:#8A94A8;font-size:11.5px}
+.dpill{margin-left:auto;display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border-radius:999px;background:#E6F0FF;color:#0B4FB3;font-size:10px;font-weight:700}
+.dpill svg{width:11px;height:11px}
+.dpill.purple{background:#F3E8FD;color:#7C3AED;border:1px solid #D8B4FE}
+.dg2{display:grid;grid-template-columns:1.1fr 1fr;gap:10px;min-height:0;align-items:stretch}
+.dfields>div{display:grid;grid-template-columns:150px 110px 1fr 40px;align-items:center;gap:8px;font-size:11.5px;padding:4px 0;border-bottom:1px solid #F3F5F8}
+.dfields .df{font-weight:600}.dfields .ds{color:#8A94A8;font-size:10.5px}
+.dfields b,.dbarrow b{text-align:right;font-variant-numeric:tabular-nums}
+.dbar2{height:8px;border-radius:4px;background:#EEF2F7;overflow:hidden}
+.dbar2 i{display:block;height:100%;width:0;border-radius:4px;transition:width 1s ease}
+.dins{display:flex;gap:8px;align-items:flex-start;font-size:12px;color:#333;margin-bottom:6px;line-height:1.35}
+.dins svg{width:14px;height:14px;color:#2E7D32;flex-shrink:0;margin-top:1px}
+.dsub{font-size:12px;font-weight:700;margin:10px 0 6px}.dsub small{font-weight:400;color:#8A94A8}
+.dperf{display:flex;justify-content:space-between;padding:6px 10px;border-radius:5px;margin-bottom:4px;font-size:11.5px}
+.dperf.up{background:#F0F9F0}.dperf.up b{color:#2E7D32}
+.dperf.down{background:#FDF0F0}.dperf.down b{color:#C62828}
+.dleg{margin-left:auto;display:flex;align-items:center;gap:6px;font-weight:400;font-size:11px;color:#4A5468}
+.dleg i{width:9px;height:9px;border-radius:50%;margin-left:8px}
+.dchart{width:100%;height:auto;display:block}
+.dline{stroke-dasharray:1400;stroke-dashoffset:1400;animation:dline 1.6s ease forwards}
+@keyframes dline{to{stroke-dashoffset:0}}
+.dtab{width:100%;border-collapse:collapse;font-size:11.5px}
+.dtab th{text-align:left;color:#8A94A8;font-weight:500;font-size:10.5px;padding:4px 8px;border-bottom:1px solid #EEF0F5}
+.dtab td{padding:5px 8px;border-bottom:1px solid #F3F5F8}
+.dtab tr.me td{background:#EEF5FF;font-weight:600}
+.dtab tr.me td:first-child{box-shadow:inset 3px 0 0 #0057B8}
+.dwho{display:flex;align-items:center;gap:7px}.dwho img{width:22px;height:22px;border-radius:50%;object-fit:cover}
+.dst{padding:2px 8px;border-radius:999px;font-size:10.5px;font-weight:600;background:#E6F0FF;color:#0B4FB3}
+.dst.ok{background:#E8F6EE;color:#1E8E4E}.dst.bad{background:#FDECEC;color:#C62828}
+.dviz{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:10px;flex:1;min-height:0}
+.dpc{display:flex;align-items:center;gap:14px}
+.dpie{filter:drop-shadow(0 3px 8px rgba(13,42,107,.12))}
+.dlegs{display:flex;flex-direction:column;gap:6px;font-size:11.5px;color:#4A5468}
+.dlegs div{display:flex;align-items:center;gap:6px}.dlegs i{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.dlegs b{color:#98A2B8;font-weight:600}
+.dsubtabs{display:flex;gap:20px;border-bottom:1px solid #E4E8F0;font-size:12.5px;flex-shrink:0}
+.dsubtabs span{padding:0 2px 8px;color:#667;display:flex;gap:6px;align-items:center;border-bottom:2.5px solid transparent}
+.dsubtabs span.on{color:#0D2A6B;font-weight:700;border-bottom-color:#0D2A6B}
+.dinfo{display:flex;gap:10px;background:#EBF3FC;border:1px solid #C9DFF5;border-radius:8px;padding:9px 14px;flex-shrink:0}
+.dinfo>b{width:20px;height:20px;border-radius:50%;background:#2D7FD3;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dinfo strong{display:block;font-size:12.5px}.dinfo span{font-size:11.5px;color:#445}
+.dsel{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dsel small,.dstats small{display:block;font-size:10.5px;color:#8A94A8;margin-bottom:3px}
+.dsel span{display:block;border:1px solid #D8DEE8;border-radius:6px;padding:7px 10px;font-size:12px}
+.dstats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.dstats b{font-size:17px}
+.dbarrow{display:grid;grid-template-columns:170px 1fr 50px;align-items:center;gap:8px;font-size:12px;padding:5px 0}
+.dbarrow small{color:#98A2B8}
+.dtext{font-size:12px;color:#445;line-height:1.55}
+.dtext b{display:block;color:#222;margin:4px 0 2px}
+.dtests{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.dtests div{border:1px solid #E8ECF4;border-radius:6px;padding:8px 10px}
+.dtests b{display:block;font-size:12px}.dtests span{display:block;font-size:12px;margin-top:2px}.dtests small{font-size:10.5px;color:#98A2B8}
 </style>
 </head>
 <body>
@@ -932,7 +1042,7 @@ const N = {
 const PERSONA = { name: 'Rohan Kulkarni', first: 'Rohan', age: 19, mobile: '+91 98226 34417', pin: '411007', area: 'Ganeshkhind, Pune', id: 'GLT-FS-28417' };
 
 /* ═══════════════ stages ═══════════════ */
-const STEPS = ['Ad 1: Education', 'Reactions', 'Ad 2: Free Sample', 'Claim + Qualify', 'Delivered', 'Feedback', 'UGC', 'Shave It Forward'];
+const STEPS = ['Ad 1: Education', 'Reactions', 'Ad 2: Free Sample', 'Claim + Qualify', 'Delivered', 'Feedback', 'UGC', 'Dashboard', 'Shave It Forward'];
 const FS_ENGINE = 'FreeStand qualification engine';
 const STAGES = [
   { k: 'intro', step: 0, label: 'How it works + meet Rohan', app: 'intro' },
@@ -959,9 +1069,13 @@ const STAGES = [
   { k: 'fb3', step: 6, label: 'Repurchase nudge + unboxing photo', app: 'wa', wa: 5, panel: 'feedback', f: 3, side: 'FreeStand feedback loop' },
   { k: 'ugc1', step: 7, label: 'UGC invite on WhatsApp', app: 'wa', wa: 6, panel: 'ugc', u: 1, side: 'FreeStand UGC engine' },
   { k: 'ugc2', step: 7, label: 'Rohan posts his first-shave Reel', app: 'ugc', panel: 'ugc', u: 2, side: 'FreeStand UGC engine' },
-  { k: 'fwdm', step: 8, label: 'Loop 1 data ready: launch a new campaign', app: 'ugc', panel: 'ugc', u: 2, modal: 'fwd', side: 'FreeStand insights' },
-  { k: 'fwd', step: 8, label: 'New campaign: Shave It Forward', app: 'reels', ad: 'partner', panel: 'forward', side: 'Campaign 3, built from the data' },
-  { k: 'loop', step: 9, label: 'The engine, as a loop', app: 'close' },
+  { k: 'dash0', step: 8, label: 'FreeStand dashboard: overview + data collected', app: 'dash', tab: 0 },
+  { k: 'dash1', step: 8, label: 'FreeStand dashboard: live analytics', app: 'dash', tab: 1 },
+  { k: 'dash2', step: 8, label: 'FreeStand dashboard: data visualisation', app: 'dash', tab: 2 },
+  { k: 'dash3', step: 8, label: 'FreeStand dashboard: statistical analysis', app: 'dash', tab: 3 },
+  { k: 'fwdm', step: 9, label: 'Loop 1 data ready: launch a new campaign', app: 'dash', tab: 3, modal: 'fwd' },
+  { k: 'fwd', step: 9, label: 'New campaign: Shave It Forward', app: 'reels', ad: 'partner', panel: 'forward', side: 'Campaign 3, built from the data' },
+  { k: 'loop', step: 10, label: 'The engine, as a loop', app: 'close' },
 ];
 const stageIdx = k => STAGES.findIndex(s => s.k === k);
 
@@ -1305,6 +1419,7 @@ function introScreen() {
     ['Deliver', 'Kit at the door in 3 days'],
     ['Feedback', 'WhatsApp check-in after the first shave'],
     ['UGC', 'First-shave Reels as social proof'],
+    ['Dashboard', 'Every answer, live in FreeStand analytics'],
     ['Shave It Forward', 'The data launches the next campaign'],
   ];
   return `<div class="intro">
@@ -1509,10 +1624,11 @@ function closingScreen() {
     ['Deliver', inr(N.delivered) + ' in 2.8 days', I.truck],
     ['Feedback', inr(N.feedback) + ' replies', I.msg],
     ['UGC', inr(N.creators) + ' creators', I.reels],
+    ['Analyse', '14 data points each', I.bars],
     ['Shave It Forward', '21L new learners', I.refresh],
   ];
   const cx = 330, cy = 330, r = 236;
-  const pos = i => { const a = (-90 + i * 45) * Math.PI / 180; return [cx + r * Math.cos(a), cy + r * Math.sin(a), Math.cos(a), Math.sin(a)]; };
+  const pos = i => { const a = (-90 + i * 360 / nodes.length) * Math.PI / 180; return [cx + r * Math.cos(a), cy + r * Math.sin(a), Math.cos(a), Math.sin(a)]; };
   const svgNodes = nodes.map(([t, n, ic], i) => {
     const [x, y, ca, sa] = pos(i);
     const lx = x + ca * 62, ly = y + sa * 54;
@@ -1552,6 +1668,145 @@ function closingScreen() {
       <div class="cta-row fi" style="animation-delay:1.2s">
         <button class="bigcta" id="runCta">Run this with <img src="${A('freestand-logo')}" alt="FreeStand">${I.arrowR}</button>
         <button class="ghost" id="restart">${I.refresh}Restart</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ═══════════════ FreeStand Campaign Analytics dashboard ═══════════════ */
+const DC = { navy: '#0A1F44', blue: '#0057B8', sky: '#4C8FE0', pale: '#9DB4D6', grey: '#C9D1DC', coral: '#E0796B', green: '#1E8E4E' };
+const DASH_TABS = [
+  ['Overview', P('<path d="M21.2 15.9A10 10 0 1 1 8 2.8"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>')],
+  ['Live analytics', P('<path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/>')],
+  ['Data visualisation', I.bars],
+  ['Statistical analysis', P('<path d="M10 2v7.3L4.3 19A2 2 0 0 0 6 22h12a2 2 0 0 0 1.7-3L14 9.3V2"/><path d="M8.5 2h7M7 16h10"/>')],
+];
+function dPie(slices, size = 132) {
+  let cum = 0; const r = size / 2 - 4, c = size / 2;
+  const paths = slices.map(sl => {
+    const a1 = cum * 3.6 * Math.PI / 180; cum += sl.p; const a2 = cum * 3.6 * Math.PI / 180;
+    const mid = (cum - sl.p / 2) * 3.6 * Math.PI / 180;
+    const d = `M ${c} ${c} L ${c + r * Math.sin(a1)} ${c - r * Math.cos(a1)} A ${r} ${r} 0 ${sl.p > 50 ? 1 : 0} 1 ${c + r * Math.sin(a2)} ${c - r * Math.cos(a2)} Z`;
+    return { ...sl, d, mid };
+  });
+  return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" class="dpie">${paths.map(q => `<path d="${q.d}" fill="${q.c}" stroke="#fff" stroke-width="2"/>`).join('')}
+    ${paths.filter(q => q.p >= 9).map(q => `<text x="${c + r * .62 * Math.sin(q.mid)}" y="${c - r * .62 * Math.cos(q.mid) + 4}" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">${q.p}%</text>`).join('')}
+    <circle cx="${c}" cy="${c}" r="${r * .32}" fill="#fff"/></svg>`;
+}
+const kpiStrip = () => {
+  const k = [[N.landing, 'Landing visits'], [N.otp, 'WhatsApp OTP verified'], [N.completed, 'Completed claims'], [N.approved, 'Approved'], [N.delivered, 'Delivered'], [N.feedback, 'Feedback (66%)'], [3718, 'Purchase intent (58%)']];
+  return `<div class="dk">${k.map(([v, l], i) => `<div><b data-count="${v}">0</b><span>${l}</span></div>`).join('')}</div>`;
+};
+
+function dashOverview() {
+  const fields = [
+    ['Name, email', 'Claim form', 100], ['Mobile (WhatsApp OTP)', 'Claim form', 100], ['Shaving frequency', 'Brand Q1', 100],
+    ['Current routine', 'Brand Q2', 100], ['Biggest worry', 'Brand Q3', 100], ['Education recall', 'Brand Q4', 100],
+    ['Pincode, geo-code', 'Delivery', 100], ['Address', 'Delivery', 100], ['WhatsApp opt-in', 'Delivery', 94],
+    ['Reaction, rating', 'WhatsApp feedback', 66], ['Purchase intent', 'WhatsApp feedback', 66], ['Photos, Reels', 'UGC', 13],
+  ];
+  return `${kpiStrip()}
+  <div class="dg2">
+    <div class="dcard"><div class="dch">First-party data collected <span class="dpill">${inr(N.completed)} profiles · 14 fields</span></div>
+      <div class="dfields">${fields.map(([f, src, p], i) => `<div><span class="df">${f}</span><span class="ds">${src}</span><span class="dbar2"><i data-w="${p}%" style="background:${p === 100 ? DC.blue : p > 50 ? DC.sky : DC.pale};transition-delay:${i * .04}s"></i></span><b>${p}%</b></div>`).join('')}</div></div>
+    <div class="dcard"><div class="dch">Key insights <span class="dpill purple">32 analyses</span></div>
+      ${['Trimmer users show the highest purchase intent after sampling: 64%', '75%+ viewers of Ad 1 claim at 2.3x the rate of people who only followed', '"Cuts and nicks" worriers rate the Guard 3-in-1 4.8 / 5: lead with the safety comb'].map(t => `<div class="dins">${I.check}<span>${t}</span></div>`).join('')}
+      <div class="dsub">Top performers <small>(purchase intent)</small></div>
+      ${[['Trimmer only + worried about cuts', '71.2%'], ['Trimmer only + shaves 2-3x/week', '66.8%'], ['Barber + learnt a lot from reel', '61.4%']].map(([l, v]) => `<div class="dperf up"><span>${l}</span><b>${v}</b></div>`).join('')}
+      <div class="dsub">Low performers</div>
+      ${[['Another razor brand + shaves rarely', '22.5%'], ["Didn't watch reel + barber", '18.9%']].map(([l, v]) => `<div class="dperf down"><span>${l}</span><b>${v}</b></div>`).join('')}
+    </div>
+  </div>
+  <div class="dsub" style="margin:2px 0 -2px">Where the data goes</div>
+  <div class="dflow">${[
+    [I.users, 'Gillette CRM', inr(N.delivered) + ' profiles synced', 'Consented, de-duplicated, with feedback'],
+    [I.meta, 'Meta audiences (hashed)', '4,550 promoters', 'Seed for lookalikes and exclusions'],
+    [I.whatsapp, 'WhatsApp opt-ins', '9,137 (94%)', 'Refill reminders and new launches'],
+    [I.shield, 'Blocked at the gate', '3,412 claims', 'Duplicates, under-18, out-of-area'],
+  ].map(([ic, t, v, d], i) => `<div class="dcard fi" style="animation-delay:${.2 + i * .08}s"><span class="dfi">${ic}</span><div><small>${t}</small><b>${v}</b><span>${d}</span></div></div>`).join('')}</div>`;
+}
+function dashLive() {
+  const claims = [1.2, 3.4, 5.9, 7.9, 9.3, 10.0], deliv = [0.3, 2.2, 4.8, 7.1, 8.9, 9.72];
+  const W = 960, H = 220, PL = 44, PB = 28, PT = 14, PR = 20, max = 12;
+  const x = i => PL + i * (W - PL - PR) / 5, y = v => H - PB - (v / max) * (H - PB - PT);
+  const line = a => a.map((v, i) => `${i ? 'L' : 'M'} ${x(i)} ${y(v)}`).join(' ');
+  const area = a => `${line(a)} L ${x(5)} ${H - PB} L ${x(0)} ${H - PB} Z`;
+  const feed = [
+    ['rohan-avatar', 'Rohan Kulkarni', '411007 Pune', 'Trimmer only', 85, 'Delivered', 'Loved it', 'Yes', true],
+    ['avatar-1', 'Aditya P.', '560034 Bengaluru', 'Barber', 72, 'Delivered', 'Loved it', 'Maybe'],
+    ['avatar-3', 'Kunal S.', '452001 Indore', 'Trimmer only', 80, 'Delivered', 'It was okay', 'Yes'],
+    ['avatar-5', 'Sid Rao', '500081 Hyderabad', 'Another razor', 64, 'Out for delivery', '-', '-'],
+    ['avatar-6', 'Vikram M.', '400053 Mumbai', 'Gillette Mach3', 25, 'Rejected', '-', '-'],
+  ];
+  return `${kpiStrip()}
+  <div class="dcard"><div class="dch">Claims vs deliveries <small>cumulative, campaign weeks 1-6 (thousands)</small>
+    <span class="dleg"><i style="background:${DC.navy}"></i>Approved claims<i style="background:${DC.sky}"></i>Delivered</span></div>
+    <svg viewBox="0 0 ${W} ${H}" class="dchart"><defs>
+      <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${DC.navy}" stop-opacity=".18"/><stop offset="1" stop-color="${DC.navy}" stop-opacity="0"/></linearGradient>
+      <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${DC.sky}" stop-opacity=".22"/><stop offset="1" stop-color="${DC.sky}" stop-opacity="0"/></linearGradient></defs>
+      ${[0, 4, 8, 12].map(v => `<line x1="${PL}" x2="${W - PR}" y1="${y(v)}" y2="${y(v)}" stroke="#EEF0F5"/><text x="${PL - 8}" y="${y(v) + 4}" font-size="11" fill="#98A2B8" text-anchor="end">${v}k</text>`).join('')}
+      <path d="${area(claims)}" fill="url(#g1)"/><path d="${area(deliv)}" fill="url(#g2)"/>
+      <path class="dline" d="${line(claims)}" fill="none" stroke="${DC.navy}" stroke-width="2.5"/><path class="dline" d="${line(deliv)}" fill="none" stroke="${DC.sky}" stroke-width="2.5"/>
+      ${claims.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="4" fill="${DC.navy}" stroke="#fff" stroke-width="1.5"/><text x="${x(i)}" y="${H - 8}" font-size="11" fill="#98A2B8" text-anchor="middle">W${i + 1}</text>`).join('')}
+      ${deliv.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="4" fill="${DC.sky}" stroke="#fff" stroke-width="1.5"/>`).join('')}
+      <text x="${x(5) - 6}" y="${y(10) - 10}" font-size="12" font-weight="700" fill="${DC.navy}" text-anchor="end">10,000 approved</text>
+      <text x="${x(5) - 6}" y="${y(9.72) + 20}" font-size="12" font-weight="700" fill="${DC.blue}" text-anchor="end">9,720 delivered</text>
+    </svg></div>
+  <div class="dcard"><div class="dch">Live claim feed <small>every claim, scored and tracked</small><span class="dpill">${I.zap}Live</span></div>
+    <table class="dtab"><thead><tr><th>Claimant</th><th>Pincode</th><th>Uses today</th><th>Score</th><th>Status</th><th>Reaction</th><th>Will buy</th></tr></thead>
+    <tbody>${feed.map(([a, n, pin, use, sc, st, re, wb, me]) => `<tr class="${me ? 'me' : ''}"><td><span class="dwho"><img src="${A(a)}" alt="">${n}</span></td><td>${pin}</td><td>${use}</td><td><b style="color:${sc >= 60 ? DC.green : '#C62828'}">${sc}</b></td><td><span class="dst ${st === 'Rejected' ? 'bad' : st === 'Delivered' ? 'ok' : ''}">${st}</span></td><td>${re}</td><td>${wb}</td></tr>`).join('')}</tbody></table></div>`;
+}
+function dashViz() {
+  const cards = [
+    ['Q1) How often do you shave?', [['Daily', 18, DC.navy], ['2-3 times a week', 46, DC.blue], ['Weekly', 24, DC.sky], ['Rarely', 12, DC.pale]]],
+    ['Q2) What do you use today?', [['Trimmer only', 52, DC.blue], ['Barber', 21, DC.sky], ['Another razor brand', 18, DC.pale], ['Gillette', 9, DC.navy]]],
+    ['Q3) Biggest shaving worry?', [['Cuts and nicks', 54, DC.blue], ['Irritation', 31, DC.sky], ['Takes too long', 15, DC.pale]]],
+    ['Q4) Did our shaving tips reel help?', [['Yes, learnt a lot', 68, DC.navy], ['Somewhat', 24, DC.sky], ["Didn't watch", 8, DC.grey]]],
+    ['How was your first Gillette shave?', [['Loved it', 71, DC.green], ['It was okay', 22, DC.pale], ['Had issues', 7, DC.coral]]],
+    ['Will you buy Guard 3-in-1?', [['Yes', 58, DC.navy], ['Maybe', 31, DC.sky], ['No', 11, DC.grey]]],
+  ];
+  return `<div class="dviz">${cards.map(([t, sl], i) => `<div class="dcard fi" style="animation-delay:${i * .07}s"><div class="dch" style="font-size:12.5px">${t}</div>
+    <div class="dpc">${dPie(sl.map(([l, p, c]) => ({ l, p, c })), 150)}<div class="dlegs">${sl.map(([l, p, c]) => `<div><i style="background:${c}"></i>${l} <b>${p}%</b></div>`).join('')}</div></div></div>`).join('')}</div>`;
+}
+function dashStats() {
+  const rows = [['Trimmer only', 64.1, 3302], ['Barber', 53.8, 1346], ['Another razor brand', 41.2, 1154], ['Gillette', 56.0, 608]];
+  return `<div class="dsubtabs">${[['2-Way Analysis', 1], ['3-Way Analysis'], ['Segmentation'], ['Barrier Analysis', 0, 'Coming soon'], ['Regression', 0, 'Coming soon']].map(([l, on, soon]) => `<span class="${on ? 'on' : ''}">${l}${soon ? `<em>${soon}</em>` : ''}</span>`).join('')}</div>
+  <div class="dinfo"><b>i</b><div><strong>2-Way Interaction Analysis</strong><span>How two answers together affect purchase intent. Here: does what you use today change whether you will buy Guard 3-in-1?</span></div></div>
+  <div class="dg2" style="grid-template-columns:1fr 1fr">
+    <div class="dcard"><div class="dch">Select variables</div>
+      <div class="dsel"><div><small>Variable 1 (rows)</small><span>What do you use today?</span></div><div><small>Variable 2 (columns)</small><span>Will you buy Guard 3-in-1?</span></div></div>
+      <div class="dstats"><div><small>Sample size</small><b>${inr(N.feedback)}</b></div><div><small>Overall intent</small><b>58.0%</b></div><div><small>Chi-square</small><b>p &lt; 0.001</b></div><div><small>Cramér's V</small><b>0.18</b></div></div>
+      <div class="dsub" style="margin-top:12px">Purchase intent by current routine</div>
+      ${rows.map(([l, v, n], i) => `<div class="dbarrow"><span>${l} <small>n=${inr(n)}</small></span><span class="dbar2"><i data-w="${v}%" style="background:${i === 0 ? DC.blue : DC.sky};transition-delay:${i * .1}s"></i></span><b>${v.toFixed(1)}%</b></div>`).join('')}
+      <div class="dsub" style="margin-top:12px">Cross-tab · % of row</div>
+      <table class="dxt"><thead><tr><th></th><th>Yes</th><th>Maybe</th><th>No</th></tr></thead><tbody>
+        ${[['Trimmer only', 64, 28, 8], ['Barber', 54, 34, 12], ['Another razor brand', 41, 36, 23], ['Gillette', 56, 33, 11]].map(([l, a, b, c]) => `<tr><td>${l}</td>${[a, b, c].map((v, j) => `<td style="background:rgba(0,87,184,${(v / 80).toFixed(2)});color:${v > 40 ? '#fff' : '#1a1a1a'}">${v}%</td>`).join('')}</tr>`).join('')}
+      </tbody></table>
+    </div>
+    <div class="dcard"><div class="dch">Key insights</div>
+      <div class="dtext"><b>Analysis summary</b>Trimmer users are the most convertible group: 64% plan to buy after one free kit, 10 points above the next segment. Their reel recall is also highest (74% "learnt a lot").
+      <b>Recommendations</b>1. Seed the next lookalike from trimmer-user promoters.<br>2. Lead creative with the safety comb for the "cuts and nicks" segment.<br>3. Give "Another razor brand" users a comparison message, not a tips reel.</div>
+      <div class="dtests"><div><b>Chi-square test</b><span>χ² = 212.4 · df 3</span><small>Answers are not independent</small></div><div><b>Odds ratio</b><span>1.84 (trimmer vs rest)</span><small>95% CI 1.66 - 2.04</small></div></div>
+      <div class="dnext">${I.sparkle}<div><small>Recommended next step</small><b>Build a lookalike from 3,302 trimmer-user promoters</b><span>FreeStand can turn this into a new campaign with one click.</span></div></div>
+    </div>
+  </div>`;
+}
+function dashScene(s) {
+  const nav = [[I.home, 'Home'], [I.calendar, 'Campaigns'], [I.list, 'Planner'], [I.pkg, 'SKUs'], [I.msg, 'Query resolution'], [I.layout, 'Inventory'], [I.wallet, 'Accounts'], [DASH_TABS[0][1], 'Analytics', 1], [I.shield, 'Audits'], [I.bars, 'Reports'], [I.users, 'Promoters'], [I.gift, 'My Coupons']];
+  const body = [dashOverview, dashLive, dashViz, dashStats][s.tab]();
+  return `<div class="dash">
+    <div class="dside"><div class="dlogo"><img src="${A('freestand-logo-white')}" alt="FreeStand"></div>
+      <div class="dnav">${nav.map(([ic, l, on]) => `<div class="${on ? 'on' : ''}">${ic}<span>${l}</span></div>`).join('')}</div>
+      <div class="dnav foot"><div>${I.users}<span>Profile</span></div><div>${I.msg}<span>Help</span></div></div></div>
+    <div class="dmain">
+      <div class="dtop"><b>Campaign Analytics</b><span class="dbell">${P('<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/>')}<i>13</i></span><span class="dme">G</span></div>
+      <div class="dbody">
+        <div class="dctl"><span class="dsel1">Oct 2026: Gillette First Shave Kit ${I.chevR}</span><span class="dbrand"><img src="${A('gillette-ig-dp')}" alt="">Gillette India · P&amp;G</span></div>
+        <div class="dpanel">
+          <div class="dtabs">${DASH_TABS.map(([l, ic], i) => `<span class="${i === s.tab ? 'on' : ''}">${ic}${l}${i === 3 ? '<em>New</em>' : ''}</span>`).join('')}
+            <span class="dbtns"><span class="dbtn2">Duplicate orders</span><span class="dbtn2 o">${I.calendar}All time</span><span class="dbtn2 o">${I.ext}Export CSV</span></span></div>
+          <div class="dcontent">${body}</div>
+        </div>
       </div>
     </div>
   </div>`;
@@ -1641,6 +1896,10 @@ function render() {
   if (s.app === 'intro') {
     stageEl.innerHTML = introScreen();
     $('#startBtn').onclick = () => go(idx + 1);
+  } else if (s.app === 'dash') {
+    stageEl.innerHTML = dashScene(s);
+    animateCounters(stageEl); growBars(stageEl);
+    if (s.modal) showModal(s);
   } else if (s.app === 'close') {
     stageEl.innerHTML = closingScreen();
     animateCounters(stageEl); growBars(stageEl);
