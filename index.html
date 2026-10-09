@@ -424,8 +424,8 @@ svg{display:block}
 .intro .ctop .eb{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#7F93B5;font-weight:700}
 .intro .logos{display:flex;align-items:center;gap:14px}
 .intro .logos img.g{height:30px}.intro .logos img.f{height:22px}.intro .logos span{color:#7F93B5;font-family:'Barlow';font-weight:600}
-.in-grid{flex:1;display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center;padding-bottom:30px}
-.intro h1{font-family:'Barlow',sans-serif;font-weight:800;font-size:64px;line-height:1.04;letter-spacing:-.5px}
+.in-grid{flex:1;display:grid;grid-template-columns:1fr 290px;gap:40px;align-items:center;padding-bottom:30px}
+.intro h1{font-family:'Barlow',sans-serif;font-weight:800;font-size:52px;white-space:nowrap;line-height:1.04;letter-spacing:-.5px}
 .intro h1 em{font-style:italic;font-weight:800;color:#A9C4EA;font-size:52px}
 .intro p{font-size:18px;line-height:1.55;color:#CFDBEE;margin-top:20px;max-width:620px}
 .b3{display:flex;align-items:center;gap:12px;margin-top:34px}
@@ -1419,8 +1419,8 @@ function introScreen() {
     <div class="ctop"><div class="eb">Gillette Fusion5 x FreeStand</div><div class="logos"><img class="g" src="${A('gillette-logo-white')}" alt=""><span>x</span><img class="f" src="${A('freestand-logo-white')}" alt=""></div></div>
     <div class="in-grid">
       <div>
-        <h1 class="fi">Teach him to shave.<br><em>If he watched, he gets the razor.</em></h1>
-        <p class="fi" style="animation-delay:.15s">A tips reel earns young men's attention. Only the ones who actually watch are shown a free Gillette Fusion5, so no media is spent on scrollers.</p>
+        <h1 class="fi">Every man remembers his first razor.<br><em>Make sure it’s a Gillette.</em></h1>
+        <p class="fi" style="animation-delay:.15s">Rohan learns to shave from a 30-second Reel. Watch it through, and a free Fusion5 shows up at his door. Skip it, and Gillette never pays to sample him.</p>
         <div class="b3 fi" style="animation-delay:.3s">${B.map(([ic, t, d], i) => `${i ? `<span class="b3a">${I.arrowR}</span>` : ''}<div><span class="b3i">${ic}</span><b>${t}</b><small>${d}</small></div>`).join('')}</div>
       </div>
       <div class="rohan-card fi" style="animation-delay:.45s">
