@@ -1,7 +1,7 @@
 <!doctype html>
 <html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
 <style>
-  /* rohan-mirror.png with the First Shave Kit (sample-kit-cutout.png) on the counter.
+  /* rohan-mirror.png (Rohan, chest-up) holding up the First Shave Kit (sample-kit-cutout.png).
      render-all.js re-saves the output through JPEG q58 for a WhatsApp-photo feel. */
   .canvas { width: 1080px; height: 1350px; background: url('../rohan-mirror.png') center/cover; }
   .warm { position: absolute; inset: 0; background: rgba(255,214,170,0.08); mix-blend-mode: multiply; }
@@ -10,14 +10,13 @@
       linear-gradient(100deg, rgba(255,255,255,0) 0 30%, rgba(255,255,255,0.10) 34%, rgba(255,255,255,0) 40% 70%, rgba(255,255,255,0.08) 74%, rgba(255,255,255,0) 80%),
       linear-gradient(180deg, #8C8F94 0%, #6E7277 45%, #55585D 100%); box-shadow: 0 -10px 24px rgba(0,0,0,0.35); }
   .counter::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 10px; background: linear-gradient(180deg, #B9BCC1, #85888D); }
-  .kit { position: absolute; left: 390px; bottom: 40px; width: 780px; transform: rotate(-3deg);
+  .kit { position: absolute; left: 330px; bottom: -40px; width: 820px; transform: rotate(-8deg);
     filter: drop-shadow(0 26px 22px rgba(0,0,0,0.45)); }
   .vignette { position: absolute; inset: 0; box-shadow: inset 0 0 160px rgba(0,0,0,0.35); }
 </style></head>
 <body>
 <div class="canvas">
   <div class="warm"></div>
-  <div class="counter"></div>
   <img class="kit" src="sample-kit-cutout.png" alt="">
   <div class="vignette"></div>
 </div>

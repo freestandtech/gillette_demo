@@ -424,25 +424,24 @@ svg{display:block}
 .intro .ctop .eb{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#7F93B5;font-weight:700}
 .intro .logos{display:flex;align-items:center;gap:14px}
 .intro .logos img.g{height:30px}.intro .logos img.f{height:22px}.intro .logos span{color:#7F93B5;font-family:'Barlow';font-weight:600}
-.in-grid{flex:1;display:grid;grid-template-columns:1fr 330px;gap:40px;align-items:center}
-.in-foot{font-size:12px;color:#7F93B5;text-align:center}
-.intro h1{font-family:'Barlow',sans-serif;font-weight:800;font-size:68px;line-height:1.02;letter-spacing:-.5px}
-.intro h1 em{font-style:italic;font-weight:900;color:#A9C4EA}
-.intro p{font-size:16px;line-height:1.55;color:#CFDBEE;margin-top:18px;max-width:640px}
-.jr{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:26px}
-.jr div{border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:10px 10px;min-height:96px}
-.jr div:nth-child(-n+3){background:rgba(26,115,217,.22);border-color:rgba(143,181,232,.5)}
-.jr .jn{display:inline-flex;width:24px;height:24px;border-radius:50%;background:#fff;color:var(--navy);font-weight:800;font-size:12px;align-items:center;justify-content:center}
-.jr b{display:block;font-family:'Barlow';font-size:17px;font-weight:800;margin-top:10px}
-.jr small{display:block;font-size:11.5px;color:#CFDBEE;margin-top:5px;line-height:1.4}
-.rohan-card{background:#fff;color:var(--ink);border-radius:18px;padding:24px;box-shadow:0 20px 50px rgba(0,0,0,.35);display:flex;flex-direction:column;align-items:flex-start}
-.rohan-card img{width:110px;height:110px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 4px #EEF5FF}
-.rohan-card .eb{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);font-weight:700;margin-top:16px}
-.rohan-card>b{font-family:'Barlow';font-size:26px;font-weight:800;margin-top:4px;color:var(--navy)}
-.rohan-card ul{list-style:none;margin:12px 0 22px;display:flex;flex-direction:column;gap:7px}
-.rohan-card li{font-size:13.5px;color:#3F4B60;padding-left:16px;position:relative}
-.rohan-card li::before{content:"";position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--blue)}
-.rohan-card .bigcta{background:var(--navy);color:#fff}
+.in-grid{flex:1;display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center;padding-bottom:30px}
+.intro h1{font-family:'Barlow',sans-serif;font-weight:800;font-size:64px;line-height:1.04;letter-spacing:-.5px}
+.intro h1 em{font-style:italic;font-weight:800;color:#A9C4EA;font-size:52px}
+.intro p{font-size:18px;line-height:1.55;color:#CFDBEE;margin-top:20px;max-width:620px}
+.b3{display:flex;align-items:center;gap:12px;margin-top:34px}
+.b3>div{display:grid;grid-template-columns:34px 1fr;grid-template-rows:auto auto;column-gap:10px;align-items:center}
+.b3i{grid-row:1/3;width:34px;height:34px;border-radius:50%;background:rgba(143,181,232,.18);color:#fff;display:flex;align-items:center;justify-content:center}
+.b3i svg{width:16px;height:16px}
+.b3 b{font-family:'Barlow';font-size:17px;font-weight:800}
+.b3 small{font-size:12px;color:#A9C4EA}
+.b3a{color:#5A7BB0}.b3a svg{width:18px;height:18px}
+.rohan-card{background:#fff;color:var(--ink);border-radius:18px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.rc-top{display:flex;align-items:center;gap:14px}
+.rc-top img{width:76px;height:76px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px #EEF5FF}
+.rohan-card .eb{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);font-weight:700}
+.rc-top b{font-family:'Barlow';font-size:24px;font-weight:800;color:var(--navy)}
+.rohan-card p{font-size:13.5px;color:#3F4B60;line-height:1.5;margin:14px 0 18px}
+.rohan-card .bigcta{background:var(--navy);color:#fff;font-size:16px;padding:11px 20px}
 
 /* Funnel */
 .fun{display:flex;flex-direction:column;gap:10px;padding:16px 18px}
@@ -1411,34 +1410,25 @@ function afterStory(root, s, prev) {
 
 /* intro */
 function introScreen() {
-  const J = [
-    ['Ad 1: Teach', 'A how-to-shave reel runs to men 18-24. No offer.'],
-    ['Reactions', 'Meta saves everyone who watched, saved, shared or followed'],
-    ['Ad 2: Sample', 'A separate free-sample ad, shown only to them'],
-    ['Claim', 'FreeStand verifies, asks, scores and approves'],
-    ['Deliver', 'Kit at the door in 3 days'],
-    ['Feedback', 'WhatsApp check-in after the first shave'],
-    ['UGC', 'First-shave Reels as social proof'],
-    ['Dashboard', 'Every answer, live in FreeStand analytics'],
-    ['Shave It Forward', 'The data launches the next campaign'],
+  const B = [
+    [I.playO, 'Educate', 'A shaving-tips reel. No offer.'],
+    [I.eye, 'Grab attention', 'Meta keeps everyone who watched'],
+    [I.gift, 'Sample the attentive', 'Only they see the free Fusion5'],
   ];
   return `<div class="intro">
-    <div class="ctop"><div class="eb">Gillette Fusion5 x FreeStand · Educate to Sample</div><div class="logos"><img class="g" src="${A('gillette-logo-white')}" alt=""><span>x</span><img class="f" src="${A('freestand-logo-white')}" alt=""></div></div>
+    <div class="ctop"><div class="eb">Gillette Fusion5 x FreeStand</div><div class="logos"><img class="g" src="${A('gillette-logo-white')}" alt=""><span>x</span><img class="f" src="${A('freestand-logo-white')}" alt=""></div></div>
     <div class="in-grid">
       <div>
-        <h1 class="fi">Teach the shave.<br><em>Sample the learners.</em></h1>
-        <p class="fi" style="animation-delay:.15s"><b style="color:#fff">Gillette Fusion5 · shave only.</b> Two separate ads. Ad 1 teaches young men how to shave. Meta remembers everyone who reacts. Days later, Ad 2 offers a free Fusion5 to that audience only. FreeStand then verifies, ships, collects feedback and turns the data into the next campaign.</p>
-        <div class="jr">${J.map(([t, d], i) => `<div class="fi" style="animation-delay:${.3 + i * .07}s"><span class="jn">${i + 1}</span><b>${t}</b><small>${d}</small></div>`).join('')}</div>
+        <h1 class="fi">Teach him to shave.<br><em>If he watched, he gets the razor.</em></h1>
+        <p class="fi" style="animation-delay:.15s">A tips reel earns young men's attention. Only the ones who actually watch are shown a free Gillette Fusion5, so no media is spent on scrollers.</p>
+        <div class="b3 fi" style="animation-delay:.3s">${B.map(([ic, t, d], i) => `${i ? `<span class="b3a">${I.arrowR}</span>` : ''}<div><span class="b3i">${ic}</span><b>${t}</b><small>${d}</small></div>`).join('')}</div>
       </div>
-      <div class="rohan-card fi" style="animation-delay:.5s">
-        <img src="${A('rohan-avatar')}" alt="">
-        <div class="eb">Meet our consumer</div>
-        <b>Rohan, 19 · Pune</b>
-        <ul><li>College student</li><li>Uses a trimmer, sometimes the barber</li><li>Has never used a razor</li><li>Scrolls Instagram Reels every evening</li></ul>
-        <button class="bigcta" id="startBtn" style="font-size:17px;padding:12px 22px">Follow Rohan's journey ${I.arrowR}</button>
+      <div class="rohan-card fi" style="animation-delay:.45s">
+        <div class="rc-top"><img src="${A('rohan-avatar')}" alt=""><div><div class="eb">Meet Rohan</div><b>19 · Pune</b></div></div>
+        <p>College student. Trims his beard, has never used a razor. Scrolls Reels every evening.</p>
+        <button class="bigcta" id="startBtn">Follow his journey ${I.arrowR}</button>
       </div>
     </div>
-    <div class="in-foot">Phone on the left: what Rohan sees. Right: what happens behind the scenes, and the profile FreeStand builds.</div>
   </div>`;
 }
 

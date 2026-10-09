@@ -28,8 +28,7 @@ Pitch-demo use only. Brand marks and product photography belong to their owners 
 ## Photos (Pexels License)
 | File | Photo | Photographer |
 |---|---|---|
-| `rohan-avatar.png` | https://www.pexels.com/photo/a-young-man-pinching-his-shirt-smiling-6338266/ | MD. Rasel Hossain |
-| `rohan-mirror.png` (and the base of `unboxing.png`) | https://www.pexels.com/photo/man-taking-a-selfie-in-mirror-16137199/ | Zain Ali |
+| `rohan-avatar.png`, `rohan-mirror.png` (base of `unboxing.png`) | https://www.pexels.com/photo/a-smiling-young-man-in-blue-and-white-striped-shirt-8916562/ | Alan Biju |
 | `delivery.png` | https://www.pexels.com/photo/a-brown-cardboard-box-beside-white-door-6170463/ | Tima Miroshnichenko |
 | `avatar-1.png` | https://www.pexels.com/photo/portrait-of-a-young-man-in-urban-setting-29153201/ | Dream_ maKkerzz |
 | `avatar-2.png` | https://www.pexels.com/photo/young-man-smiling-in-gray-t-shirt-5192518/ | Velroy Fernandes |
