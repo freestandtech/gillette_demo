@@ -1,8 +1,8 @@
-# Gillette x FreeStand: Educate to Sample
+# FreeStand x Gillette: Educate to Sample
 
 A click-through pitch demo for Gillette India (P&G). It follows Rohan, 19, a college student in Pune, from a Gillette first-shave education reel to a qualified free Gillette Fusion5 sample (shave-only use case), WhatsApp feedback and a UGC Reel.
 
-The phone on the left shows what Rohan sees. The middle panel shows what Meta and FreeStand are doing at that moment. The right column is the first-party profile FreeStand builds, which stays anonymous until Rohan claims. Step 8 is the FreeStand Campaign Analytics dashboard (overview + data collected, live analytics, data visualisation, statistical analysis). Step 9 ("Shave It Forward") is the next campaign built from the data, and the last screen shows the whole engine as a loop.
+The phone on the left shows what Rohan sees. The middle panel shows what Meta and FreeStand are doing at that moment. The right column is the first-party profile FreeStand builds, which stays anonymous until Rohan claims. Step 8 is the FreeStand Campaign Analytics dashboard (overview + data collected, live analytics, data visualisation, statistical analysis). Step 9 ("Shave It Forward") is the next campaign built from the data, and the last screen shows the engine as an 8-node loop (Grab attention, Educate, Engage, Sample, Trial, Purchase, Advocate, Optimise media) with the "Run this with FreeStand" CTA.
 
 ## Run locally
 Any static server works:
@@ -17,8 +17,8 @@ Opening `index.html` straight from disk also works.
 ## Present
 - **Next:** `→`, `Space`, `Enter`, the Next button, or a tap on the phone.
 - **Back:** `←`, or the Back button.
-- **Jump:** `Home` / `End`, the 7 step chips at the top, or the numbered sub-steps at the bottom.
-- **Deep link:** `index.html#s=12` opens sub-step 12 (sub-step 1 is the intro, 25-28 are the FreeStand dashboard, 31 is the engine loop). The last stage you viewed is remembered.
+- **Jump:** `Home` / `End`, the 9 step chips at the top, or the numbered sub-steps at the bottom.
+- **Deep link:** `index.html#s=12` opens sub-step 12 (sub-step 1 is the intro, 25-28 are the FreeStand dashboard, 31 is the engine loop and CTA). The last stage you viewed is remembered.
 - The stage scales to fit the window. It is designed at 1280x820 and reads well at 1366x768 and above.
 
 ## Deploy on GitHub Pages

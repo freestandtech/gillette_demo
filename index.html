@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gillette Fusion5 x FreeStand: Educate to Sample</title>
+<title>FreeStand x Gillette Fusion5: Educate to Sample</title>
 <meta name="description" content="Interactive demo: how FreeStand turns Gillette India's first-shave education reel into qualified Fusion5 sampling, feedback and UGC.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Gillette x FreeStand: Educate to Sample">
+<meta property="og:title" content="FreeStand x Gillette: Educate to Sample">
 <meta property="og:description" content="Educate > Engage > Qualify > Sample > Feedback > UGC. A click-through demo for Gillette India.">
 <!-- og:image must be an absolute URL for link previews. Update if the Pages repo name differs. -->
 <meta property="og:image" content="https://freestandtech.github.io/gillette_demo/assets/og-image.png">
@@ -753,29 +753,26 @@ svg{display:block}
 
 /* closing loop */
 .loopc{padding:30px 48px}
-.loop{position:absolute;left:0;top:84px;width:700px;height:680px;overflow:visible}
+.loop{position:absolute;left:240px;top:40px;width:800px;height:709px;overflow:visible}
+.loopcta{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:20px;padding:14px 26px;white-space:nowrap;z-index:2}
 .ring1{fill:none;stroke:rgba(143,181,232,.18);stroke-width:26}
 .ring2{fill:none;stroke:#8FB5E8;stroke-width:2;stroke-dasharray:6 8;animation:dashMove 1.2s linear infinite}
 @keyframes dashMove{to{stroke-dashoffset:-14}}
 .ln-node{opacity:0;animation:fadeIn .5s both}
 @keyframes fadeIn{to{opacity:1}}
 .nbg{fill:#13306A;stroke:#8FB5E8;stroke-width:2}
-.nlast{fill:#fff;stroke:#fff;stroke-width:2}
+.nlast,.ln-node.on .nbg{fill:#fff;stroke:#fff;stroke-width:2;transition:fill .3s}
+.ln-node.on .nic{color:var(--navy)}
+.ln-node.on .nt{fill:#fff}
+.ln-node .nt{fill:#CFDBEE}
 .nic{width:28px;height:28px;color:#fff;display:flex;align-items:center;justify-content:center}
 .nic svg{width:24px;height:24px}
 .nic.dark{color:var(--navy)}
-.nt{fill:#fff;font-family:'Barlow',sans-serif;font-weight:800;font-size:19px}
+.nt{fill:#fff;font-family:'Barlow',sans-serif;font-weight:800;font-size:21px}
 .nn{fill:#A9C4EA;font-size:14px;font-family:'Roboto',sans-serif}
 .ct1{fill:#fff;font-family:'Barlow',sans-serif;font-weight:800;font-size:40px}
 .ct2{fill:#A9C4EA;font-family:'Barlow',sans-serif;font-weight:800;font-style:italic;font-size:28px}
 .ct3{fill:#CFDBEE;font-size:14.5px;font-family:'Roboto',sans-serif}
-.lside{position:absolute;right:44px;top:110px;width:420px}
-.lside .eb{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700}
-.keeps{margin-top:16px;display:flex;flex-direction:column;gap:8px}
-.keeps div{display:flex;align-items:center;gap:10px;font-size:13.5px;color:#CFDBEE;padding:9px 12px;border-radius:10px;background:rgba(255,255,255,.05)}
-.keeps svg{width:18px;height:18px;color:#8FB5E8}
-.keeps b{color:#fff}
-.loopc .cta-row{margin-top:20px}
 /* FreeStand Campaign Analytics dashboard */
 .dflow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .dflow .dcard{display:flex;gap:10px;align-items:flex-start}
@@ -1416,7 +1413,7 @@ function introScreen() {
     [I.gift, 'Sample the attentive', 'Only they see the free Fusion5'],
   ];
   return `<div class="intro">
-    <div class="ctop"><div class="eb">Gillette Fusion5 x FreeStand</div><div class="logos"><img class="g" src="${A('gillette-logo-white')}" alt=""><span>x</span><img class="f" src="${A('freestand-logo-white')}" alt=""></div></div>
+    <div class="ctop"><div class="eb">FreeStand x Gillette Fusion5</div><div class="logos"><img class="f" src="${A('freestand-logo-white')}" alt=""><span>x</span><img class="g" src="${A('gillette-logo-white')}" alt=""></div></div>
     <div class="in-grid">
       <div>
         <h1 class="fi">Every man remembers his first razor.<br><em>Make sure it’s a Gillette.</em></h1>
@@ -1606,61 +1603,54 @@ function profileCol() {
 
 /* closing: the whole engine as a loop */
 function closingScreen() {
+  const cart = P('<circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>');
+  const megaphone = P('<path d="M3 11l18-8v18L3 13z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>');
+  const razor = P('<rect x="5" y="2" width="14" height="5" rx="1.5"/><path d="M12 7v14"/><path d="M10 12h4M10 16h4"/>');
   const nodes = [
-    ['Ad 1: Educate', lakh(N.reach) + ' reached', I.playO],
-    ['Reactions', lakh(N.engaged) + ' engaged', I.users],
-    ['Ad 2: Free sample', inr(N.landing) + ' visits', I.gift],
-    ['Claim + qualify', inr(N.approved) + ' approved', I.shield],
-    ['Deliver', inr(N.delivered) + ' in 2.8 days', I.truck],
-    ['Feedback', inr(N.feedback) + ' replies', I.msg],
-    ['UGC', inr(N.creators) + ' creators', I.reels],
-    ['Analyse', '14 data points each', I.bars],
-    ['Shave It Forward', '21L new learners', I.refresh],
+    ['Grab attention', I.eye],
+    ['Educate', I.playO],
+    ['Engage', I.heart],
+    ['Sample', I.gift],
+    ['Trial', razor],
+    ['Purchase', cart],
+    ['Advocate', megaphone],
+    ['Optimise media', I.target],
   ];
   const cx = 330, cy = 330, r = 236;
   const pos = i => { const a = (-90 + i * 360 / nodes.length) * Math.PI / 180; return [cx + r * Math.cos(a), cy + r * Math.sin(a), Math.cos(a), Math.sin(a)]; };
-  const svgNodes = nodes.map(([t, n, ic], i) => {
+  const svgNodes = nodes.map(([t, ic], i) => {
     const [x, y, ca, sa] = pos(i);
-    const lx = x + ca * 62, ly = y + sa * 54;
+    const lx = x + ca * 58, ly = y + sa * 56 + 7;
     const anchor = Math.abs(ca) < .2 ? 'middle' : ca > 0 ? 'start' : 'end';
-    const last = i === nodes.length - 1;
-    return `<g class="ln-node" style="animation-delay:${.2 + i * .15}s">
-      <circle cx="${x}" cy="${y}" r="38" class="${last ? 'nlast' : 'nbg'}"/>
-      <foreignObject x="${x - 14}" y="${y - 14}" width="28" height="28"><div class="nic ${last ? 'dark' : ''}">${ic}</div></foreignObject>
-      <text x="${lx}" y="${ly - 4}" text-anchor="${anchor}" class="nt">${i + 1}. ${t}</text>
-      <text x="${lx}" y="${ly + 15}" text-anchor="${anchor}" class="nn">${n}</text></g>`;
+    return `<g class="ln-node" id="ln${i}" style="animation-delay:${.2 + i * .12}s">
+      <circle cx="${x}" cy="${y}" r="38" class="nbg"/>
+      <foreignObject x="${x - 14}" y="${y - 14}" width="28" height="28"><div class="nic">${ic}</div></foreignObject>
+      <text x="${lx}" y="${ly}" text-anchor="${anchor}" class="nt">${t}</text></g>`;
   }).join('');
   return `<div class="close loopc">
-    <div class="ctop"><div class="eb">The Gillette x FreeStand sampling engine</div><div class="logos"><img class="g" src="${A('gillette-logo-white')}" alt=""><span>x</span><img class="f" src="${A('freestand-logo-white')}" alt=""></div></div>
+    <div class="ctop"><div class="eb">The FreeStand x Gillette sampling engine</div><div class="logos"><img class="f" src="${A('freestand-logo-white')}" alt=""><span>x</span><img class="g" src="${A('gillette-logo-white')}" alt=""></div></div>
     <svg class="loop" viewBox="-110 -60 880 780">
       <circle cx="${cx}" cy="${cy}" r="${r}" class="ring1"/>
       <circle cx="${cx}" cy="${cy}" r="${r}" class="ring2"/>
-      <circle r="7" fill="#fff"><animateMotion dur="9s" repeatCount="indefinite" path="M${cx},${cy - r} A${r},${r} 0 1,1 ${cx - .1},${cy - r}"/></circle>
+      <circle r="7" fill="#fff"><animateMotion dur="8.8s" repeatCount="indefinite" path="M${cx},${cy - r} A${r},${r} 0 1,1 ${cx - .1},${cy - r}"/></circle>
       ${svgNodes}
-      <text x="${cx}" y="${cy - 34}" text-anchor="middle" class="ct1">One loop.</text>
-      <text x="${cx}" y="${cy + 6}" text-anchor="middle" class="ct2">Every turn starts warmer.</text>
-      <text x="${cx}" y="${cy + 44}" text-anchor="middle" class="ct3">Loop 1 data launches loop 2:</text>
-      <text x="${cx}" y="${cy + 66}" text-anchor="middle" class="ct3">lookalikes, creator ads, referrals.</text>
+      <text x="${cx}" y="${cy - 128}" text-anchor="middle" class="ct1">One loop.</text>
+      <text x="${cx}" y="${cy - 90}" text-anchor="middle" class="ct2">Every turn gets cheaper.</text>
+      <text x="${cx}" y="${cy - 56}" text-anchor="middle" class="ct3">Loop 1 data sharpens loop 2:</text>
+      <text x="${cx}" y="${cy - 35}" text-anchor="middle" class="ct3">lookalikes, creator ads, referrals.</text>
     </svg>
-    <div class="lside">
-      <div class="eb" style="color:#7F93B5">Loop 1 results</div>
-      <div class="ckpi" style="margin-top:12px">
-        <div class="fi" style="animation-delay:.5s"><b class="cv"><span data-count="3412">0</span></b><span class="cl">Bad claims blocked</span><span class="cs">Duplicates, under-18, out-of-area</span></div>
-        <div class="fi" style="animation-delay:.6s"><b class="cv"><span data-count="${N.conquest}" data-fmt="pct">0</span></b><span class="cl">Conquest share</span><span class="cs">Kits to non-Gillette users</span></div>
-        <div class="fi" style="animation-delay:.7s"><b class="cv"><span data-count="${N.intentYes}" data-fmt="pct">0</span></b><span class="cl">Purchase intent</span><span class="cs">Will buy Fusion5</span></div>
-        <div class="fi" style="animation-delay:.8s"><b class="cv"><span data-count="${N.creators}">0</span></b><span class="cl">UGC pieces</span><span class="cs">${lakh(N.ugcViews)} organic views</span></div>
-      </div>
-      <div class="keeps fi" style="animation-delay:1s">
-        <div>${I.users}<span><b>${inr(N.completed)}</b> first-party profiles</span></div>
-        <div>${I.whatsapp}<span><b>${inr(N.delivered)}</b> WhatsApp opt-ins</span></div>
-        <div>${I.msg}<span><b>${inr(N.feedback)}</b> reviews in CRM</span></div>
-      </div>
-      <div class="cta-row fi" style="animation-delay:1.2s">
-        <button class="bigcta" id="runCta">Run this with <img src="${A('freestand-logo')}" alt="FreeStand">${I.arrowR}</button>
-        <button class="ghost" id="restart">${I.refresh}Restart</button>
-      </div>
-    </div>
+    <button class="bigcta loopcta fi" id="runCta" style="animation-delay:1s">Run this with <img src="${A('freestand-logo')}" alt="FreeStand">${I.arrowR}</button>
   </div>`;
+}
+function afterClosing(root) {
+  // active node follows the dot around the loop (8.8s per turn, 1.1s per node)
+  let i = 0;
+  const step = () => {
+    root.querySelectorAll('.ln-node').forEach((g, j) => g.classList.toggle('on', j === i));
+    i = (i + 1) % 8;
+    later(1100, step);
+  };
+  step();
 }
 
 /* ═══════════════ FreeStand Campaign Analytics dashboard ═══════════════ */
@@ -1892,8 +1882,7 @@ function render() {
     if (s.modal) showModal(s);
   } else if (s.app === 'close') {
     stageEl.innerHTML = closingScreen();
-    animateCounters(stageEl); growBars(stageEl);
-    $('#restart').onclick = () => go(0);
+    animateCounters(stageEl); growBars(stageEl); afterClosing(stageEl);
     $('#runCta').onclick = () => window.open('https://freestand.in', '_blank', 'noopener');
   } else {
     let phoneHtml = '';
