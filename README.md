@@ -29,6 +29,7 @@ Opening `index.html` straight from disk also works.
 ## Structure
 ```
 index.html                  the demo (vanilla JS, no build step)
+fs-loader.js                the FreeStand loader (animated logo), as supplied by FreeStand
 assets/                     PNG masters at the requested sizes + the reel
 assets/web/                 WebP copies loaded by the demo (about 0.9 MB in total)
 assets/src/                 HTML sources for every built creative + render scripts

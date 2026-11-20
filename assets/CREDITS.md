@@ -14,7 +14,8 @@ Pitch-demo use only. Brand marks and product photography belong to their owners 
 | File | Source | License |
 |---|---|---|
 | `gillette-logo.svg`, `gillette-logo.png`, `gillette-logo-white.png` | [Wikimedia Commons: File:Gillette_logo.svg](https://commons.wikimedia.org/wiki/File:Gillette_logo.svg) | Commons lists it as public domain (simple text logo). Trademark of P&G. |
-| `freestand-logo.svg`, `freestand-logo.png`, `freestand-logo-white.png` | freestand.in footer wordmark: https://framerusercontent.com/images/hYY5CwrTYzubsPJ4sILBcdh4w.svg (recoloured navy #0E2A6B / white) | FreeStand's own mark |
+| `freestand-logo.svg`, `freestand-logo-white.svg` | The official FreeStand logo supplied by FreeStand (FreeStand_LogoWordmark_Blue vector, navy #052762) and the same paths in white; used by `index.html` | FreeStand's own mark |
+| `freestand-logo.png`, `freestand-logo-white.png` | freestand.in footer wordmark: https://framerusercontent.com/images/hYY5CwrTYzubsPJ4sILBcdh4w.svg (recoloured navy #0E2A6B / white); used by the creatives in `src/` | FreeStand's own mark |
 | `freestand-mark.png` | freestand.in header gift icon: https://framerusercontent.com/images/0J9Nzq9QZNhvI3xuWThOLe8w.png | FreeStand's own mark |
 
 ## Product images (Gillette Fusion5, shave only)
